@@ -8,7 +8,7 @@
 | Whiteboard-Foto, Dateiname mit Datum 23.09.2026 | Original der Tauschmatrix | `docs/assets/tauschmatrix_original.jpg` |
 | Bereitgestellte Übergabe-Zusammenfassung | 22 Zonen, Rollen der Werkzeuge, Modellannahmen | Gesprächsinput; nicht als Originaldaten behandelt |
 | Erläuterungen von Marcel am 02.10.2026 | Grünanlage → Wohnen: + VSM; Wohnen → Grünanlage: + ESM, − VSM; ESM in der Box | in Regeln und Änderungsvermerk dokumentiert |
-| Finale Excel-Arbeitsdatei | tatsächliche Zonenattribute | ausstehend |
+| Finale Excel-Arbeitsdatei, ursprünglich `Zonen Zuweisung.xlsx` | tatsächliche Zonenattribute; 23 Einträge in `Tabelle1` | unverändert als `data/zones.xlsx`, Export als `data/zones.csv`; bereitgestellt am 04.10.2026 |
 
 ## Externe Grundlagen laut Projektunterlagen
 

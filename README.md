@@ -1,6 +1,6 @@
 # Setzen. Tauschen. Folgen sichtbar machen.
 
-Ein physisches, datenbasiertes Modell für das gesamte ehemalige Flughafengelände Berlin-Tegel. Auf 22 manuell abgeleiteten Zonen lassen sich Nutzungsbausteine austauschen. Akteure, Marker und eine gemeinsame Verlustbox machen sichtbar, was durch eine Entscheidung entsteht und was sich verändert.
+Ein physisches, datenbasiertes Modell für das gesamte ehemalige Flughafengelände Berlin-Tegel. Die Projektbeschreibung nennt 22 manuell abgeleitete Zonen; die inzwischen bereitgestellte Zonenzuweisung enthält 23 Einträge. Auf den Zonen lassen sich Nutzungsbausteine austauschen. Akteure, Marker und eine gemeinsame Verlustbox machen sichtbar, was durch eine Entscheidung entsteht und was sich verändert.
 
 ![Physisches Modell auf der Grundkarte; Präsentation, Folie 10](docs/assets/modell_gesamt.png)
 
@@ -11,7 +11,7 @@ Das Modell richtet sich besonders an Kinder und jüngere Menschen sowie an Inter
 - [Technische Dokumentation](docs/technische-dokumentation.md) und [PDF-Fassung](docs/technische-dokumentation.pdf)
 - [Modellregeln und vorgeschlagene Markerlogik](model/modellregeln.md)
 - [Tauschmatrix mit Bearbeitungsstatus](model/tauschmatrix.md) und [CSV](model/tauschmatrix.csv)
-- [Zonendaten: aktueller Stand](data/README.md) und [Data Dictionary: Vorbereitung](data/data_dictionary.md)
+- [Zonendaten](data/README.md), [Original-Excel](data/zones.xlsx), [CSV-Export](data/zones.csv) und [Data Dictionary](data/data_dictionary.md)
 - [Originalpräsentation](presentation/abschlussprasentation.pdf)
 - [Datenquellen und Herkunft der Abbildungen](references/quellen.md)
 - [Offene Punkte](docs/offene-punkte.md)
@@ -22,9 +22,9 @@ Zone wählen → vorhandenen Baustein entfernen → neuen Baustein einsetzen →
 
 Die Bausteine werden ersetzt, nicht übereinander gestapelt. Alle Nutzungskombinationen sind im Modell erlaubt; daraus folgt keine reale planerische Zulässigkeit.
 
-## Stand: 2. Oktober 2026
+## Stand: 4. Oktober 2026
 
-Erste dokumentierte Arbeitsfassung. Die originale Excel-Datei fehlt noch. Deshalb enthält dieses Repository noch keine erfundenen Zonendatensätze. Die Matrix ist eine vorläufige Transkription mit zwei erläuterten Versiegelungskorrekturen. Vorschläge zur dauerhaften Handhabung der Marker sind ausdrücklich als Vorschläge gekennzeichnet.
+Dokumentierte Arbeitsfassung mit der unverändert übernommenen Excel-Zonenzuweisung und einem UTF-8-CSV-Export. Die Datei enthält 23 eindeutige Zonen-IDs, während die Projektbeschreibung und Karte 22 Zonen nennen; diese Abweichung bleibt als offener Abgleich dokumentiert. Die Matrix ist eine vorläufige Transkription mit zwei erläuterten Versiegelungskorrekturen. Vorschläge zur dauerhaften Handhabung der Marker sind ausdrücklich als Vorschläge gekennzeichnet.
 
 ## Team
 
@@ -35,7 +35,7 @@ Thao Trang Le (Anny), Linda Izadi Sharifbad, Fatih Koc, Marcel Do. Schreibweise 
 | Ordner | Inhalt |
 |---|---|
 | `docs/` | Dokumentation, PDF, Abbildungen und offene Punkte |
-| `data/` | Datenbeschreibung; Excel/CSV nach Eingang |
+| `data/` | Original-Excel, CSV-Export und Beschreibung der Zonenzuweisung |
 | `model/` | Regeln und 25 gerichtete Nutzungstausche |
 | `maps/` | Hinweise zu Arbeitskarten und Reproduktion |
 | `presentation/` | bereitgestellte Abschlusspräsentation |
