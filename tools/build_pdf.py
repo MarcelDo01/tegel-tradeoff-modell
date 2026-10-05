@@ -104,7 +104,7 @@ def build():
         canvas.line(50, A4[1]-35, A4[0]-50, A4[1]-35)
         canvas.setFont(normal,7.5)
         canvas.setFillColor(colors.HexColor('#666666'))
-        canvas.drawString(50,23,'Tegel-Modell | Arbeitsfassung 02.10.2026')
+        canvas.drawString(50,23,'Tegel-Modell | Arbeitsfassung 04.10.2026')
         canvas.drawRightString(A4[0]-50,23,str(doc.page))
 
     SimpleDocTemplate(str(OUTPUT), pagesize=A4, rightMargin=50, leftMargin=50,

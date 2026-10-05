@@ -2,7 +2,7 @@
 
 | ID | Punkt | Bedeutung für die Fassung |
 |---|---|---|
-| O1 | finale Excel-Datei und eindeutige 22 Zonen | CSV, Data Dictionary und vollständiger Ausgangsaufbau fehlen |
+| O1 | Abgleich der 23 Tabellenzeilen mit den 22 Zonen der Projektbeschreibung und Karte | Excel und CSV liegen vor; zu klären ist, ob eine Tabellenzeile eine Teilzone oder eine zusätzliche Zone beschreibt |
 | O2 | ESM/VSM in übrigen Whiteboard-Zellen | nur GA → W und W → GA fachlich erläutert; keine pauschale Korrektur |
 | O3 | Pflanzen in K → Er, W → GA, Ge → GA, Er → K | Klammern oder Fragezeichen im Original, Interpretation offen |
 | O4 | Lebenszyklus der Marker | ESM in der Box bestätigt; dauerhafte Ereignissammlung und VSM-Rücknahme bei Wiederbebauung sind Vorschläge |
