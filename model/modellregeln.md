@@ -1,48 +1,146 @@
 # Modellregeln und Markerlogik
 
-Stand: 02.10.2026. Bestätigte Erläuterungen, Whiteboard-Transkription und neue Vorschläge werden getrennt behandelt.
+## Ziel des Modells
 
-## Grundregeln aus der Projektbeschreibung
+Das Modell zeigt, welche Folgen eine veränderte Flächennutzung haben kann. Eine bestehende Nutzung wird gegen eine neue Nutzung ausgetauscht. Die dabei verdrängten Bausteine und Marker werden in der Verlust-Box sichtbar.
 
-1. Mit dem definierten Ausgangsaufbau beginnen, nicht mit einer leeren Karte.
-2. Eine Zone und eine Zielnutzung wählen.
-3. Bestehenden Nutzungsbaustein entfernen und neuen Baustein einsetzen; nicht stapeln.
-4. Die gerichtete Matrixregel für Ausgang und Ziel bestimmen.
-5. Akteure und Marker entsprechend verändern; entfernte Elemente in die gemeinsame Box geben.
-6. Veränderungen gemeinsam besprechen. Es gibt keine Punktzahl und keinen optimalen Endzustand.
+Es gibt keine Punktzahl und keine optimale Lösung. Nach jedem Tausch werden die Veränderungen gemeinsam besprochen.
 
-Alle Kombinationen sind erlaubt; gleiche Nutzung ergibt 0. Die Regeln sind qualitativ und müssen bei Rücktausch nicht spiegelbildlich sein.
+## Bestandteile
 
-## Bestätigte Versiegelungserläuterung
+Das Modell besteht aus:
 
-Marcel erläuterte am 02.10.2026:
+- einer Karte mit den Zonen,
+- Nutzungsbausteinen,
+- Akteursmarkern,
+- VSM-, ESM-, NSM- und DMS-Markern,
+- einer Tauschbox,
+- einer Verlust-Box,
+- der Tauschmatrix.
 
-- Grünanlage → Wohnen: Zum Bauen wird die Fläche versiegelt, daher + VSM.
-- Wohnen → Grünanlage: Beton wird aufgebrochen, daher − VSM und + ESM.
-- Der ESM liegt anschließend in der Verlustbox, nicht auf der Fläche.
+Auf der Karte liegen ausschließlich die Nutzungsbausteine. Akteurs- und Ereignismarker befinden sich immer in einer der beiden Boxen.
 
-Das korrigiert die Markerangaben der vorläufigen Transkription für diese beiden Richtungen. Die übrigen Akteursangaben bleiben Transkription, keine zusätzlich bestätigte Regel.
+## Die beiden Boxen
 
-## Vorschlag für eine widerspruchsfreie Handhabung
+### Tauschbox
 
-VSM beschreibt den Zustand auf der Karte. ESM dokumentiert einen Entsiegelungsvorgang in der Box. Die Box sammelt also sowohl entfernte Elemente als auch diese Ereignismarker; sie ist keine reine Negativbilanz.
+In der Tauschbox befinden sich die Bausteine und Marker, die aktuell verfügbar sind.
 
-| Tausch | Karte | Box |
-|---|---|---|
-| Grünanlage → Wohnen | VSM setzen | vorhandenen VSM bei Bedarf aus der Box zurücknehmen; sonst aus Vorrat |
-| Wohnen → Grünanlage | vorhandenen VSM entfernen | entfernten VSM hineinlegen; zusätzlich ESM als Ereignismarker hineinlegen |
-| erneuter Wechsel zu Wohnen | VSM wieder auf Karte setzen | VSM aus Box oder Vorrat; früherer ESM bleibt als Ereignisnachweis |
+Der Inhalt der Tauschbox zählt nicht als Verlust.
 
-Wichtig für den ersten Entsiegelungstausch: Der VSM kommt von der Karte in die Box. Ein VSM wird erst bei einer erneuten Versiegelung aus der Box entnommen. Der einzelne Marker steht für eine Kategorie, nicht für eine bestimmte Fläche.
+### Verlust-Box
 
-Der dauerhafte Verbleib aller ESM in der Box und die genaue Vorratslogik sind Empfehlungen, noch keine verifizierte ursprüngliche Teamregel. Werden ESM kumulativ gesammelt, zeigt ihre Zahl Entsiegelungsereignisse und nicht die aktuell entsiegelte Fläche. Wiederholte Tausche können mehrere ESM erzeugen.
+In der Verlust-Box befinden sich die Bausteine und Marker, die durch die bisherigen Tausche verdrängt wurden.
 
-Empfehlung: Ereignismarker (ESM) in einem gekennzeichneten Bereich derselben Box von entfernten Akteuren/Zustandsmarkern unterscheiden. Eine einzige Gesamtzahl aus dem Boxinhalt hat keine fachliche Einheit und sollte nicht als Schadensmaß verwendet werden.
+Die Elemente in der Verlust-Box dürfen später wieder verwendet werden. Sobald ein Baustein oder Marker aus der Verlust-Box entnommen wird, zählt er nicht mehr als aktueller Verlust.
 
-## Fehlende Elemente und Rücktausch
+Die Verlust-Box zeigt deshalb den aktuellen Zustand und nicht die gesamte Geschichte aller vorherigen Tausche.
 
-Empfehlung: Nur tatsächlich vorhandene Elemente entfernen. Einen fehlenden Marker nicht durch einen negativen Bestand ersetzen, sondern die Unstimmigkeit notieren. Bei Rücktausch kann ein passender Akteur oder Zustandsmarker aus der Box wieder eingesetzt werden. Originalregeln zu Vorräten und mehrfach vorhandenen Markern sind noch zu bestätigen.
+## Vorbereitung
+
+1. Die Karte wird mit dem festgelegten Ausgangszustand aufgebaut.
+2. Auf jeder Zone liegt der zugehörige Nutzungsbaustein.
+3. Alle übrigen Bausteine und Marker werden auf die Tauschbox und die Verlust-Box verteilt.
+4. Die beiden Boxen werden klar voneinander getrennt aufgestellt.
+5. Die Tauschmatrix wird gut sichtbar bereitgelegt.
+
+## Ablauf eines Tauschs
+
+### 1. Zone auswählen
+
+Eine Zone auf der Karte wird ausgewählt. Der dort liegende Nutzungsbaustein zeigt die aktuelle Nutzung.
+
+### 2. Neue Nutzung auswählen
+
+Ein neuer Nutzungsbaustein wird aus der Tauschbox oder aus der Verlust-Box genommen.
+
+### 3. Alten Baustein entfernen
+
+Der bisherige Nutzungsbaustein wird von der ausgewählten Zone genommen und in die Verlust-Box gelegt.
+
+### 4. Neuen Baustein einsetzen
+
+Der neue Nutzungsbaustein wird auf die Zone gelegt.
+
+In jeder Zone liegt immer nur ein Nutzungsbaustein. Bausteine werden ausgetauscht und nicht übereinandergestapelt.
+
+### 5. Tauschmatrix lesen
+
+In der Tauschmatrix wird die Regel für den Wechsel von der bisherigen zur neuen Nutzung gesucht.
+
+- Die Zeile steht für die bisherige Nutzung.
+- Die Spalte steht für die neue Nutzung.
+- Gleiche Ausgangs- und Zielnutzung ergibt `0`.
+
+### 6. Marker zwischen den Boxen bewegen
+
+Die Tauschmatrix legt fest, welche Akteurs- und Ereignismarker zwischen den beiden Boxen bewegt werden.
+
+Die Zeichen haben für alle Marker dieselbe Bedeutung:
+
+- `+ Marker`: Den genannten Marker aus der Tauschbox nehmen und in die Verlust-Box legen.
+- `− Marker`: Den genannten Marker aus der Verlust-Box nehmen und zurück in die Tauschbox legen.
+- `0`: Es wird kein Marker bewegt.
+
+Diese Regel gilt für:
+
+- Tiere,
+- Pflanzen,
+- Besucher,
+- Anwohner,
+- Beschäftigte,
+- VSM,
+- ESM,
+- NSM,
+- DMS,
+- alle weiteren Marker der Tauschmatrix.
+
+Marker werden niemals auf die Karte gelegt.
+
+Ist ein benötigter Marker nicht in der vorgesehenen Box vorhanden, wird kein negativer Bestand erzeugt. Die fehlende Verfügbarkeit wird notiert und der Modellzug wird gemeinsam besprochen.
+
+### 7. Ergebnis besprechen
+
+Nach dem Tausch wird gemeinsam betrachtet:
+
+- Welche Nutzung befindet sich jetzt in der Zone?
+- Welcher Nutzungsbaustein wurde verdrängt?
+- Welcher Baustein wurde aus der Verlust-Box zurückgeholt?
+- Welche Marker wurden in die Verlust-Box gelegt?
+- Welche Marker wurden aus der Verlust-Box entfernt?
+- Welche Folgen und Nutzungskonflikte macht der Tausch sichtbar?
+
+## Beispiel: Grünanlage zu Wohnen
+
+1. Eine Zone mit Grünanlage wird ausgewählt.
+2. Der Wohnbaustein wird aus der Tauschbox oder Verlust-Box genommen.
+3. Der Grünanlagenbaustein wird von der Karte genommen und in die Verlust-Box gelegt.
+4. Der Wohnbaustein wird auf die Zone gesetzt.
+5. Die Regel für Grünanlage zu Wohnen wird in der Tauschmatrix gelesen.
+6. Steht dort beispielsweise `+ VSM`, wird ein VSM aus der Tauschbox in die Verlust-Box gelegt.
+7. Anschließend werden der neue Zustand und die sichtbaren Folgen besprochen.
+
+## Wichtige Regeln
+
+- Auf jeder Zone liegt genau ein Nutzungsbaustein.
+- Nutzungsbausteine werden ausgetauscht und nicht gestapelt.
+- Neue Bausteine dürfen aus beiden Boxen genommen werden.
+- Der entfernte Baustein kommt in die Verlust-Box.
+- Bausteine und Marker aus der Verlust-Box dürfen später wiederverwendet werden.
+- Der Inhalt der Tauschbox zählt nicht als Verlust.
+- Marker liegen niemals auf der Karte.
+- `+` bedeutet Bewegung in die Verlust-Box.
+- `−` bedeutet Bewegung aus der Verlust-Box zurück in die Tauschbox.
+- Gleiche Ausgangs- und Zielnutzung ergibt `0`.
+- Alle in der Tauschmatrix enthaltenen Kombinationen sind im Modell erlaubt.
+- Die Marker zeigen qualitative Veränderungen. Sie bilden keine wissenschaftliche Umweltbilanz und keine rechtliche Bewertung.
 
 ## Begriffe
 
-NSG bezeichnet ein Naturschutzgebiet; NSM den Naturschutzmarker im Modell. VSM ist der Versiegelungsmarker, ESM der Entsiegelungsmarker, DMS der Denkmalschutzmarker. Kein Marker bewirkt oder bescheinigt einen rechtlichen Schutzstatus.
+- **VSM:** Versiegelungsmarker
+- **ESM:** Entsiegelungsmarker
+- **NSM:** Naturschutzmarker
+- **DMS:** Denkmalschutzmarker
+- **NSG:** Naturschutzgebiet
+
+NSG und NSM haben unterschiedliche Bedeutungen. Ein Marker erzeugt keinen rechtlichen Schutzstatus und bestätigt keine planerische Zulässigkeit.
