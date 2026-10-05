@@ -1,56 +1,162 @@
-# Tauschmatrix - vorläufige Arbeitsfassung
+# Tauschmatrix
 
-Stand: 02.10.2026. Zeilen bezeichnen die Ausgangsnutzung, Spalten die Zielnutzung. Alle 25 gerichteten Kombinationen einschließlich fünf Diagonalfeldern sind enthalten.
+## Zweck der Matrix
 
-Quelle: [Whiteboard-Original](../docs/assets/tauschmatrix_original.jpg). Die Beschriftung oben links ist missverständlich: „ist da“ steht am oberen Bereich, „wird zu“ links. Diese Dokumentation interpretiert die Einträge nach ihrem Inhalt wie die Übergabe: Zeile = Ausgang, Spalte = Ziel. Die Teamprüfung der Achsen bleibt erforderlich.
+Die Tauschmatrix beschreibt, welche Akteurs- und Ereignismarker bei einem Nutzungswechsel zwischen der Tauschbox und der Verlust-Box bewegt werden.
 
-`+` = hinzufügen, `−` = entfernen, `0` = keine Änderung. ESM wird bei einem bestätigten Entsiegelungstausch in die Box gegeben; es ist kein zusätzlicher Akteur auf der Karte.
+Der Austausch des Nutzungsbausteins erfolgt immer zusätzlich zu den Angaben in der Matrix:
 
-**Korrekturen gegenüber der Transkription:** GA → W erhält + VSM statt + ESM. W → GA erhält zusätzlich + ESM und entfernt VSM. Diese Marker wurden am 02.10.2026 von Marcel erläutert. Pflanzen in W → GA und Ge → GA stehen im Original in Klammern und bleiben ungeklärt. Akteursangaben sind nicht durch die Versiegelungserläuterung zusätzlich bestätigt.
+1. Den neuen Nutzungsbaustein aus der Tauschbox oder der Verlust-Box nehmen.
+2. Den bisherigen Nutzungsbaustein der Zone in die Verlust-Box legen.
+3. Den neuen Nutzungsbaustein auf die Zone setzen.
+4. Die zugehörigen Marker gemäß der Tauschmatrix bewegen.
 
-In anderen Richtungen werden auffällige ESM-Einträge nicht stillschweigend auf VSM geändert. Eine logische Übertragung auf weitere Nutzungen wäre ein neuer Vorschlag, keine bestätigte Originalregel.
+Die Marker werden nicht auf die Karte gelegt. Sie befinden sich immer in einer der beiden Boxen.
 
-| Ausgang ↓ / Ziel → | Koppel | Grünanlage | Wohnen | Gewerbe | Erholung/Freizeit |
+## Aufbau der Matrix
+
+- Die Zeile bezeichnet die bisherige Nutzung der Zone.
+- Die Spalte bezeichnet die neue Nutzung der Zone.
+- Die Zelle am Schnittpunkt enthält die Markerbewegungen für diesen Tausch.
+- Gleiche Ausgangs- und Zielnutzung ergibt `0`.
+
+Beispiel: Für einen Wechsel von Grünanlage zu Wohnen wird die Zeile `Grünanlage` und die Spalte `Wohnen` gelesen.
+
+## Bedeutung der Zeichen
+
+Die Zeichen haben für alle Akteurs- und Ereignismarker dieselbe Bedeutung:
+
+- `+ Marker`: Den genannten Marker aus der Tauschbox nehmen und in die Verlust-Box legen.
+- `− Marker`: Den genannten Marker aus der Verlust-Box nehmen und zurück in die Tauschbox legen.
+- `0`: Es wird kein Marker bewegt.
+
+Ist ein benötigter Marker nicht in der vorgesehenen Box vorhanden, wird kein negativer Bestand erzeugt. Der Marker wird nicht bewegt und die Abweichung wird für die gemeinsame Besprechung festgehalten.
+
+Jede Angabe in einer Matrixzelle wird pro Tausch genau einmal ausgeführt.
+
+## Abkürzungen
+
+- **VSM:** Versiegelungsmarker
+- **ESM:** Entsiegelungsmarker
+- **NSM:** Naturschutzmarker
+- **DMS:** Denkmalschutzmarker
+
+Akteursmarker sind beispielsweise Tiere, Pflanzen, Besucher, Anwohner und Beschäftigte.
+
+## Nutzungswechsel als Matrix
+
+| Bisherige Nutzung | Koppel | Grünanlage | Wohnen | Gewerbe | Erholung/Freizeit |
 |---|---|---|---|---|---|
-| Koppel | 0 | + Besucher; − Tiere; − NSM | + ESM; + Anwohner; − NSM; − Pflanzen; − Tiere **[prüfen]** | + ESM; + Beschäftigte; + DMS; − NSM; − Tiere; − Pflanzen **[prüfen]** | + ESM; + Besucher; − NSM; − Tiere **[prüfen]** |
-| Grünanlage | + NSM; + Tiere; − Besucher | 0 | + VSM; + Anwohner; − Pflanzen; − Besucher **[prüfen]** | + ESM; + Beschäftigte; + DMS; − Tiere; − Pflanzen; − Besucher **[prüfen]** | + ESM; − Pflanzen **[prüfen]** |
-| Wohnen | + Tiere; + NSM; + Pflanzen; − Anwohner; − VSM **[prüfen]** | + ESM; + Besucher; − VSM; − Anwohner **[prüfen]** | 0 | + Beschäftigte; + DMS; − Anwohner **[prüfen]** | + Besucher; − Anwohner |
-| Gewerbe | + NSM; + Tiere; + Pflanzen; − Beschäftigte; − VSM **[prüfen]** | + Besucher; − VSM; − Beschäftigte **[prüfen]** | + Anwohner; − Beschäftigte **[prüfen]** | 0 | + Besucher; − Beschäftigte **[prüfen]** |
-| Erholung/Freizeit | + NSM; + Tiere; − Besucher; − VSM **[prüfen]** | + Pflanzen; − VSM | + Anwohner; − Besucher **[prüfen]** | + Beschäftigte; + DMS; − Besucher **[prüfen]** | 0 |
+| **Koppel** | 0 | + Besucher; − Tiere; − NSM | + ESM; + Anwohner; − NSM; − Pflanzen; − Tiere | + ESM; + Beschäftigte; + DMS; − NSM; − Tiere; − Pflanzen | + ESM; + Besucher; − NSM; − Tiere |
+| **Grünanlage** | + NSM; + Tiere; − Besucher | 0 | + VSM; + Anwohner; − Pflanzen; − Besucher | + ESM; + Beschäftigte; + DMS; − Tiere; − Pflanzen; − Besucher | + ESM; − Pflanzen |
+| **Wohnen** | + Tiere; + NSM; + Pflanzen; − Anwohner; − VSM | + ESM; + Besucher; − VSM; − Anwohner | 0 | + Beschäftigte; + DMS; − Anwohner | + Besucher; − Anwohner |
+| **Gewerbe** | + NSM; + Tiere; + Pflanzen; − Beschäftigte; − VSM | + Besucher; − VSM; − Beschäftigte | + Anwohner; − Beschäftigte | 0 | + Besucher; − Beschäftigte |
+| **Erholung/Freizeit** | + NSM; + Tiere; − Besucher; − VSM | + Pflanzen; − VSM | + Anwohner; − Besucher | + Beschäftigte; + DMS; − Besucher | 0 |
 
-## Hinweise je Transformation
+## Nutzungswechsel als Liste
 
-| Ausgang | Ziel | Hinweis |
-|---|---|---|
-| Koppel | Wohnen | ESM/VSM ungeklärt |
-| Koppel | Gewerbe | ESM/VSM und DMS ungeklärt |
-| Koppel | Erholung/Freizeit | Entfernung Pflanzen?; ESM/VSM ungeklärt |
-| Grünanlage | Wohnen | Original: ESM; korrigiert auf VSM laut Erläuterung |
-| Grünanlage | Gewerbe | ESM/VSM und DMS ungeklärt; Tiere laut Original, obwohl GA-Legende keine Weidetiere vorsieht |
-| Grünanlage | Erholung/Freizeit | ESM/VSM ungeklärt |
-| Wohnen | Koppel | Original teilweise VM statt VSM |
-| Wohnen | Grünanlage | Pflanzen in Klammern; ESM ergänzt laut Erläuterung |
-| Wohnen | Gewerbe | DMS ungeklärt |
-| Gewerbe | Koppel | Original teilweise VM statt VSM |
-| Gewerbe | Grünanlage | Pflanze in Klammern, unsicher |
-| Gewerbe | Wohnen | DMS-Entfernung nicht angegeben |
-| Gewerbe | Erholung/Freizeit | DMS-Entfernung nicht angegeben |
-| Erholung/Freizeit | Koppel | Pflanzen? |
-| Erholung/Freizeit | Wohnen | Original: in Bezug auf Natur gleich |
-| Erholung/Freizeit | Gewerbe | DMS ungeklärt |
+| Ausgang | Ziel | In die Verlust-Box | Aus der Verlust-Box in die Tauschbox |
+|---|---|---|---|
+| Koppel | Koppel | Keine Änderung | Keine Änderung |
+| Koppel | Grünanlage | Besucher | Tiere, NSM |
+| Koppel | Wohnen | ESM, Anwohner | NSM, Pflanzen, Tiere |
+| Koppel | Gewerbe | ESM, Beschäftigte, DMS | NSM, Tiere, Pflanzen |
+| Koppel | Erholung/Freizeit | ESM, Besucher | NSM, Tiere |
+| Grünanlage | Koppel | NSM, Tiere | Besucher |
+| Grünanlage | Grünanlage | Keine Änderung | Keine Änderung |
+| Grünanlage | Wohnen | VSM, Anwohner | Pflanzen, Besucher |
+| Grünanlage | Gewerbe | ESM, Beschäftigte, DMS | Tiere, Pflanzen, Besucher |
+| Grünanlage | Erholung/Freizeit | ESM | Pflanzen |
+| Wohnen | Koppel | Tiere, NSM, Pflanzen | Anwohner, VSM |
+| Wohnen | Grünanlage | ESM, Besucher | VSM, Anwohner |
+| Wohnen | Wohnen | Keine Änderung | Keine Änderung |
+| Wohnen | Gewerbe | Beschäftigte, DMS | Anwohner |
+| Wohnen | Erholung/Freizeit | Besucher | Anwohner |
+| Gewerbe | Koppel | NSM, Tiere, Pflanzen | Beschäftigte, VSM |
+| Gewerbe | Grünanlage | Besucher | VSM, Beschäftigte |
+| Gewerbe | Wohnen | Anwohner | Beschäftigte |
+| Gewerbe | Gewerbe | Keine Änderung | Keine Änderung |
+| Gewerbe | Erholung/Freizeit | Besucher | Beschäftigte |
+| Erholung/Freizeit | Koppel | NSM, Tiere | Besucher, VSM |
+| Erholung/Freizeit | Grünanlage | Pflanzen | VSM |
+| Erholung/Freizeit | Wohnen | Anwohner | Besucher |
+| Erholung/Freizeit | Gewerbe | Beschäftigte, DMS | Besucher |
+| Erholung/Freizeit | Erholung/Freizeit | Keine Änderung | Keine Änderung |
+## Beispiel: Grünanlage zu Wohnen
 
-## CSV-Schema
+Die bisherige Nutzung ist Grünanlage. Die neue Nutzung ist Wohnen.
 
-UTF-8, Komma als Spaltentrenner, Semikolon innerhalb der Listen. Eine Zeile pro gerichteter Transformation. Leere Listen bedeuten keine in dieser Transkription genannten Elemente; sie sind kein Nachweis einer vollständig validierten Regel.
+Die entsprechende Matrixzelle enthält:
+
+`+ VSM; + Anwohner; − Pflanzen; − Besucher`
+
+Damit werden folgende Schritte ausgeführt:
+
+1. Einen VSM aus der Tauschbox in die Verlust-Box legen.
+2. Einen Anwohnermarker aus der Tauschbox in die Verlust-Box legen.
+3. Einen Pflanzenmarker aus der Verlust-Box zurück in die Tauschbox legen.
+4. Einen Besuchermarker aus der Verlust-Box zurück in die Tauschbox legen.
+
+Die Marker bleiben in den Boxen und werden nicht auf die Karte gelegt.
+
+## Beispiel: Wohnen zu Grünanlage
+
+Die bisherige Nutzung ist Wohnen. Die neue Nutzung ist Grünanlage.
+
+Die entsprechende Matrixzelle enthält:
+
+`+ ESM; + Besucher; − VSM; − Anwohner`
+
+Damit werden folgende Schritte ausgeführt:
+
+1. Einen ESM aus der Tauschbox in die Verlust-Box legen.
+2. Einen Besuchermarker aus der Tauschbox in die Verlust-Box legen.
+3. Einen VSM aus der Verlust-Box zurück in die Tauschbox legen.
+4. Einen Anwohnermarker aus der Verlust-Box zurück in die Tauschbox legen.
+
+## Regeln für die Anwendung
+
+- Die Matrix wird erst nach dem Austausch des Nutzungsbausteins angewendet.
+- Alle Angaben einer Matrixzelle werden einmal ausgeführt.
+- Marker werden ausschließlich zwischen den beiden Boxen bewegt.
+- Marker werden niemals auf die Karte gelegt.
+- Bausteine und Marker aus der Verlust-Box dürfen später erneut verwendet werden.
+- Ein aus der Verlust-Box entnommenes Element zählt nicht mehr als aktueller Verlust.
+- Der Inhalt der Verlust-Box zeigt den aktuellen Zustand und nicht die gesamte Tauschhistorie.
+- Ist ein Marker nicht verfügbar, wird kein Ersatz erfunden und kein negativer Bestand erzeugt.
+- Alle in der Matrix enthaltenen Nutzungskombinationen sind im Modell erlaubt.
+- Die Matrix beschreibt qualitative Folgen. Sie ist keine wissenschaftliche Umweltbilanz und keine rechtliche Bewertung.
+
+## Noch zu prüfende Matrixeinträge
+
+Die folgenden Punkte betreffen einzelne Inhalte der Matrix, nicht die allgemeine Spielmechanik:
+
+- Die Verwendung von ESM oder VSM bei mehreren Wechseln von Koppel und Grünanlage sollte noch einmal gemeinsam geprüft werden.
+- Die Verwendung von DMS bei Wechseln zu oder von Gewerbe sollte überprüft werden.
+- Einzelne Pflanzenangaben bei Koppel, Grünanlage, Wohnen und Gewerbe sind im ursprünglichen Arbeitsstand nicht eindeutig.
+- Der Tiermarker beim Wechsel von Grünanlage zu Gewerbe sollte mit der Flächenlegende abgeglichen werden.
+
+Bis zu einer gemeinsamen Änderung gelten die Einträge der oben dargestellten Matrix.
+
+## CSV-Datei
+
+Die maschinenlesbare Fassung enthält eine Zeile pro gerichtetem Nutzungswechsel.
 
 | Feld | Bedeutung |
 |---|---|
-| ausgang, ziel | ausgeschriebene Nutzungskategorien |
-| hinzugefuegt, entfernt | vorläufige Regel einschließlich der zwei erläuterten Markeränderungen |
-| hinweis | Unsicherheiten, Lesart und Widersprüche |
-| status | original_transkribiert, versiegelung_korrigiert oder keine_aenderung; ggf. offen |
-| original_hinzugefuegt, original_entfernt | Transkription vor der Versiegelungskorrektur |
+| `ausgang` | bisherige Nutzung |
+| `ziel` | neue Nutzung |
+| `hinzugefuegt` | Marker, die aus der Tauschbox in die Verlust-Box gelegt werden |
+| `entfernt` | Marker, die aus der Verlust-Box zurück in die Tauschbox gelegt werden |
+| `hinweis` | noch offene oder zu prüfende Besonderheiten |
+| `status` | Bearbeitungs- oder Prüfstatus des Eintrags |
+| `original_hinzugefuegt` | ursprünglich erfasste Plus-Angaben |
+| `original_entfernt` | ursprünglich erfasste Minus-Angaben |
 
-„Original“ bezeichnet hier die manuelle Transkription des Fotos, keine unabhängig verifizierte Regelfassung. Klammerzusätze zu Pflanzen stehen im Hinweisfeld. VM wird als VSM normalisiert. Andere Rechtschreibvarianten wie Tier/Tiere werden vereinheitlicht.
+Die Datei verwendet UTF-8, Kommas als Spaltentrenner und Semikolons innerhalb der Markerlisten.
 
-Die Matrix ist eine vom Team entwickelte didaktische Modellannahme, keine wissenschaftlich validierte planerische, ökologische oder rechtliche Bewertung. NSM und DMS sind Modellsymbole, keine rechtswirksamen Statusänderungen. Der aktuelle Arbeitsstand genügt zum Nachvollziehen der Regeln, aber nicht für eine ungeprüfte automatische Simulation.
+Leere Markerlisten bedeuten, dass für diese Richtung keine entsprechenden Markerbewegungen eingetragen sind.
+
+## Quelle
+
+Die Matrix wurde aus dem [Whiteboard-Original](../docs/assets/tauschmatrix_original.jpg) in eine lesbare Tabelle übertragen. Für die Anwendung des Modells ist die in diesem Dokument dargestellte Matrix maßgeblich.
