@@ -27,6 +27,6 @@ SHA-256 der aktuellen Excel-Datei: `aae6512198033a36385b7ae0aa1fbdd1a500d446271e
 | Naturschutzgebiet und natürlicher Lebensraum | 1–7, 9, 10, 13–15, 18 | 13 |
 | Flughafenbestand / Denkmalschutz | 8, 11, 12 | 3 |
 | Freizeit / Erholung | 16, 17, 19, 20 | 4 |
-| Wohnen / Quartier | 21,22 | 2 |
+| Wohnen / Quartier | 21, 22 | 2 |
 
 Für die vollständige zonenweise Zuordnung sind `zones.xlsx` und `zones.csv` maßgeblich.
