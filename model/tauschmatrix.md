@@ -127,17 +127,6 @@ Damit werden folgende Schritte ausgeführt:
 - Alle in der Matrix enthaltenen Nutzungskombinationen sind im Modell erlaubt.
 - Die Matrix beschreibt qualitative Folgen. Sie ist keine wissenschaftliche Umweltbilanz und keine rechtliche Bewertung.
 
-## Noch zu prüfende Matrixeinträge
-
-Die folgenden Punkte betreffen einzelne Inhalte der Matrix, nicht die allgemeine Spielmechanik:
-
-- Die Verwendung von ESM oder VSM bei mehreren Wechseln von Koppel und Grünanlage sollte noch einmal gemeinsam geprüft werden.
-- Die Verwendung von DMS bei Wechseln zu oder von Gewerbe sollte überprüft werden.
-- Einzelne Pflanzenangaben bei Koppel, Grünanlage, Wohnen und Gewerbe sind im ursprünglichen Arbeitsstand nicht eindeutig.
-- Der Tiermarker beim Wechsel von Grünanlage zu Gewerbe sollte mit der Flächenlegende abgeglichen werden.
-
-Bis zu einer gemeinsamen Änderung gelten die Einträge der oben dargestellten Matrix.
-
 ## CSV-Datei
 
 Die maschinenlesbare Fassung enthält eine Zeile pro gerichtetem Nutzungswechsel.
