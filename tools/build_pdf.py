@@ -21,12 +21,20 @@ OUTPUT = SOURCE.with_suffix('.pdf')
 
 
 def build():
-    fontdir = Path('/usr/share/fonts/truetype/dejavu')
-    if (fontdir / 'DejaVuSans.ttf').exists():
-        for name, file in [('Body', 'DejaVuSans.ttf'), ('BodyBold', 'DejaVuSans-Bold.ttf')]:
-            pdfmetrics.registerFont(TTFont(name, str(fontdir / file)))
-        pdfmetrics.registerFontFamily('Body', normal='Body', bold='BodyBold', italic='Body', boldItalic='BodyBold')
-        normal, bold = 'Body', 'BodyBold'
+    font_pairs = [
+        (Path('C:/Windows/Fonts/arial.ttf'), Path('C:/Windows/Fonts/arialbd.ttf')),
+        (Path('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'),
+         Path('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf')),
+    ]
+    for regular_font, bold_font in font_pairs:
+        if regular_font.exists() and bold_font.exists():
+            pdfmetrics.registerFont(TTFont('Body', str(regular_font)))
+            pdfmetrics.registerFont(TTFont('BodyBold', str(bold_font)))
+            pdfmetrics.registerFontFamily(
+                'Body', normal='Body', bold='BodyBold', italic='Body', boldItalic='BodyBold'
+            )
+            normal, bold = 'Body', 'BodyBold'
+            break
     else:
         normal, bold = 'Helvetica', 'Helvetica-Bold'
     styles = getSampleStyleSheet()
@@ -39,6 +47,7 @@ def build():
     width = A4[0] - 100
 
     def inline(s):
+        s = s.translate(str.maketrans({'−': '-', '–': '-', '—': '-', '‑': '-'}))
         s = escape(s)
         s = re.sub(r'`([^`]+)`', r'<font color="#465e36">\1</font>', s)
         s = re.sub(r'\*\*([^*]+)\*\*', r'<b>\1</b>', s)
