@@ -1,13 +1,13 @@
 # KI-Verzeichnis
 
-Dieses Verzeichnis dokumentiert den Einsatz KI-basierter Hilfsmittel im Projekt **„Tegel im Tausch“**.
+Dieses Verzeichnis dokumentiert unseren Einsatz KI-basierter Hilfsmittel im Projekt **„Tegel im Tausch“**.
 
 ## Verwendete KI-Tools
 
 | KI-Tool | Einsatzform | Grund | Betroffene Teile | Anmerkungen |
 |---|---|---|---|---|
-| ChatGPT, OpenAI | Brainstorming, Strukturierung und Prüfung der Projektidee | Die Grundidee war vorhanden. Mithilfe der KI wurden mögliche Abläufe, Kategorien und Zusammenhänge diskutiert und zu einem umsetzbaren Konzept weiterentwickelt. | Ausarbeitung des Modellkonzepts und der Spielmechanik | Die grundlegende Projektidee und die fachlichen Entscheidungen stammen vom Projektteam. KI-Vorschläge wurden diskutiert, verändert oder verworfen. |
-| ChatGPT, OpenAI | Strukturierung, Formulierung und Überarbeitung der technischen Dokumentation | Die Regeln, Datenquellen und technischen Bestandteile sollten verständlich, einheitlich und nachvollziehbar dokumentiert werden. | Technische Dokumentation im GitHub-Repository, insbesondere Modellregeln, Tauschmatrix, Quellenbeschreibung und Erläuterungen zu den Zonendaten | Inhalte und Regeln wurden vom Projektteam geprüft und fachlich korrigiert. Die KI wurde vor allem als Schreib-, Strukturierungs- und Konsistenzhilfe eingesetzt. |
+| ChatGPT, OpenAI | Brainstorming, Strukturierung und Prüfung der Projektidee | Unsere Grundidee war vorhanden. Mithilfe der KI haben wir mögliche Abläufe, Kategorien und Zusammenhänge diskutiert und zu einem umsetzbaren Konzept weiterentwickelt. | Ausarbeitung des Modellkonzepts und der Spielmechanik | Die grundlegende Projektidee und die fachlichen Entscheidungen stammen von uns. KI-Vorschläge haben wir diskutiert, verändert oder verworfen. |
+| ChatGPT, OpenAI | Strukturierung, Formulierung und Überarbeitung der technischen Dokumentation | Die Regeln, Datenquellen und technischen Bestandteile sollten verständlich, einheitlich und nachvollziehbar dokumentiert werden. | Technische Dokumentation im GitHub-Repository, insbesondere Modellregeln, Tauschmatrix, Quellenbeschreibung und Erläuterungen zu den Zonendaten | Wir haben die Inhalte und Regeln geprüft und fachlich korrigiert. Die KI wurde vor allem als Schreib-, Strukturierungs- und Konsistenzhilfe eingesetzt. |
 | Bildgenerierung in ChatGPT/OpenAI | Erzeugung einer visuellen Skizze des geplanten Modells | Das noch nicht fertig gebaute Modell sollte in der Präsentation frühzeitig veranschaulicht werden. | Präsentation: KI-generierte Visualisierung beziehungsweise Modellskizze | Die Abbildung ist eine generierte Konzeptdarstellung und kein Foto des realen Modells. |
 | ChatGPT, OpenAI | Erstellung eines interaktiven Website-Prototyps | Für ein Projektmeeting wurde eine ungefähre Visualisierung des Modells und eines möglichen Spielablaufs benötigt. | Website-Prototyp „Tegel im Tausch – Spielanleitung“; archivierte HTML-Fassung: `docs/prototyp/tegel-im-tausch-prototyp.html` | Die Website zeigt einen frühen Arbeitsstand und ist nicht als verbindliche oder aktuelle Regelfassung zu verstehen. |
 
@@ -22,5 +22,5 @@ Die ursprünglichen Eingaben wurden nicht vollständig wortgetreu protokolliert.
 
 ## Verantwortung und Prüfung
 
-Die KI-Ausgaben wurden nicht als eigenständige fachliche Quelle verwendet. Das Projektteam hat die Ergebnisse ausgewählt, überprüft, überarbeitet und an den tatsächlichen Projektstand angepasst. Die Verantwortung für die übernommenen Inhalte und die finale Ausgestaltung liegt beim Projektteam.
+Wir haben KI-Ausgaben nicht als eigenständige fachliche Quelle verwendet. Die Ergebnisse wurden von uns ausgewählt, überprüft, überarbeitet und an den tatsächlichen Projektstand angepasst. Die Verantwortung für die übernommenen Inhalte und die finale Ausgestaltung liegt bei uns.
 

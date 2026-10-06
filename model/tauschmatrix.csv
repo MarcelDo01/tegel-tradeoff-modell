@@ -1,26 +1,26 @@
-ausgang,ziel,hinzugefuegt,entfernt,hinweis,status,original_hinzugefuegt,original_entfernt
-Koppel,Koppel,,,,keine_aenderung,,
-Koppel,Grünanlage,Besucher,Tiere; NSM,,original_transkribiert,Besucher,Tiere; NSM
-Koppel,Wohnen,ESM; Anwohner,NSM; Pflanzen; Tiere,ESM/VSM ungeklärt,original_transkribiert; offen,ESM; Anwohner,NSM; Pflanzen; Tiere
-Koppel,Gewerbe,ESM; Beschäftigte; DMS,NSM; Tiere; Pflanzen,ESM/VSM und DMS ungeklärt,original_transkribiert; offen,ESM; Beschäftigte; DMS,NSM; Tiere; Pflanzen
-Koppel,Erholung/Freizeit,ESM; Besucher,NSM; Tiere,Entfernung Pflanzen?; ESM/VSM ungeklärt,original_transkribiert; offen,ESM; Besucher,NSM; Tiere
-Grünanlage,Koppel,NSM; Tiere,Besucher,,original_transkribiert,NSM; Tiere,Besucher
-Grünanlage,Grünanlage,,,,keine_aenderung,,
-Grünanlage,Wohnen,VSM; Anwohner,Pflanzen; Besucher,Original: ESM; korrigiert auf VSM laut Erläuterung,versiegelung_korrigiert,ESM; Anwohner,Pflanzen; Besucher
-Grünanlage,Gewerbe,ESM; Beschäftigte; DMS,Tiere; Pflanzen; Besucher,"ESM/VSM und DMS ungeklärt; Tiere laut Original, obwohl GA-Legende keine Weidetiere vorsieht",original_transkribiert; offen,ESM; Beschäftigte; DMS,Tiere; Pflanzen; Besucher
-Grünanlage,Erholung/Freizeit,ESM,Pflanzen,ESM/VSM ungeklärt,original_transkribiert; offen,ESM,Pflanzen
-Wohnen,Koppel,Tiere; NSM; Pflanzen,Anwohner; VSM,Original teilweise VM statt VSM,original_transkribiert,Tiere; NSM; Pflanzen,Anwohner; VSM
-Wohnen,Grünanlage,ESM; Besucher,VSM; Anwohner,Pflanzen in Klammern; ESM ergänzt laut Erläuterung,versiegelung_korrigiert; offen,Besucher,VSM; Anwohner
-Wohnen,Wohnen,,,,keine_aenderung,,
-Wohnen,Gewerbe,Beschäftigte; DMS,Anwohner,DMS ungeklärt,original_transkribiert; offen,Beschäftigte; DMS,Anwohner
-Wohnen,Erholung/Freizeit,Besucher,Anwohner,,original_transkribiert,Besucher,Anwohner
-Gewerbe,Koppel,NSM; Tiere; Pflanzen,Beschäftigte; VSM,Original teilweise VM statt VSM,original_transkribiert,NSM; Tiere; Pflanzen,Beschäftigte; VSM
-Gewerbe,Grünanlage,Besucher,VSM; Beschäftigte,"Pflanze in Klammern, unsicher",original_transkribiert; offen,Besucher,VSM; Beschäftigte
-Gewerbe,Wohnen,Anwohner,Beschäftigte,DMS-Entfernung nicht angegeben,original_transkribiert,Anwohner,Beschäftigte
-Gewerbe,Gewerbe,,,,keine_aenderung,,
-Gewerbe,Erholung/Freizeit,Besucher,Beschäftigte,DMS-Entfernung nicht angegeben,original_transkribiert,Besucher,Beschäftigte
-Erholung/Freizeit,Koppel,NSM; Tiere,Besucher; VSM,Pflanzen?,original_transkribiert; offen,NSM; Tiere,Besucher; VSM
-Erholung/Freizeit,Grünanlage,Pflanzen,VSM,,original_transkribiert,Pflanzen,VSM
-Erholung/Freizeit,Wohnen,Anwohner,Besucher,Original: in Bezug auf Natur gleich,original_transkribiert,Anwohner,Besucher
-Erholung/Freizeit,Gewerbe,Beschäftigte; DMS,Besucher,DMS ungeklärt,original_transkribiert; offen,Beschäftigte; DMS,Besucher
-Erholung/Freizeit,Erholung/Freizeit,,,,keine_aenderung,,
+ausgang,ziel,hinzugefuegt,entfernt,hinweis,status
+Koppel,Koppel,,,,keine_aenderung
+Koppel,Grünanlage,Besucher,Tiere; NSM,,aktuelle_regel
+Koppel,Wohnen,ESM; Anwohner,NSM; Pflanzen; Tiere,ESM/VSM prüfen,offen
+Koppel,Gewerbe,ESM; Beschäftigte; DMS,NSM; Tiere; Pflanzen,ESM/VSM und DMS prüfen,offen
+Koppel,Erholung/Freizeit,ESM; Besucher,NSM; Tiere,Pflanzenangabe sowie ESM/VSM prüfen,offen
+Grünanlage,Koppel,NSM; Tiere,Besucher,,aktuelle_regel
+Grünanlage,Grünanlage,,,,keine_aenderung
+Grünanlage,Wohnen,VSM; Anwohner,Pflanzen; Besucher,,aktuelle_regel
+Grünanlage,Gewerbe,ESM; Beschäftigte; DMS,Tiere; Pflanzen; Besucher,Tiermarker sowie ESM/VSM und DMS prüfen,offen
+Grünanlage,Erholung/Freizeit,ESM,Pflanzen,ESM/VSM prüfen,offen
+Wohnen,Koppel,Tiere; NSM; Pflanzen,Anwohner; VSM,,aktuelle_regel
+Wohnen,Grünanlage,ESM; Besucher,VSM; Anwohner,Pflanzenangabe prüfen,offen
+Wohnen,Wohnen,,,,keine_aenderung
+Wohnen,Gewerbe,Beschäftigte; DMS,Anwohner,DMS prüfen,offen
+Wohnen,Erholung/Freizeit,Besucher,Anwohner,,aktuelle_regel
+Gewerbe,Koppel,NSM; Tiere; Pflanzen,Beschäftigte; VSM,,aktuelle_regel
+Gewerbe,Grünanlage,Besucher,VSM; Beschäftigte,Pflanzenangabe prüfen,offen
+Gewerbe,Wohnen,Anwohner,Beschäftigte,Entfernung von DMS prüfen,offen
+Gewerbe,Gewerbe,,,,keine_aenderung
+Gewerbe,Erholung/Freizeit,Besucher,Beschäftigte,Entfernung von DMS prüfen,offen
+Erholung/Freizeit,Koppel,NSM; Tiere,Besucher; VSM,Pflanzenangabe prüfen,offen
+Erholung/Freizeit,Grünanlage,Pflanzen,VSM,,aktuelle_regel
+Erholung/Freizeit,Wohnen,Anwohner,Besucher,,aktuelle_regel
+Erholung/Freizeit,Gewerbe,Beschäftigte; DMS,Besucher,DMS prüfen,offen
+Erholung/Freizeit,Erholung/Freizeit,,,,keine_aenderung
