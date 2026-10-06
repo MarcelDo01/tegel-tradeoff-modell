@@ -153,7 +153,7 @@ Die Zeichen beschreiben ausschließlich Bewegungen zwischen den beiden Boxen:
 
 Diese Logik gilt für alle Akteurs- und Zusatzmarker. Marker werden niemals auf die Karte gelegt. Ist ein benötigter Marker nicht in der vorgesehenen Box vorhanden, wird kein negativer Bestand erzeugt. Die fehlende Verfügbarkeit wird festgehalten und gemeinsam besprochen.
 
-Die Regeln sind gerichtet: Ein Wechsel von A nach B ist nicht automatisch die genaue Umkehrung des Wechsels von B nach A. Die vollständige [Tauschmatrix](../model/tauschmatrix.md) und ihre [CSV-Fassung](../model/tauschmatrix.csv) sind separat dokumentiert.
+Die Regeln sind gerichtet: Ein Wechsel von A nach B ist nicht automatisch die genaue Umkehrung des Wechsels von B nach A. Die vollständige [Tauschmatrix](../model/tauschmatrix.md) ist separat dokumentiert.
 
 ## 9. Ablauf eines Modellzugs
 
@@ -198,8 +198,6 @@ Die Tauschmatrix beschreibt qualitative Modellannahmen. Ein Marker entspricht we
 
 Das Modell ist keine GIS-Simulation, ökologische Bilanz, wissenschaftliche Prognose oder rechtliche Prüfung. Es dient dazu, Zusammenhänge und Zielkonflikte sichtbar zu machen und gemeinsam zu diskutieren.
 
-Einzelne Inhalte der Tauschmatrix sind weiterhin fachlich zu prüfen. Diese Punkte sind direkt in der Matrix gekennzeichnet und betreffen nicht die bestätigte Zwei-Box-Mechanik.
-
 ## 12. Nachbau und Reproduzierbarkeit
 
 Für einen Nachbau werden eine druckfähige Grundkarte, eine transparente Folie, Nutzungsbausteine, Akteurs- und Zusatzmarker, eine Tauschbox, eine Verlust-Box, die Zonenzuweisung und die Tauschmatrix benötigt.
@@ -219,6 +217,6 @@ Fotos und Präsentationsabbildungen dokumentieren den Aufbau, ersetzen jedoch ke
 
 ## 13. Dokumentationsstand
 
-Die Markdown-Dateien enthalten den aktuellen Text- und Regelstand. Die Tauschmatrix wird zusätzlich als CSV und die Zonenzuweisung als Excel- und CSV-Datei bereitgestellt.
+Die Markdown-Dateien enthalten den aktuellen Text- und Regelstand. Die Tauschmatrix ist vollständig in Markdown dokumentiert; die Zonenzuweisung wird als Excel- und CSV-Datei bereitgestellt.
 
 Die Quellen, externen Links und Abbildungsnachweise sind in [Quellen und Herkunft](../references/quellen.md) zusammengefasst. Der Einsatz von KI bei Konzeptentwicklung, Dokumentation, Bildgenerierung und Website-Prototyp ist im [KI-Verzeichnis](ki-verzeichnis.md) beschrieben.

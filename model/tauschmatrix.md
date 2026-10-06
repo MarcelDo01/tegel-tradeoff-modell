@@ -127,23 +127,6 @@ Damit werden folgende Schritte ausgeführt:
 - Alle in der Matrix enthaltenen Nutzungskombinationen sind im Modell erlaubt.
 - Die Matrix beschreibt qualitative Folgen. Sie ist keine wissenschaftliche Umweltbilanz und keine rechtliche Bewertung.
 
-## CSV-Datei
-
-Die maschinenlesbare Fassung enthält eine Zeile pro gerichtetem Nutzungswechsel.
-
-| Feld | Bedeutung |
-|---|---|
-| `ausgang` | bisherige Nutzung |
-| `ziel` | neue Nutzung |
-| `hinzugefuegt` | Marker, die mit `+` aus der Tauschbox in die Verlust-Box gelegt werden |
-| `entfernt` | Marker, die mit `−` aus der Verlust-Box zurück in die Tauschbox gelegt werden |
-| `hinweis` | noch offene oder zu prüfende Besonderheiten |
-| `status` | aktueller Prüfstatus des Eintrags |
-
-Die Datei verwendet UTF-8, Kommas als Spaltentrenner und Semikolons innerhalb der Markerlisten.
-
-Leere Markerlisten bedeuten, dass für diese Richtung keine entsprechenden Markerbewegungen eingetragen sind.
-
 ## Quelle
 
 Die Matrix wurde aus dem [Whiteboard-Original](../docs/assets/tauschmatrix_original.jpg) in eine lesbare Tabelle übertragen. Für die Anwendung des Modells ist die in diesem Dokument dargestellte Matrix maßgeblich.
