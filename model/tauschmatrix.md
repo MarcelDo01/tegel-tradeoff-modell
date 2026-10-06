@@ -2,7 +2,7 @@
 
 ## Zweck der Matrix
 
-Die Tauschmatrix beschreibt, welche Akteurs- und Ereignismarker bei einem Nutzungswechsel zwischen der Tauschbox und der Verlust-Box bewegt werden.
+Die Tauschmatrix beschreibt, welche Akteurs- und Zusatzmarker bei einem Nutzungswechsel zwischen der Tauschbox und der Verlust-Box bewegt werden.
 
 Der Austausch des Nutzungsbausteins erfolgt immer zusätzlich zu den Angaben in der Matrix:
 
@@ -24,7 +24,7 @@ Beispiel: Für einen Wechsel von Grünanlage zu Wohnen wird die Zeile `Grünanla
 
 ## Bedeutung der Zeichen
 
-Die Zeichen haben für alle Akteurs- und Ereignismarker dieselbe Bedeutung:
+Die Zeichen haben für alle Akteurs- und Zusatzmarker dieselbe Bedeutung:
 
 - `+ Marker`: Den genannten Marker aus der Tauschbox nehmen und in die Verlust-Box legen.
 - `− Marker`: Den genannten Marker aus der Verlust-Box nehmen und zurück in die Tauschbox legen.
@@ -146,12 +146,10 @@ Die maschinenlesbare Fassung enthält eine Zeile pro gerichtetem Nutzungswechsel
 |---|---|
 | `ausgang` | bisherige Nutzung |
 | `ziel` | neue Nutzung |
-| `hinzugefuegt` | Marker, die aus der Tauschbox in die Verlust-Box gelegt werden |
-| `entfernt` | Marker, die aus der Verlust-Box zurück in die Tauschbox gelegt werden |
+| `hinzugefuegt` | Marker, die mit `+` aus der Tauschbox in die Verlust-Box gelegt werden |
+| `entfernt` | Marker, die mit `−` aus der Verlust-Box zurück in die Tauschbox gelegt werden |
 | `hinweis` | noch offene oder zu prüfende Besonderheiten |
-| `status` | Bearbeitungs- oder Prüfstatus des Eintrags |
-| `original_hinzugefuegt` | ursprünglich erfasste Plus-Angaben |
-| `original_entfernt` | ursprünglich erfasste Minus-Angaben |
+| `status` | aktueller Prüfstatus des Eintrags |
 
 Die Datei verwendet UTF-8, Kommas als Spaltentrenner und Semikolons innerhalb der Markerlisten.
 

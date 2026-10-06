@@ -9,7 +9,7 @@
 | Finale Excel-Arbeitsdatei | Zonenbezeichnungen und Zonenattribute für insgesamt 22 Zonen | `data/zones.xlsx` |
 | CSV-Export der Zonendaten | Maschinenlesbare Fassung der Excel-Arbeitsdatei | `data/zones.csv` |
 
-Die Modellregeln und die Tauschmatrix wurden für die technische Dokumentation vereinheitlicht und verständlich formuliert. Maßgeblich sind die aktuellen Dateien im Verzeichnis `model/`.
+Für die technische Dokumentation haben wir Modellregeln und Tauschmatrix vereinheitlicht und verständlich formuliert. Maßgeblich sind die aktuellen Dateien im Verzeichnis `model/`.
 
 ## Externe Kartengrundlagen
 
@@ -26,13 +26,13 @@ Folgende Kartenebenen wurden einbezogen:
 - Projektgrenze
 - Hintergrundkarte farbig
 
-Die Kartenebenen dienten als visuelle und räumliche Arbeitsgrundlage für das Modell. Die daraus abgeleiteten Zoneneinteilungen und Modellregeln stellen projektbezogene Modellannahmen dar.
+Die Kartenebenen dienten uns als visuelle und räumliche Arbeitsgrundlage für das Modell.
 
 ### Fachliche Grundlage
 
-Das [Pflege- und Entwicklungskonzept für die Tegeler Stadtheide](https://www.berlin.de/sen/uvk/natur-und-gruen/landschaftsplanung/tegeler-stadtheide/) wurde als fachliche Hintergrundgrundlage verwendet.
+Das [Pflege- und Entwicklungskonzept für die Tegeler Stadtheide](https://www.berlin.de/sen/uvk/natur-und-gruen/landschaftsplanung/tegeler-stadtheide/) haben wir als fachliche Hintergrundgrundlage verwendet.
 
-Die daraus abgeleiteten Zoneneinteilungen und Modellregeln stellen projektbezogene Modellannahmen dar. Sie bilden keine vollständige planerische, ökologische oder rechtliche Bewertung ab.
+Die aus Kartenebenen und Konzept abgeleiteten Zoneneinteilungen und Modellregeln sind projektbezogene Modellannahmen. Sie bilden keine vollständige planerische, ökologische oder rechtliche Bewertung ab.
 
 ## Abbildungen
 

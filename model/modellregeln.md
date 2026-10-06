@@ -18,7 +18,7 @@ Das Modell besteht aus:
 - einer Verlust-Box,
 - der Tauschmatrix.
 
-Auf der Karte liegen ausschließlich die Nutzungsbausteine. Akteurs- und Ereignismarker befinden sich immer in einer der beiden Boxen.
+Auf der Karte liegen ausschließlich die Nutzungsbausteine. Akteurs- und Zusatzmarker befinden sich immer in einer der beiden Boxen.
 
 ## Die beiden Boxen
 
@@ -40,7 +40,7 @@ Die Verlust-Box zeigt deshalb den aktuellen Zustand und nicht die gesamte Geschi
 
 1. Die Karte wird mit dem festgelegten Ausgangszustand aufgebaut.
 2. Auf jeder Zone liegt der zugehörige Nutzungsbaustein.
-3. Alle übrigen Bausteine und Marker werden auf die Tauschbox und die Verlust-Box verteilt.
+3. Die übrigen Bausteine und Marker werden gemäß dem festgelegten Ausgangsaufbau auf die Tauschbox und die Verlust-Box verteilt.
 4. Die beiden Boxen werden klar voneinander getrennt aufgestellt.
 5. Die Tauschmatrix wird gut sichtbar bereitgelegt.
 
@@ -74,7 +74,7 @@ In der Tauschmatrix wird die Regel für den Wechsel von der bisherigen zur neuen
 
 ### 6. Marker zwischen den Boxen bewegen
 
-Die Tauschmatrix legt fest, welche Akteurs- und Ereignismarker zwischen den beiden Boxen bewegt werden.
+Die Tauschmatrix legt fest, welche Akteurs- und Zusatzmarker zwischen den beiden Boxen bewegt werden.
 
 Die Zeichen haben für alle Marker dieselbe Bedeutung:
 
@@ -117,7 +117,7 @@ Nach dem Tausch wird gemeinsam betrachtet:
 3. Der Grünanlagenbaustein wird von der Karte genommen und in die Verlust-Box gelegt.
 4. Der Wohnbaustein wird auf die Zone gesetzt.
 5. Die Regel für Grünanlage zu Wohnen wird in der Tauschmatrix gelesen.
-6. Steht dort beispielsweise `+ VSM`, wird ein VSM aus der Tauschbox in die Verlust-Box gelegt.
+6. Für jeden Marker der Matrixzelle wird die angegebene `+`- oder `−`-Bewegung ausgeführt.
 7. Anschließend werden der neue Zustand und die sichtbaren Folgen besprochen.
 
 ## Wichtige Regeln

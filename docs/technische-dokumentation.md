@@ -1,105 +1,117 @@
 # Setzen. Tauschen. Folgen sichtbar machen.
 
 Technische Dokumentation des physischen Tegel-Modells
+Stand: 6. Oktober 2026
 
-Arbeitsfassung vom 4. Oktober 2026. Team: Thao Trang Le (Anny), Linda Izadi Sharifbad, Fatih Koc und Marcel Do.
-
-Diese Fassung beschreibt den verfügbaren Projektstand anhand der Abschlusspräsentation, des Whiteboard-Fotos, der Übergabe, der anschließenden Erläuterungen und der am 04.10.2026 bereitgestellten Zonenzuweisung. Unsichere Originalregeln und neue Empfehlungen werden ausdrücklich unterschieden.
+Team: Thao Trang Le (Anny), Linda Izadi Sharifbad, Fatih Koc und Marcel Do
 
 ## 1. Projekt und Zielsetzung
 
-Flächen erscheinen in Planungsprozessen mitunter frei oder leer. Tatsächlich besitzen sie bereits ökologische, räumliche und gesellschaftliche Funktionen. Eine neue Nutzung kann Wohnraum, Arbeitsplätze oder Freizeitangebote schaffen und zugleich andere Funktionen verändern oder verdrängen.
+Flächen wirken in Planungsprozessen mitunter frei oder ungenutzt. Tatsächlich erfüllen sie bereits ökologische, räumliche und gesellschaftliche Funktionen. Eine neue Nutzung kann Wohnraum, Arbeitsplätze oder Freizeitangebote schaffen und zugleich andere Funktionen verändern oder verdrängen.
 
-Das Projekt macht diese Nutzungskonflikte über ein physisches, datenbasiertes und interaktives Modell erfahrbar. Eine Zone wird ausgewählt, ihre Nutzung verändert und die Folgen werden anhand von Akteuren und Markern verglichen. Im Mittelpunkt steht das Verständnis von Trade-offs, nicht die Ermittlung einer optimalen Planung.
+Mit unserem physischen, datenbasierten Modell machen wir solche Nutzungskonflikte anschaulich. Eine Zone wird ausgewählt, ihre Nutzung verändert und die daraus entstehenden Markerbewegungen werden gemeinsam besprochen. Im Mittelpunkt steht das Verständnis von Zielkonflikten, nicht die Ermittlung einer optimalen Planung.
 
-Die Zielgruppe umfasst vor allem Kinder und jüngere Menschen, außerdem Besucher und Interessierte ohne planerisches Fachwissen. Die Vereinfachung soll einen verständlichen Gesprächsanlass schaffen. Die Regeln liefern keine belastbaren räumlichen Prognosen.
+Das Modell richtet sich vor allem an Kinder, jüngere Menschen und Interessierte ohne planerisches Fachwissen. Es vereinfacht komplexe Zusammenhänge und schafft einen Gesprächsanlass. Die Regeln liefern keine räumliche Prognose, Umweltbilanz oder rechtliche Bewertung.
 
-## 2. Untersuchungsgebiet und Ausgangszustand
+## 2. Untersuchungsgebiet und Zonierung
 
-Betrachtet wird das gesamte Gelände des ehemaligen Flughafens Berlin-Tegel, nicht ausschließlich die Tegeler Stadtheide. Das Gelände wurde nach Projektbeschreibung in 22 Zonen gegliedert. Die gelieferte Tabelle enthält dagegen 23 eindeutige `zone_id`-Werte. Bis zum Abgleich mit der Karte wird keine Tabellenzeile entfernt oder zusammengelegt.
-
-Der Ausgangszustand verbindet bestehende Eigenschaften mit einzelnen berücksichtigten Entwicklungsplanungen. Im östlichen Bereich wurden geplante Wohnquartiere bereits als Zonen 22 und 23 aufgenommen. Er ist daher kein vollständig historischer Zustand zu einem einheitlichen Stichtag. Die genaue räumliche Zuordnung der 23 Tabellenzeilen zur 22-Zonen-Karte bleibt zu klären.
+Betrachtet wird das gesamte Gelände des ehemaligen Flughafens Berlin-Tegel, nicht ausschließlich die Tegeler Stadtheide. Für das Modell wurde das Gebiet in 22 Zonen gegliedert.
 
 ![Zonendarstellung aus der Präsentation, Folie 2](assets/zonierung.png)
 
-## 3. Datengrundlage
+Die Zonierung entstand durch den Vergleich verschiedener Karteninformationen. Berücksichtigt wurden insbesondere Naturschutz, Biotop- und Artenschutz, Erholung und Freiraumnutzung, Denkmalschutz, Versiegelung, bestehende und geplante Nutzungen sowie die Projektgrenze.
 
-Die räumlichen Grundlagen stammen laut Projektunterlagen hauptsächlich aus dem FUTR HUB Geoportal und dem Entwicklungs- und Pflegekonzept zur Tegeler Stadtheide. Luftbild, Versiegelung und Projektgrenze halfen bei der räumlichen Orientierung. Das Konzept lieferte Informationen zu vorgesehenen Nutzungen und räumlichen Zusammenhängen.
+Wir haben die Zonengrenzen manuell entwickelt und zusätzlich an die rechteckigen Grundplatten der physischen Bausteine angepasst. Die Zonen sind deshalb projektbezogene Modelleinteilungen und keine amtlichen Verwaltungs-, Schutzgebiets- oder Planungseinheiten.
 
-| Grundlage | Rolle im Projekt | Nachweis |
+## 3. Datengrundlagen
+
+### 3.1 Externe Karten- und Konzeptgrundlagen
+
+Für die räumliche Einordnung und die Entwicklung der Zonierung wurden folgende Ebenen im FUTR HUB Geoportal verwendet:
+
+- Versiegelung 2021
+- LaPro Beschlussfassung: Erholung und Freiraumnutzung
+- LaPro Beschlussfassung: Biotop- und Artenschutz
+- Flächennutzungsplan, aktuelle Arbeitskarte
+- Denkmalkarte Berlin
+- Digitale Orthophotos 2025
+- Projektgrenze
+- Hintergrundkarte farbig
+
+Das Pflege- und Entwicklungskonzept für die Tegeler Stadtheide diente als fachliche Hintergrundgrundlage. Die vollständigen Links und Herkunftsnachweise stehen in [Quellen und Herkunft](../references/quellen.md).
+
+### 3.2 Projektdateien
+
+| Grundlage | Verwendung | Datei |
 |---|---|---|
-| Luftbild | Grundkarte und räumliche Orientierung | Präsentation, Folie 4 |
-| Versiegelung | Vergleich der Oberflächenzustände | Präsentation, Folie 4 |
-| Projektgrenze | Abgrenzung des betrachteten Geländes | Präsentation, Folie 4 |
-| Entwicklungs- und Pflegekonzept | Interpretation bestehender und geplanter Funktionen | Präsentation, Folien 4 und 17 |
-| Excel-Arbeitsdatei | strukturierte Zonenattribute | `data/zones.xlsx`; bereitgestellt am 04.10.2026 |
+| Abschlusspräsentation | Projektidee, Arbeitsprozess, Modellaufbau, Fotos und Legenden | `presentation/abschlussprasentation.pdf` |
+| Whiteboard-Foto | Grundlage der Tauschmatrix | `docs/assets/tauschmatrix_original.jpg` |
+| Excel-Arbeitsdatei | Zonenbezeichnungen und Zonenattribute | `data/zones.xlsx` |
+| CSV-Export | maschinenlesbare Fassung der Zonendaten | `data/zones.csv` |
 
-Die Arbeitsdatei nennt projektinterne Quelltypen wie Kartenfolie / EPK, Denkmalkarte, Freiraumplanung, Kompensationskonzept und Masterplan Schumacher Quartier. Konkrete Layernamen, Datenstände, Abrufdaten und die verwendete Konzeptversion sind noch zu ergänzen. Diese Dokumentation erfindet keine Metadaten. Rechtliche Ausgleichs- oder Ersatzpflichten werden nicht aus der vereinfachten Modelllogik abgeleitet.
+Die Quellen wurden als Arbeitsgrundlagen für ein didaktisches Modell verwendet. Aus ihnen werden keine ungeprüften rechtlichen Aussagen abgeleitet.
 
-## 4. Datenaufbereitung und Werkzeuge
+## 4. Arbeitsprozess und Werkzeuge
 
-Im FUTR HUB wurden relevante Karteninformationen betrachtet und miteinander verglichen. Figma diente als Sammelboard für Karten und Screenshots. Es wurde nicht als GIS-Analysewerkzeug eingesetzt.
+Im FUTR HUB Geoportal wurden die relevanten Kartenebenen betrachtet und miteinander verglichen. QGIS wurde genutzt, um das Luftbild zu importieren, den benötigten Ausschnitt festzulegen und die Grundkarte für den Druck im A1-Format vorzubereiten.
 
-QGIS wurde zum Import des Luftbilds, zur Auswahl des Ausschnitts und zur Druckvorbereitung im A1-Format verwendet. Eine automatisierte Zonierung oder weitergehende GIS-Analyse war kein Bestandteil des finalen Vorgehens.
-
-Ein zwischenzeitlicher Python-Ansatz zur Datenaufbereitung beziehungsweise Zonierung wurde verworfen, weil die manuelle Lösung für das Projekt angemessener war. Er ist kein Bestandteil der reproduzierten Modellmethode. Das PDF-Erzeugungsskript in diesem Repository dient ausschließlich der Dokumentation.
+Die eigentliche Zonierung erfolgte manuell. Wir haben die Informationen der Kartenebenen verglichen, die Grundkarte ausgedruckt und die Zonengrenzen auf einer transparenten Folie skizziert. Eine automatisierte Zonierung oder weitergehende GIS-Analyse war nicht Bestandteil des finalen Vorgehens.
 
 ![Kartenvergleich und Arbeit an der Grundkarte, Präsentation, Folie 6](assets/arbeitsprozess.png)
 
-## 5. Manueller Zonierungsprozess
+## 5. Zonendatenmodell
 
-Die Zonierung entstand durch den Vergleich mehrerer Karteninformationen: insbesondere Naturschutz, Denkmalschutz, Versiegelung, bestehende und geplante Nutzungen sowie räumliche Struktur. Die Zoneinteilung wurde nicht unmittelbar aus einem einzelnen GIS-Layer übernommen.
+Die Excel-Datei enthält im Tabellenblatt `Tabelle1` 22 Datenzeilen und zehn vollständig befüllte Spalten. Die `zone_id`-Werte reichen ohne Lücken von 1 bis 22. Der CSV-Export bildet denselben Tabellenstand ab; das [Data Dictionary](../data/data_dictionary.md) erläutert die einzelnen Felder.
 
-Das Team wählte Karten aus, verglich deren Informationen, druckte die Grundkarte und skizzierte Grenzen auf einer transparenten Folie. Die Zonen orientierten sich sowohl an räumlichen Eigenschaften als auch an den rechteckigen Grundplatten der physischen Bausteine.
-
-Die 22 Zonen sind somit eine projektbezogene Interpretation aus Daten, Modellanforderungen und physischer Darstellbarkeit. Sie sind keine unabhängig bestätigten Verwaltungs-, Schutzgebiets- oder Planungseinheiten. Für einen identischen Nachbau fehlen noch eine druckfähige Grundkarte und eindeutig zuordenbare Zonengrenzen.
-
-## 6. Zonendatenmodell
-
-Die Excel-Tabelle ist die strukturierte Arbeitsgrundlage für die Eigenschaften der Zonen. Die bereitgestellte Datei wird unverändert als `data/zones.xlsx` aufbewahrt. Ihr einziges Tabellenblatt `Tabelle1` enthält 23 Datenzeilen und zehn vollständig befüllte Spalten. `data/zones.csv` ist der verlustfreie UTF-8-Export für Versionsvergleich und Weiterverarbeitung; `data/data_dictionary.md` beschreibt die Felder.
-
-| Feldgruppe | Spalten | Rolle |
+| Feldgruppe | Spalten | Funktion |
 |---|---|---|
-| Identifikation | `zone_id` | eindeutige Tabellenkennung 1 bis 23 |
-| räumlich-fachliche Einordnung | `Hauptkategorie`, `Unterkategorie`, `Aktuelle Nutzung`, `Flächentyp` | Beschreibung des Ausgangskontexts |
-| Nutzung und Beteiligte | `Zugang`, `Akteure`, `Beweidung` | Hinweise für Besucher-, Akteurs- und Tierdarstellungen |
-| Schutz und Herkunft | `Schutzstatus`, `Datenquelle` | Kontext und projektinterner Herkunftshinweis |
+| Identifikation | `zone_id` | eindeutige Kennung der Zone |
+| räumliche Einordnung | `Hauptkategorie`, `Unterkategorie`, `Aktuelle Nutzung`, `Flächentyp` | Beschreibung des Ausgangskontexts |
+| Zugang und Beteiligte | `Zugang`, `Akteure`, `Beweidung` | Hinweise auf Nutzung, Beteiligte und Tierhaltung |
+| Schutz und Herkunft | `Schutzstatus`, `Datenquelle` | fachlicher Kontext und projektinterner Quellenhinweis |
 
-13 Einträge gehören zur Hauptkategorie Naturschutzgebiet und natürlicher Lebensraum, drei zu Flughafenbestand / Denkmalschutz, fünf zu Freizeit / Erholung und zwei zu Wohnen / Quartier. 16 Zonen sind als eingeschränkt, sieben als öffentlich zugänglich gekennzeichnet; 13 Einträge nennen Beweidung. Diese Summen beschreiben nur die gelieferte Tabelle.
+Die 22 Zonen verteilen sich auf folgende Hauptkategorien:
 
-Die Tabellenbegriffe sind nicht automatisch mit den fünf vereinfachten Nutzungen der Tauschmatrix gleichzusetzen. Insbesondere sind aktuelle Nutzung, Flächentyp und Schutzstatus Kontextattribute und keine Transformationsregeln. Geometrien, Flächengrößen und quantitative Wirkungen enthält die Datei nicht.
+| Hauptkategorie | Anzahl |
+|---|---:|
+| Naturschutzgebiet und natürlicher Lebensraum | 13 |
+| Flughafenbestand / Denkmalschutz | 3 |
+| Freizeit / Erholung | 5 |
+| Wohnen / Quartier | 1 |
 
-Die Abweichung zwischen 23 Tabellenzeilen und 22 Zonen in Projektbeschreibung und Karte ist offen. Denkbar sind eine zusätzliche Zone, eine Teilzone oder eine abweichende Nummerierungslogik; ohne Teamabgleich wird keine dieser Erklärungen als Tatsache übernommen.
+16 Zonen sind als eingeschränkt und sechs als öffentlich zugänglich erfasst. Für 13 Zonen ist Beweidung mit `Ja`, für neun mit `Nein` angegeben.
 
-## 7. Physisches Modell
+Die Tabellenbegriffe sind nicht automatisch mit den fünf vereinfachten Nutzungen der Tauschmatrix gleichzusetzen. Die Datei enthält keine Geometrien, Flächengrößen, Personenzahlen oder quantitativen Umweltwirkungen.
 
-Das Modell besteht aus Grundkarte, Nutzungsbausteinen, Akteurs- und Zustandsmarkern, Tauschstapel und gemeinsamer Verlustbox. Die Präsentation zeigt die Herstellung und den Aufbau.
+## 6. Bestandteile des physischen Modells
 
-### Flächentypen
+Das Modell besteht aus:
 
-| Darstellung | Bedeutung im vereinfachten Modell |
-|---|---|
-| Dunkelgrün | Naturschutzbereich/natürlicher Lebensraum, Koppeln; laut Modelllegende kein Besucherzugang |
-| Hellgrün | zugängliche Grün- und Freifläche für Besucher; keine Weidetiere |
-| Betoniert | Untergrund für Wohn-, Gewerbe- sowie Erholungs-/Freizeitnutzung |
+- einer Karte mit 22 Zonen,
+- Nutzungsbausteinen,
+- Akteursmarkern,
+- VSM-, ESM-, NSM- und DMS-Markern,
+- einer Tauschbox,
+- einer Verlust-Box,
+- der Tauschmatrix.
 
-Diese Kategorien sind die Modelllegende, keine allgemeingültige Aussage über reale Schutzgebiete oder jede Form von Freizeitnutzung.
+Auf der Karte liegen ausschließlich die Nutzungsbausteine. Alle Akteurs- und Zusatzmarker befinden sich immer in einer der beiden Boxen.
 
-### Nutzungen und Symbole
+### 6.1 Nutzungsbausteine
 
-| Kürzel | Nutzung | Symbol laut Projektunterlagen |
+| Kürzel | Nutzung | Vereinfachte Darstellung |
 |---|---|---|
-| K | Koppel/naturnaher Bereich | Koppelbaustein auf dunkelgrünem Boden |
+| K | Koppel | Koppelbaustein auf dunkelgrünem Boden |
 | GA | Grünanlage | hellgrüner Flächenbaustein |
-| W | Wohnen | Haus/Quartier |
-| Ge | Gewerbe | Tonblöcke, auch Unternehmen/Bildungseinrichtungen |
+| W | Wohnen | Haus oder Quartier |
+| Ge | Gewerbe | Unternehmen oder Bildungseinrichtung |
 | Er/Fr | Erholung/Freizeit | Fahrrad |
 
-Ein Haus repräsentiert Wohnnutzung, keine bestimmte Zahl von Wohnungen oder Bewohnern. Auch die übrigen Symbole besitzen keine hinterlegte quantitative Einheit.
+Jeder Baustein steht für eine Nutzungskategorie. Er repräsentiert keine festgelegte Fläche, Gebäudezahl oder Personenzahl.
 
-### Akteure und Marker
+### 6.2 Akteurs- und Zusatzmarker
 
-Akteure beziehungsweise sichtbare Elemente sind Tiere, Pflanzen/Grünfläche, Besucher, Anwohner und Beschäftigte. Pflanzen werden dabei als Modellelement geführt; damit wird keine biologische Definition von Akteur festgelegt.
+Akteursmarker sind Tiere, Pflanzen, Besucher, Anwohner und Beschäftigte. Zusätzlich verwendet das Modell folgende Kürzel:
 
 | Kürzel | Bedeutung |
 |---|---|
@@ -108,118 +120,105 @@ Akteure beziehungsweise sichtbare Elemente sind Tiere, Pflanzen/Grünfläche, Be
 | ESM | Entsiegelungsmarker |
 | DMS | Denkmalschutzmarker |
 
-NSG bezeichnet dagegen das Naturschutzgebiet. NSM und NSG dürfen nicht gleichgesetzt werden. Ein Marker bewirkt weder einen Schutzstatus noch die rechtliche Zulässigkeit eines Eingriffs.
+NSG bezeichnet ein Naturschutzgebiet und ist nicht mit NSM gleichzusetzen. Kein Marker erzeugt einen rechtlichen Schutzstatus oder bestätigt die planerische Zulässigkeit einer Nutzung.
 
 ![Herstellung von Bausteinen und Markern, Präsentation, Folie 7](assets/bausteine_herstellung.png)
 
-## 8. Tauschmatrix und Transformationslogik
+## 7. Die beiden Boxen
 
-Die Matrix enthält fünf Ausgangs- und fünf Zielnutzungen, also 25 gerichtete Kombinationen. In dieser Dokumentation stehen die Zeilen für die Ausgangsnutzung und die Spalten für die Zielnutzung. Plus bedeutet Hinzufügen, Minus Entfernen. Auf der Diagonale gilt 0. Alle Kombinationen sind grundsätzlich erlaubt; zonenspezifische Verbote wurden im Modell nicht festgelegt.
+### 7.1 Tauschbox
 
-Die Beschriftung oben links im Originalfoto ist missverständlich. Die Richtung wird anhand der Einträge und der Übergabe interpretiert; eine abschließende Teamprüfung bleibt offen. Die Regeln müssen asymmetrisch verstanden werden: der Wechsel von A zu B ist nicht zwingend die exakte Umkehrung des Wechsels von B zu A.
+In der Tauschbox liegen die aktuell verfügbaren Nutzungsbausteine und Marker. Ihr Inhalt zählt nicht als Verlust.
 
-Die Matrix wurde vom Team entwickelt. Sie ist eine qualitative, didaktische Annahme, keine wissenschaftlich validierte Bewertungsmethode. Ein Marker entspricht weder einer bestimmten Fläche noch einer standardisierten Umweltwirkung.
+### 7.2 Verlust-Box
 
-Die lesbare vollständige Arbeitsmatrix steht in `model/tauschmatrix.md`, alle 25 Transformationen in `model/tauschmatrix.csv`. Die CSV bewahrt sowohl die originalnahe Transkription als auch den aktuellen Korrekturstand. Unklare Pflanzenangaben, ESM/VSM und DMS werden in Hinweisen ausgewiesen.
+In der Verlust-Box liegen die Nutzungsbausteine und Marker, die durch die bisherigen Tausche verdrängt wurden. Diese Elemente dürfen bei späteren Tauschen erneut verwendet werden.
 
-Am 02.10.2026 wurden zwei Markerregeln erläutert: Grünanlage zu Wohnen erhält VSM statt ESM; Wohnen zu Grünanlage entfernt VSM und erzeugt ESM für die Box. Andere auffällige ESM-Angaben werden nicht eigenständig korrigiert.
+Wird ein Baustein oder Marker aus der Verlust-Box entnommen, zählt er nicht mehr als aktueller Verlust. Die Box zeigt daher den aktuellen Modellzustand und nicht die vollständige Geschichte aller Tausche.
 
-## 9. Ablauf eines Modellzuges
+## 8. Tauschmatrix und Zeichenlogik
 
-1. Den definierten Ausgangsaufbau betrachten und eine Zone wählen.
-2. Aktuelle Nutzung und vorhandene Akteure/Marker benennen.
-3. Neuen Nutzungsbaustein aus dem Tauschstapel auswählen.
-4. Alten Baustein entfernen und neuen Baustein einsetzen, ohne zu stapeln.
-5. Matrixzelle für den gerichteten Wechsel bestimmen und ihren Bearbeitungsstatus beachten.
-6. Genannte Akteure und Marker hinzufügen oder entfernen.
-7. Entfernte Elemente in die Box geben; bei bestätigter Entsiegelung ESM zusätzlich in die Box geben.
-8. Ausgang und Ergebnis besprechen: Was entsteht, was verändert sich und welche Annahme steckt in der Regel?
+Die Tauschmatrix enthält fünf Ausgangs- und fünf Zielnutzungen und damit 25 gerichtete Kombinationen.
 
-Empfehlung: Falls ein zu entfernendes Element nicht vorhanden ist, nichts künstlich abziehen; die Abweichung notieren und die Regel prüfen. Diese Handhabung ist noch keine bestätigte Originalregel.
+- Die Zeile bezeichnet die bisherige Nutzung.
+- Die Spalte bezeichnet die neue Nutzung.
+- Gleiche Ausgangs- und Zielnutzung ergibt `0`.
+- Alle Kombinationen sind im Modell erlaubt.
 
-## 10. Verlustbox und vorgeschlagene Markerhandhabung
+Die Zeichen beschreiben ausschließlich Bewegungen zwischen den beiden Boxen:
 
-Die Box macht entfernte Elemente und damit Folgen der Entscheidungen sichtbar. Ihre Inhalte bilden keine moralische Punktzahl. Elemente können bei einem späteren Wechsel teilweise wieder auf die Karte gelangen.
+- `+ Marker`: den Marker aus der Tauschbox in die Verlust-Box legen
+- `− Marker`: den Marker aus der Verlust-Box zurück in die Tauschbox legen
+- `0`: keinen Marker bewegen
 
-Marcel bestätigte, dass ESM nach der Entsiegelung in die Box kommt und nicht auf der Fläche verbleibt. Die genaue Handhabung bei späterer Wiederbebauung war im Gespräch noch nicht abschließend festgelegt. Für Konsistenz wird folgende Unterscheidung vorgeschlagen:
+Diese Logik gilt für alle Akteurs- und Zusatzmarker. Marker werden niemals auf die Karte gelegt. Ist ein benötigter Marker nicht in der vorgesehenen Box vorhanden, wird kein negativer Bestand erzeugt. Die fehlende Verfügbarkeit wird festgehalten und gemeinsam besprochen.
 
-VSM ist ein Zustandsmarker der Karte; ESM ein Ereignismarker für einen erfolgten Entsiegelungsvorgang. Beim Wechsel von Wohnen zu Grünanlage wird VSM von der Karte entfernt und in die Box gelegt, zusätzlich wird dort ESM abgelegt. Bei erneuter Versiegelung kommt ein VSM aus Box oder Vorrat auf die Karte. Bereits erzeugte ESM bleiben als Nachweis früherer Ereignisse in der Box.
+Die Regeln sind gerichtet: Ein Wechsel von A nach B ist nicht automatisch die genaue Umkehrung des Wechsels von B nach A. Die vollständige [Tauschmatrix](../model/tauschmatrix.md) und ihre [CSV-Fassung](../model/tauschmatrix.csv) sind separat dokumentiert.
 
-| Wechsel | Zustand auf der Karte | Folgen in der Box |
-|---|---|---|
-| Grünanlage zu Wohnen | VSM wird gesetzt | ggf. VSM aus Box zurücknehmen |
-| Wohnen zu Grünanlage | VSM wird entfernt | VSM hineinlegen; ESM hinzufügen |
-| spätere Wiederbebauung | VSM erneut setzen | früherer ESM bleibt nach vorgeschlagener Ereignislogik |
+## 9. Ablauf eines Modellzugs
 
-Damit zählt die Box verschiedene Arten von Elementen. Eine einzige Gesamtzahl wäre keine einheitliche Verlustgröße. Wiederholte Entsiegelung kann mehrere ESM erzeugen, ohne dass damit mehrere unterschiedliche Flächen gemeint sind. Empfohlen wird ein gekennzeichneter Bereich für ESM innerhalb derselben Box.
+1. Mit dem festgelegten Ausgangsaufbau beginnen.
+2. Eine Zone auswählen und ihre bisherige Nutzung bestimmen.
+3. Eine Zielnutzung wählen und den passenden Nutzungsbaustein aus der Tauschbox oder der Verlust-Box nehmen.
+4. Den bisherigen Nutzungsbaustein von der Zone entfernen und in die Verlust-Box legen.
+5. Den neuen Nutzungsbaustein auf die Zone setzen. Pro Zone liegt immer genau ein Nutzungsbaustein.
+6. Die passende Matrixzelle aus bisheriger Nutzung und Zielnutzung bestimmen.
+7. Alle dort genannten Marker nach der `+`- und `−`-Logik zwischen den Boxen bewegen.
+8. Die Veränderungen, Nutzungskonflikte und zugrunde liegenden Annahmen gemeinsam besprechen.
 
-Dauerhaftes Sammeln von ESM, Vorratsregeln und Unterteilung der Box sind neue Vorschläge. Sie müssen vor einer finalen Modellregel vom Team bestätigt werden.
+Nutzungsbausteine werden ausgetauscht und nicht übereinandergestapelt. Ein Baustein aus der Verlust-Box kann erneut eingesetzt werden; der ausgetauschte Baustein kommt anschließend in die Verlust-Box.
 
-## 11. Dokumentationsbeispiele
+## 10. Beispiele
 
-In der Präsentation wurden nach Erinnerung drei Tausche gezeigt, vermutlich zweimal Naturschutz zu Wohnen und einmal Wohnen zu Freizeit. Die genaue Folge ist nicht gesichert. Die folgenden Beispiele sind deshalb bewusst neu gewählte Dokumentationsbeispiele und kein Protokoll der Vorführung.
+### 10.1 Grünanlage zu Wohnen
 
-### Beispiel A: Grünanlage zu Wohnen
+Der Grünanlagenbaustein wird von der Zone genommen und in die Verlust-Box gelegt. Ein Wohnbaustein aus der Tauschbox oder der Verlust-Box wird auf die Zone gesetzt.
 
-Der grüne Baustein wird durch Wohnnutzung ersetzt. Nach Marcels Versiegelungserläuterung wird VSM hinzugefügt. Die Originaltranskription nennt außerdem Anwohner als Zugang sowie Pflanzen und Besucher als Abgang. Die Versiegelungskorrektur bestätigt diese Akteursannahmen nicht unabhängig.
+Die Matrixzelle lautet:
 
-### Beispiel B: Wohnen zu Grünanlage
+`+ VSM; + Anwohner; − Pflanzen; − Besucher`
 
-Der Wohnbaustein wird durch eine Grünanlage ersetzt. VSM wird entfernt; ESM entsteht und kommt in die Box. Laut Transkription werden Anwohner entfernt und Besucher hinzugefügt. Pflanzen sind im Original in Klammern angegeben und bleiben zu prüfen. Die vorgeschlagene Handhabung legt den entfernten VSM ebenfalls in die Box.
+Damit werden VSM und Anwohnermarker aus der Tauschbox in die Verlust-Box gelegt. Pflanzen- und Besuchermarker werden aus der Verlust-Box zurück in die Tauschbox gelegt.
 
-### Beispiel C: Wohnen zu Erholung/Freizeit
+### 10.2 Wohnen zu Grünanlage
 
-Der Wohnbaustein wird durch Freizeitnutzung ersetzt. Die Transkription nennt Besucher als Zugang und Anwohner als Abgang. Sie nennt keine zusätzliche Entsiegelung. Das passt zur Modelllegende, in der auch Freizeit auf betoniertem Boden liegen kann; es ist keine Aussage über jede reale Freizeitgestaltung.
+Der Wohnbaustein wird von der Zone genommen und in die Verlust-Box gelegt. Ein Grünanlagenbaustein aus der Tauschbox oder der Verlust-Box wird auf die Zone gesetzt.
 
-Ein Beispiel Koppel zu Wohnen kann erst nach Klärung der auffälligen ESM-Angabe als vollständig erläutertes Szenario verwendet werden.
+Die Matrixzelle lautet:
 
-## 12. Modellannahmen
+`+ ESM; + Besucher; − VSM; − Anwohner`
 
-Die Zonierung ist interpretativ und an die physischen Bausteine angepasst. Der Ausgangsaufbau verbindet Bestand mit ausgewählten Planungsannahmen. Die Flächen- und Nutzungskategorien sind bewusst vereinfacht.
+Damit werden ESM und Besuchermarker aus der Tauschbox in die Verlust-Box gelegt. VSM und Anwohnermarker werden aus der Verlust-Box zurück in die Tauschbox gelegt.
 
-Jeder Baustein steht für eine Nutzungskategorie, nicht für eine Gebäudezahl, Einwohnerzahl oder Quadratmeterfläche. Die Bausteine besitzen keinen definierten räumlichen Maßstab. Für die Zonen wurden im Modell keine numerischen Flächengrößen hinterlegt.
+## 11. Modellannahmen und Grenzen
 
-Die selbst entwickelte Matrix beschreibt angenommene qualitative Veränderungen. Jede Kombination ist modellintern erlaubt. Die Anwendung berücksichtigt derzeit keine zonenspezifischen Restriktionen und besitzt keine optimale Zielkonfiguration.
+Die Zonierung ist eine projektbezogene Interpretation und wurde an die physische Darstellbarkeit angepasst. Auch die Nutzungs- und Markerkategorien sind bewusst vereinfacht.
 
-## 13. Limitationen und aktueller Prüfstatus
+Die Tauschmatrix beschreibt qualitative Modellannahmen. Ein Marker entspricht weder einer bestimmten Fläche noch einer standardisierten Umweltwirkung. Der Inhalt der Verlust-Box darf deshalb nicht als Punktzahl oder quantitative Schadensbilanz interpretiert werden.
 
-Das Modell ist keine GIS-Simulation, ökologische Bilanz, wissenschaftliche Prognose oder rechtliche Prüfung. Es kann komplexe räumliche Zusammenhänge verständlich machen, aber konkrete planerische Entscheidungen nicht begründen.
+Das Modell ist keine GIS-Simulation, ökologische Bilanz, wissenschaftliche Prognose oder rechtliche Prüfung. Es dient dazu, Zusammenhänge und Zielkonflikte sichtbar zu machen und gemeinsam zu diskutieren.
 
-Der Originaldatensatz liegt vor, seine 23 Einträge sind jedoch noch nicht eindeutig mit den 22 Zonen der Projektbeschreibung und Karte abgeglichen. Außerdem ist die Zuordnung der detaillierten Tabellenkategorien zu den fünf vereinfachten Modellnutzungen nicht vollständig dokumentiert. Einige Matrixregeln widersprechen möglicherweise den Legenden, etwa der Verlust von Tieren beim Wechsel von Grünanlage zu Gewerbe trotz fehlender Weidetiere auf Grünanlagen. DMS wird teilweise bei Gewerbe hinzugefügt, ohne dass sein späteres Entfernen erläutert ist.
+Einzelne Inhalte der Tauschmatrix sind weiterhin fachlich zu prüfen. Diese Punkte sind direkt in der Matrix gekennzeichnet und betreffen nicht die bestätigte Zwei-Box-Mechanik.
 
-Die Zahl oder Art der Marker ist kein empirisches Maß für den Umfang eines Eingriffs. Insbesondere Boxinhalt und Ereignismarker erlauben keine quantitative Umweltbilanz. Die offene-Punkte-Liste hält den noch erforderlichen Abgleich fest.
+## 12. Nachbau und Reproduzierbarkeit
 
-## 14. Reproduzierbarkeit
+Für einen Nachbau werden eine druckfähige Grundkarte, eine transparente Folie, Nutzungsbausteine, Akteurs- und Zusatzmarker, eine Tauschbox, eine Verlust-Box, die Zonenzuweisung und die Tauschmatrix benötigt.
 
-### Materialien und Vorbereitung
+Der dokumentierte Arbeitsablauf lautet:
 
-Benötigt werden eine druckfähige Grundkarte, transparente Folie, Material für rechteckige Nutzungsbausteine und ihre Symbole, Akteurs- und Zustandsmarker, ein Tauschstapel sowie eine gemeinsame Box. Fotos zeigen den Aufbau, ersetzen jedoch keine Maßangaben oder Stückliste.
+1. Kartenebenen und Konzeptgrundlagen auswählen und ihre Datenstände dokumentieren.
+2. Luftbild, Versiegelung, Projektgrenze, Schutz- und Nutzungsinformationen vergleichen.
+3. Die Grundkarte im benötigten Format vorbereiten und drucken.
+4. Die 22 Zonen auf transparenter Folie einzeichnen und mit den Bausteinabmessungen abstimmen.
+5. Nutzungsbausteine und Marker gemäß den Legenden herstellen.
+6. Karte und beide Boxen nach dem festgelegten Ausgangszustand aufbauen.
+7. Die Tauschmatrix bereitlegen und einen Beispielzug durchführen.
+8. Die Veränderungen anhand der beiden Boxen gemeinsam auswerten.
 
-### Nachbau des Vorgehens
+Fotos und Präsentationsabbildungen dokumentieren den Aufbau, ersetzen jedoch keine vollständige Maß- oder Stückliste.
 
-1. Karten und Konzeptunterlagen anhand der angegebenen Quellen auswählen; Datenstände festhalten.
-2. Luftbild, Versiegelung, Grenzen und Nutzungen vergleichen.
-3. Grundkarte passend drucken; das Projekt nutzte A1.
-4. Zonen auf Folie skizzieren und räumliche Eigenschaften mit Bausteinabmessungen abstimmen.
-5. Die 23 Tabellenzeilen mit der 22-Zonen-Karte abgleichen und die geklärte Nummerierungs- oder Teilzonenlogik dokumentieren.
-6. Flächenbausteine und Symbole gemäß Modelllegende herstellen.
-7. Akteurs- und Zustandsmarker herstellen und Legende beilegen.
-8. Den dokumentierten Ausgangsaufbau auf Karte und Zonentabelle abstimmen.
-9. Tauschmatrix bereitstellen, offene Regeln klären und einen Beispielzug durchführen.
-10. Folgen auf Karte und in Box nachvollziehen und diskutieren.
+## 13. Dokumentationsstand
 
-Der prinzipielle Prozess und die gelieferten Zonenattribute lassen sich mit dieser Fassung nachvollziehen. Ein originalgetreuer Nachbau bleibt bis zur Klärung der 23-zu-22-Abweichung sowie zur Bereitstellung der Originalkarte und der Abmessungen eingeschränkt.
+Die Markdown-Dateien enthalten den aktuellen Text- und Regelstand. Die Tauschmatrix wird zusätzlich als CSV und die Zonenzuweisung als Excel- und CSV-Datei bereitgestellt.
 
-### Pflege der Dokumentation
-
-Markdown ist die maßgebliche Textfassung. Änderungen zuerst dort eintragen, die PDF mit `python tools/build_pdf.py` erzeugen und visuell prüfen. Die vollständige Matrix wird separat in Markdown und CSV gepflegt; beide Fassungen bei Regeländerungen abgleichen. Die PDF enthält die fachliche Beschreibung und verweist auf die separate vollständige Matrix.
-
-## 15. Quellen und Änderungsstand
-
-Die Abschlusspräsentation umfasst 17 Folien und liegt unter `presentation/abschlussprasentation.pdf`. Wesentliche Nachweise sind Folien 4 bis 8 für Datenarbeit/Prozess, Folie 9 für die Excel-Vorschau, Folien 10 bis 13 für Modell und Legenden sowie Folien 16 und 17 für Matrix und Quellen.
-
-Das separat bereitgestellte Whiteboard-Foto ist unter `docs/assets/tauschmatrix_original.jpg` erhalten. Die Regeln enthalten die am 02.10.2026 erläuterten Korrekturen für die Wechsel zwischen Grünanlage und Wohnen. Die am 04.10.2026 bereitgestellte Zonenzuweisung liegt unverändert unter `data/zones.xlsx`; `data/zones.csv` und das Data Dictionary dokumentieren den ausgelesenen Tabellenstand. Neue Empfehlungen sind als solche markiert.
-
-Externe Grundlagen laut Unterlagen: FUTR HUB Geoportal und Berliner Senatsverwaltung, Tegeler Stadtheide. Die genauen URLs und Abbildungsnachweise stehen in `references/quellen.md`. Es wurden keine zusätzlichen rechtlichen oder aktuellen externen Tatsachen recherchiert.
-
-Änderungsstand dieser Arbeitsfassung: Repository-Struktur, Quellenmaterial, technische Beschreibung, vorläufige 25-Zellen-Matrix, zwei Versiegelungskorrekturen, Original-Excel mit CSV-Export und Data Dictionary sowie transparent ausgewiesene offene Punkte. Noch keine abschließend validierte Abgabefassung.
+Die Quellen, externen Links und Abbildungsnachweise sind in [Quellen und Herkunft](../references/quellen.md) zusammengefasst. Der Einsatz von KI bei Konzeptentwicklung, Dokumentation, Bildgenerierung und Website-Prototyp ist im [KI-Verzeichnis](ki-verzeichnis.md) beschrieben.
