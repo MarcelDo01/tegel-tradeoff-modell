@@ -10,8 +10,6 @@ Die aktuelle Arbeitsdatei liegt als `zones.xlsx` vor. Das Tabellenblatt `Tabelle
 | `zones.csv` | UTF-8-Export von `Tabelle1` mit Komma als Trennzeichen |
 | `data_dictionary.md` | Bedeutung, Datentypen und beobachtete Werte der zehn Spalten |
 
-SHA-256 der aktuellen Excel-Datei: `aae6512198033a36385b7ae0aa1fbdd1a500d446271e2ce554971f92c8c2617e`
-
 ## Prüfung
 
 - `zone_id` enthält die eindeutigen ganzzahligen Werte 1 bis 22.
