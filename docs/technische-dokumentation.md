@@ -76,8 +76,8 @@ Die 22 Zonen verteilen sich auf folgende Hauptkategorien:
 |---|---:|
 | Naturschutzgebiet und natürlicher Lebensraum | 13 |
 | Flughafenbestand / Denkmalschutz | 3 |
-| Freizeit / Erholung | 5 |
-| Wohnen / Quartier | 1 |
+| Freizeit / Erholung | 4 |
+| Wohnen / Quartier | 2 |
 
 16 Zonen sind als eingeschränkt und sechs als öffentlich zugänglich erfasst. Für 13 Zonen ist Beweidung mit `Ja`, für neun mit `Nein` angegeben.
 
