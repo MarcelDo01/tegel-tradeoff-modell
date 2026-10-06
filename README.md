@@ -10,7 +10,7 @@ Ziel ist es, Nutzungskonflikte und mögliche Folgen räumlicher Entscheidungen v
 
 - [Technische Dokumentation](docs/technische-dokumentation.md) und [PDF-Fassung](docs/technische-dokumentation.pdf)
 - [Modellregeln](model/modellregeln.md)
-- [Tauschmatrix](model/tauschmatrix.md) und [maschinenlesbare CSV-Fassung](model/tauschmatrix.csv)
+- [Tauschmatrix](model/tauschmatrix.md)
 - [Zonendaten](data/README.md), [Excel-Datei](data/zones.xlsx), [CSV-Export](data/zones.csv) und [Data Dictionary](data/data_dictionary.md)
 - [Quellen und Herkunft der Abbildungen](references/quellen.md)
 - [KI-Verzeichnis](docs/ki-verzeichnis.md)
