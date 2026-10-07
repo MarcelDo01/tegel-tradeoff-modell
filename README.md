@@ -6,8 +6,15 @@ Dieses Repository dokumentiert unser physisches und datenbasiertes Modell für d
 
 Ziel ist es, Nutzungskonflikte und mögliche Folgen räumlicher Entscheidungen verständlich zu machen. Das Modell richtet sich insbesondere an Kinder, jüngere Menschen und Interessierte ohne planerisches Fachwissen. Es berechnet keine optimale Planung, keine Flächenbilanz und keine Punktzahl.
 
+## Spielanleitung auf einen Blick
+
+![Visualisierte Spielanleitung für Tegel im Tausch](docs/assets/spielanleitung-auf-einen-blick.png)
+
+Die ausführlichen und verbindlichen Regeln stehen in den [Modellregeln](model/modellregeln.md) und in der [Tauschmatrix](model/tauschmatrix.md).
+
 ## Dokumentation und Materialien
 
+- [Visualisierte Spielanleitung](docs/assets/spielanleitung-auf-einen-blick.png)
 - [Technische Dokumentation](docs/technische-dokumentation.md) und [PDF-Fassung](docs/technische-dokumentation.pdf)
 - [Modellregeln](model/modellregeln.md)
 - [Tauschmatrix](model/tauschmatrix.md)
@@ -57,7 +64,7 @@ Die aktuelle Zonenzuweisung enthält 22 eindeutig nummerierte Zonen und zehn vol
 
 | Ordner | Inhalt |
 |---|---|
-| `docs/` | technische Dokumentation, PDF-Fassung, Abbildungen, KI-Verzeichnis und archivierter Prototyp |
+| `docs/` | visualisierte Spielanleitung, technische Dokumentation, PDF-Fassung, Abbildungen, KI-Verzeichnis und archivierter Prototyp |
 | `data/` | Excel-Datei, CSV-Export und Beschreibung der 22 Zonen |
 | `model/` | Modellregeln und 25 gerichtete Nutzungstausche |
 | `presentation/` | Abschlusspräsentation |

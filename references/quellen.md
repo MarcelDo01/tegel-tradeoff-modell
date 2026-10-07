@@ -51,4 +51,8 @@ Die folgenden PNG-Dateien sind vollständig gerenderte Seiten der Abschlusspräs
 
 Das Foto der Tauschmatrix wurde separat in das Repository übernommen und befindet sich unter `docs/assets/tauschmatrix_original.jpg`.
 
+### Visualisierte Spielanleitung
+
+Die Datei `docs/assets/spielanleitung-auf-einen-blick.png` ist eine KI-generierte Infografik. Als visuelle Referenzen dienten vom Projektteam bereitgestellte Fotos des realen Modells und einzelner Bausteine. Inhalt, Bewegungsrichtungen und Beschriftungen wurden mit den aktuellen Modellregeln und der Tauschmatrix abgeglichen. Die Infografik ist kein unverändertes Foto und ersetzt nicht die ausführlichen Regeln.
+
 Die Visualisierung auf Folie 3 ist laut Präsentation KI-gestützt und wird nicht als Aufnahme des realen Modells verwendet. Der auf Folie 1 sichtbare Vorlagen-Webseitentext ist kein Bestandteil des Projekts und wird nicht als Projektquelle behandelt.
