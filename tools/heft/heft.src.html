@@ -1,0 +1,521 @@
+<title>Tegel im Tausch</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+/* Layout: ein Spielheft auf dem Tisch. Doppelseiten zum Umblättern, auf dem Handy Einzelseiten.
+   Farben kommen von den echten Spielteilen: Kunstrasen, rotes Dach, Ton und die neun Markerfarben. */
+:root{
+  --tisch:#DDE8D6; --tisch-ink:#1F3324; --tisch-dim:#587060; --knopf:#FFFFFF; --knopf-ink:#1F3324; --knopf-rand:#B7C9B4;
+  --papier:#FFFEFA; --tinte:#1E2A22; --tinte-dim:#56645B; --linie:#D9DED2;
+  --moos:#2F5D34; --rasen:#62C12B; --rasen-hell:#E8F6DA; --dach:#D3262C; --dach-hell:#FCE4E2;
+  --ton:#8C877C; --ton-hell:#EFEDE7; --himmel:#1F6FB5; --himmel-hell:#E1EEF9; --sonne:#F5B700; --sonne-hell:#FFF3CC;
+  --holz:#C99A5B; --holz-dunkel:#8A6231;
+  --m-ti:#FFFFFF; --m-pf:#1B7A4B; --m-ns:#FF66C4; --m-bs:#FF8F3D; --m-an:#2B3230; --m-be:#187FA3; --m-dm:#FFD93B; --m-vs:#B07389; --m-es:#E3CCBF;
+  --display:"Fredoka","Baloo 2","Trebuchet MS",system-ui,sans-serif;
+  --text:"Atkinson Hyperlegible","Verdana","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --tisch:#142019; --tisch-ink:#E4EFE3; --tisch-dim:#9DB3A3; --knopf:#22332A; --knopf-ink:#E4EFE3; --knopf-rand:#3C5546; --papier:#F6F5EE; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --tisch:#142019; --tisch-ink:#E4EFE3; --tisch-dim:#9DB3A3; --knopf:#22332A; --knopf-ink:#E4EFE3; --knopf-rand:#3C5546; --papier:#F6F5EE; color-scheme:dark }
+
+*{box-sizing:border-box}
+body{background:var(--tisch);color:var(--tisch-ink);font-family:var(--text);margin:0}
+.wrap{padding-inline:16px;padding-block:18px 28px;display:flex;flex-direction:column;align-items:center;gap:14px;overflow:hidden}
+.kopf{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;justify-content:center;text-align:center}
+.kopf strong{font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:.02em}
+.kopf span{color:var(--tisch-dim);font-size:14px}
+
+/* ---------- Buch ---------- */
+.book{--pw:min(560px,calc((100vw - 48px)/2),max(380px,calc((100vh - 150px)/1.38)));--ph:calc(var(--pw)*1.38);
+  width:calc(var(--pw)*2);height:var(--ph);position:relative;perspective:2600px;font-size:calc(var(--pw)/35.5);
+  transition:transform .7s cubic-bezier(.3,.1,.2,1)}
+.book.vorn{transform:translateX(-25%)} .book.hinten{transform:translateX(25%)}
+.leaf{position:absolute;left:50%;top:0;width:var(--pw);height:var(--ph);transform-origin:left center;transform-style:preserve-3d;
+  transition:transform .7s cubic-bezier(.3,.1,.2,1)}
+.leaf.flipped{transform:rotateY(-180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:var(--papier);color:var(--tinte);
+  overflow:hidden;box-shadow:0 .5em 1.6em rgba(10,30,15,.28);border-radius:.25em .7em .7em .25em}
+.face.back{transform:rotateY(180deg);border-radius:.7em .25em .25em .7em}
+.face::after{content:"";position:absolute;top:0;bottom:0;width:2.4em;pointer-events:none;left:0;
+  background:linear-gradient(90deg,rgba(20,40,25,.16),rgba(20,40,25,0))}
+.face.back::after{left:auto;right:0;background:linear-gradient(270deg,rgba(20,40,25,.16),rgba(20,40,25,0))}
+
+/* ---------- Seite ---------- */
+.pg{height:100%;padding:1.9em 2.3em 2.6em;display:flex;flex-direction:column;gap:.95em;line-height:1.42}
+.pg p{margin:0}
+.pg.gross{font-size:1.07em}
+.pg.luft{gap:1.3em}
+.pg ol,.pg ul{margin:0;padding-left:1.25em;display:flex;flex-direction:column;gap:.3em}
+.ph{display:flex;align-items:center;gap:.7em}
+.ph .num{flex:none;width:2.1em;height:2.1em;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-weight:700;
+  font-size:1.35em;color:#fff;background:var(--c,var(--moos))}
+.ph h2{margin:0;font-family:var(--display);font-weight:700;font-size:1.75em;line-height:1.1;letter-spacing:.01em;text-transform:uppercase;
+  color:var(--c,var(--moos));text-wrap:balance}
+h3{margin:0;font-family:var(--display);font-weight:600;font-size:1.12em;color:var(--c,var(--moos))}
+.fuss{position:absolute;bottom:.8em;left:2.3em;right:2.3em;display:flex;justify-content:space-between;font-size:.72em;color:var(--tinte-dim);
+  letter-spacing:.06em;text-transform:uppercase}
+.c-gruen{--c:var(--moos);--ch:var(--rasen-hell)} .c-rot{--c:var(--dach);--ch:var(--dach-hell)} .c-blau{--c:var(--himmel);--ch:var(--himmel-hell)}
+.c-gelb{--c:#A87400;--ch:var(--sonne-hell)} .c-ton{--c:#6B665C;--ch:var(--ton-hell)}
+.kasten{background:var(--ch,var(--rasen-hell));border-radius:.8em;padding:.75em .95em;display:flex;flex-direction:column;gap:.4em}
+.merke{border:.14em dashed var(--c,var(--moos));border-radius:.8em;padding:.6em .9em;font-weight:700}
+.klein{font-size:.86em;color:var(--tinte-dim)}
+b,strong{font-weight:700}
+
+/* Marker */
+.mk{display:inline-grid;place-items:center;width:1.9em;height:1.9em;border-radius:50%;font-size:.78em;font-weight:700;font-family:var(--display);
+  color:#fff;vertical-align:middle;flex:none;box-shadow:inset 0 -.14em 0 rgba(0,0,0,.18)}
+.mk-ti{background:var(--m-ti);color:var(--tinte);border:.1em solid #9aa49c} .mk-pf{background:var(--m-pf)} .mk-ns{background:var(--m-ns);color:var(--tinte)}
+.mk-bs{background:var(--m-bs);color:var(--tinte)} .mk-an{background:var(--m-an)} .mk-be{background:var(--m-be)}
+.mk-vs{background:var(--m-vs)} .mk-es{background:var(--m-es);color:var(--tinte)}
+.mk-dm{background:var(--m-dm);color:var(--tinte);border-radius:0;box-shadow:none;width:2.2em;height:2.2em;
+  clip-path:polygon(50% 0,63% 27%,93% 25%,76% 50%,93% 75%,63% 73%,50% 100%,37% 73%,7% 75%,24% 50%,7% 25%,37% 27%)}
+.mkz{display:inline-flex;align-items:center;gap:.35em;white-space:nowrap}
+
+/* Bausteine */
+.stein{width:3.6em;height:3.6em;border-radius:.35em;object-fit:cover;flex:none;box-shadow:0 .15em .4em rgba(0,0,0,.25)}
+.steine{display:grid;grid-template-columns:auto 1fr;gap:.55em .8em;align-items:center}
+.steine b{font-family:var(--display);font-weight:600;font-size:1.05em}
+.steine p{font-size:.9em;line-height:1.3}
+.kz{display:inline-block;min-width:2.5em;text-align:center;border-radius:.4em;padding:0 .35em;background:var(--tinte);color:#fff;
+  font-family:var(--display);font-weight:600;font-size:.82em;margin-right:.4em}
+
+/* Titel */
+.titel{background:var(--moos);color:#fff;gap:1.1em;padding-top:2.4em}
+.titel .eyebrow{font-family:var(--display);font-weight:600;letter-spacing:.22em;text-transform:uppercase;font-size:.9em;color:#D6F2C2}
+.titel h1{margin:0;font-family:var(--display);font-weight:700;font-size:4.6em;line-height:.92;text-transform:uppercase;letter-spacing:.01em}
+.titel h1 em{font-style:normal;color:#B9F27C;display:block}
+.titel .claim{font-family:var(--display);font-weight:500;font-size:1.3em}
+.titel img{width:100%;border-radius:.7em;border:.35em solid #fff;transform:rotate(-1.6deg);box-shadow:0 .6em 1.4em rgba(0,0,0,.35)}
+.plaketten{display:flex;flex-wrap:wrap;gap:.5em;margin-top:auto}
+.plaketten span{background:#fff;color:var(--moos);border-radius:2em;padding:.25em .85em;font-family:var(--display);font-weight:600;font-size:.92em}
+.plaketten span:nth-child(2){background:var(--sonne);color:var(--tinte)} .plaketten span:nth-child(3){background:#B9F27C;color:var(--tinte)} .plaketten span:nth-child(4){background:var(--dach);color:#fff}
+.titel .blaettern{font-size:.85em;color:#D6F2C2}
+
+/* Wer will was */
+.wuensche{display:grid;grid-template-columns:1fr 1fr;gap:.6em}
+.wunsch{border-radius:.8em;padding:.6em .8em;background:var(--ch);color:var(--tinte);display:flex;flex-direction:column;gap:.15em}
+.wunsch b{font-family:var(--display);font-weight:600;color:var(--c)}
+.wunsch span{font-size:.88em;line-height:1.3}
+
+/* Tabellen */
+table{border-collapse:collapse;width:100%;font-size:.9em}
+th,td{text-align:left;padding:.36em .5em;border-bottom:.08em solid var(--linie);vertical-align:middle}
+th{font-family:var(--display);font-weight:600;color:var(--c,var(--moos));font-size:.92em}
+
+/* Schritte */
+.schritte{list-style:none;padding:0!important;gap:.6em!important;counter-reset:s}
+.schritte li{counter-increment:s;display:grid;grid-template-columns:2.2em 1fr;gap:.7em;align-items:start}
+.schritte li::before{content:counter(s);width:2.2em;height:2.2em;border-radius:50%;display:grid;place-items:center;color:#fff;
+  font-family:var(--display);font-weight:700;background:var(--sc,var(--moos))}
+.schritte li:nth-child(1){--sc:var(--himmel)} .schritte li:nth-child(2){--sc:var(--rasen);} .schritte li:nth-child(3){--sc:var(--sonne)}
+.schritte li:nth-child(4){--sc:var(--himmel)} .schritte li:nth-child(5){--sc:var(--dach)} .schritte li:nth-child(6){--sc:#E8870E}
+.schritte li:nth-child(2)::before,.schritte li:nth-child(3)::before{color:var(--tinte)}
+.schritte b{font-family:var(--display);font-weight:600;font-size:1.06em;display:block}
+.schritte span{font-size:.93em;line-height:1.35;display:block}
+
+/* Boxen */
+.boxen{display:grid;grid-template-columns:1fr 1fr;gap:.8em}
+.box{border:.22em solid var(--holz-dunkel);border-top-width:.1em;background:linear-gradient(180deg,#E8C795,var(--holz));border-radius:.3em .3em .7em .7em;
+  padding:.6em .7em .7em;display:flex;flex-direction:column;gap:.3em;color:var(--tinte)}
+.box b{font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.box span{font-size:.86em;line-height:1.3}
+.box.verlust{border-color:#7E1A1D;background:linear-gradient(180deg,#F2B8B2,#E08B84)}
+
+/* Plus Minus */
+.pm{display:grid;grid-template-columns:auto 1fr;gap:.9em;align-items:center}
+.zeichen{width:1.9em;height:1.9em;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:1.5em;color:#fff;line-height:1}
+.zeichen.plus{background:var(--dach)} .zeichen.minus{background:var(--moos)} .zeichen.null{background:var(--ton)}
+.weg{display:flex;align-items:center;gap:.4em;flex-wrap:wrap;font-family:var(--display);font-weight:600;font-size:.9em}
+.ort{border-radius:.5em;padding:.1em .55em;background:#fff;border:.1em solid var(--linie)}
+.ort.v{background:#F2B8B2;border-color:#7E1A1D} .ort.t{background:#E8C795;border-color:var(--holz-dunkel)} .ort.k{background:var(--rasen-hell);border-color:var(--moos)}
+
+/* Matrix */
+.matrix{font-size:.84em;table-layout:fixed}
+.matrix th,.matrix td{border:.08em solid var(--linie);padding:.3em .25em;text-align:center;vertical-align:top}
+.matrix thead th,.matrix tbody th{background:var(--himmel-hell);color:var(--tinte);font-size:.95em;line-height:1.15}
+.matrix .ecke{background:none;border:none;font-size:.8em;color:var(--tinte-dim);text-align:left;font-family:var(--text);font-weight:400}
+.matrix .zl{display:flex;align-items:center;justify-content:center;gap:.18em;flex-wrap:wrap;min-height:1.7em}
+.matrix .zl i{font-style:normal;font-family:var(--display);font-weight:700;font-size:1.15em;width:.7em}
+.matrix .zl.p i{color:var(--dach)} .matrix .zl.m i{color:var(--moos)}
+.matrix .mk{font-size:.72em}
+.matrix .nix{color:var(--ton);font-family:var(--display);font-weight:700;font-size:1.4em;padding-top:.5em}
+.legende{display:flex;flex-wrap:wrap;gap:.3em .9em;font-size:.84em}
+
+/* Probierer */
+.wahl{display:flex;flex-direction:column;gap:.3em}
+.wahl > span{font-family:var(--display);font-weight:600;font-size:.95em;color:var(--c)}
+.knoepfe{display:grid;grid-template-columns:repeat(5,1fr);gap:.4em}
+.knoepfe button{font:inherit;font-family:var(--display);font-weight:600;font-size:.74em;line-height:1.1;cursor:pointer;border:.16em solid var(--linie);
+  background:#fff;color:var(--tinte);border-radius:.6em;padding:.35em .15em .4em;display:flex;flex-direction:column;align-items:center;gap:.25em;min-width:0}
+.knoepfe button img{width:2.7em;height:2.7em;border-radius:.3em;object-fit:cover}
+.knoepfe button[aria-pressed="true"]{border-color:var(--c);background:var(--ch);box-shadow:0 0 0 .14em var(--c)}
+.knoepfe button:focus-visible,.tat:focus-visible,.bar button:focus-visible{outline:.2em solid var(--sonne);outline-offset:.12em}
+.ergebnis{background:var(--himmel-hell);border-radius:.8em;padding:.7em .9em;display:flex;flex-direction:column;gap:.45em;font-size:.93em;min-height:8.6em}
+.ergebnis .zeile{display:flex;gap:.5em;align-items:center;flex-wrap:wrap}
+.ergebnis .zeile > b{font-family:var(--display);font-weight:600;min-width:9.2em}
+.taten{display:flex;gap:.5em;flex-wrap:wrap}
+.tat{font:inherit;font-family:var(--display);font-weight:600;font-size:.95em;border:0;border-radius:2em;padding:.4em 1.1em;cursor:pointer;background:var(--dach);color:#fff}
+.tat.leise{background:#fff;color:var(--tinte);border:.12em solid var(--linie)}
+.vbox{min-height:5.2em}
+.vbox .inhalt{display:flex;flex-wrap:wrap;gap:.35em .7em;align-items:center}
+.zahl{font-family:var(--display);font-weight:700}
+
+/* Fragen */
+.fragen{list-style:none;padding:0!important;gap:.4em!important}
+.fragen li{background:var(--ch);border-radius:1em 1em 1em .2em;padding:.4em .8em;font-size:.95em}
+.fragen li:nth-child(even){border-radius:1em 1em .2em 1em;margin-left:1.6em;background:var(--sonne-hell)}
+
+/* Rückseite */
+.rueck{background:var(--rasen-hell)}
+.kurz{list-style:none;padding:0!important;counter-reset:k;gap:.45em!important}
+.kurz li{counter-increment:k;display:grid;grid-template-columns:1.7em 1fr;gap:.6em;align-items:baseline;font-family:var(--display);font-weight:500;font-size:1.05em}
+.kurz li::before{content:counter(k);width:1.7em;height:1.7em;border-radius:50%;background:var(--moos);color:#fff;display:grid;place-items:center;font-weight:700;font-size:.9em}
+
+/* ---------- Leiste ---------- */
+.bar{display:flex;align-items:center;gap:10px;width:min(100%,560px)}
+.bar button{font:inherit;font-family:var(--display);font-weight:600;font-size:15px;cursor:pointer;background:var(--knopf);color:var(--knopf-ink);
+  border:2px solid var(--knopf-rand);border-radius:999px;padding:8px 16px;white-space:nowrap}
+.bar button:disabled{opacity:.4;cursor:default}
+.bar input{flex:1;min-width:0;accent-color:var(--rasen)}
+.ort-anzeige{font-size:14px;color:var(--tisch-dim);font-variant-numeric:tabular-nums;text-align:center}
+
+/* ---------- Handy: Einzelseiten ---------- */
+@media (max-width:819px){
+  .pg.gross{font-size:1em}
+  .book{width:min(100%,460px);height:auto;perspective:none;transform:none!important;font-size:14.5px}
+  .leaf{position:static;width:auto;height:auto;transform:none!important;transition:none;transform-style:flat}
+  .face,.face.back{position:static;transform:none;backface-visibility:visible;display:none;border-radius:10px;overflow:visible}
+  .face.current{display:block} .face::after{display:none}
+  .pg{height:auto;min-height:70vh;padding:22px 18px 44px}
+  .fuss{left:18px;right:18px} .face{position:relative}
+  .titel h1{font-size:3.4em}
+  .matrix{font-size:.72em}
+}
+@media (prefers-reduced-motion:reduce){ .leaf,.book{transition:none} }
+</style>
+
+<div class="wrap">
+  <div class="kopf"><strong>Tegel im Tausch</strong><span>Spielanleitung zum Blättern</span></div>
+
+  <div class="book vorn" id="book">
+
+    <!-- Blatt 1 -->
+    <div class="leaf">
+      <section class="face front" data-p="1"><div class="pg titel">
+        <div class="eyebrow">Spielanleitung</div>
+        <h1>Tegel <em>im Tausch</em></h1>
+        <div class="claim">Setzen. Tauschen. Folgen sichtbar machen.</div>
+        <img src="{{IMG:modell}}" alt="Luftbild des ehemaligen Flughafens Tegel mit den Bausteinen des Spiels">
+        <div class="plaketten"><span>Ab 6 Jahren</span><span>Einzelspiel</span><span>Kein festes Ende</span><span>Kein Gewinner</span></div>
+        <div class="blaettern">Zum Blättern: Pfeiltasten, Wischen oder die Knöpfe unten</div>
+      </div></section>
+      <section class="face back" data-p="2"><div class="pg gross c-gruen">
+        <header class="ph"><span class="num">1</span><h2>Worum geht es?</h2></header>
+        <p>Der Flughafen Tegel ist geschlossen. Jetzt ist dort viel Platz. Aber viele wollen etwas davon:</p>
+        <div class="wuensche">
+          <div class="wunsch c-rot"><b>Wohnen</b><span>Menschen suchen eine Wohnung.</span></div>
+          <div class="wunsch c-ton"><b>Arbeiten</b><span>Firmen und Schulen brauchen Platz.</span></div>
+          <div class="wunsch c-blau"><b>Erholen</b><span>Besucher wollen radeln und spielen.</span></div>
+          <div class="wunsch c-gruen"><b>Natur</b><span>Tiere und Pflanzen brauchen ihren Lebensraum.</span></div>
+        </div>
+        <p>Eine Fläche kann aber immer nur <b>eine</b> Nutzung haben. Darum tauschst <b>du</b> die Nutzungsart und die damit verbundenen Komponenten der Flächen aus.</p>
+        <div class="kasten"><h3>Jeder Tausch hat zwei Seiten</h3>
+          <p>Etwas Neues kommt auf die Karte. Etwas anderes wird verdrängt und landet in der <b>Verlust-Box</b>. So siehst du, was eine Entscheidung kostet.</p></div>
+        <div class="merke c-rot" style="--c:var(--dach)">Du wirst merken: Einen Aufbau, mit dem alle zufrieden sind, gibt es nicht. Genau das ist die Erkenntnis des Spiels.</div>
+        <div class="fuss"><span>Tegel im Tausch</span><span>2</span></div>
+      </div></section>
+    </div>
+
+    <!-- Blatt 2 -->
+    <div class="leaf">
+      <section class="face front" data-p="3"><div class="pg gross c-blau">
+        <header class="ph"><span class="num">2</span><h2>Die Bausteine</h2></header>
+        <p>Die <b>Karte</b> ist ein Luftbild des Geländes mit 22 Zonen. Auf jeder Zone liegt immer genau ein Baustein. Er zeigt, wie die Fläche genutzt wird.</p>
+        <div class="steine">
+          <img class="stein" src="{{IMG:koppel}}" alt="Dunkelgrüner Baustein"><div><b><span class="kz">K</span>Koppel</b><p>Naturschutz und Lebensraum. Hier weiden Tiere. Kein Zugang für Besucher.</p></div>
+          <img class="stein" src="{{IMG:gruen}}" alt="Hellgrüner Baustein"><div><b><span class="kz">GA</span>Grünanlage</b><p>Grünfläche für Besucher. Keine Weidetiere.</p></div>
+          <img class="stein" src="{{IMG:wohnen}}" alt="Baustein mit Haus"><div><b><span class="kz">W</span>Wohnen</b><p>Wohnhäuser, zum Beispiel im Schumacher Quartier.</p></div>
+          <img class="stein" src="{{IMG:gewerbe}}" alt="Baustein mit Tonblöcken"><div><b><span class="kz">Ge</span>Gewerbe</b><p>Firmen oder Schulen und Hochschulen.</p></div>
+          <img class="stein" src="{{IMG:erholung}}" alt="Baustein mit Fahrrad"><div><b><span class="kz">Er</span>Erholung/Freizeit</b><p>Freizeit und Erholung für Menschen.</p></div>
+        </div>
+        <div class="kasten"><h3>Der Boden verrät die Versiegelung</h3>
+          <p><b>Grün</b> (dunkel oder hell) ist offener, grüner Boden. <b>Weiß</b> ist betonierter Boden, auf dem Häuser, Firmen und Freizeitflächen stehen.</p></div>
+        <div class="fuss"><span>Spielmaterial</span><span>3</span></div>
+      </div></section>
+      <section class="face back" data-p="4"><div class="pg gross c-gelb">
+        <header class="ph"><span class="num">3</span><h2>Marker und Boxen</h2></header>
+        <p>Marker zeigen, wer eine Fläche nutzt oder was sie besonders macht. Sie liegen auf ihrem Baustein.</p>
+        <table>
+          <tr><th>Marker</th><th>Liegt auf</th></tr>
+          <tr><td><span class="mkz"><span class="mk mk-ti">Ti</span> Tiere</span></td><td>Koppel</td></tr>
+          <tr><td><span class="mkz"><span class="mk mk-pf">Pf</span> Pflanzen</span></td><td>Koppel, Grünanlage</td></tr>
+          <tr><td><span class="mkz"><span class="mk mk-ns">NS</span> Naturschutz (NSM)</span></td><td>Koppel</td></tr>
+          <tr><td><span class="mkz"><span class="mk mk-bs">Bs</span> Besucher</span></td><td>Grünanlage, Erholung</td></tr>
+          <tr><td><span class="mkz"><span class="mk mk-an">An</span> Anwohner</span></td><td>Wohnen</td></tr>
+          <tr><td><span class="mkz"><span class="mk mk-be">Be</span> Beschäftigte</span></td><td>Gewerbe</td></tr>
+          <tr><td><span class="mkz"><span class="mk mk-dm">D</span> Denkmalschutz (DMS)</span></td><td>einzelne Gewerbesteine</td></tr>
+          <tr><td><span class="mkz"><span class="mk mk-vs">VS</span> Versiegelung (VSM)</span></td><td>nie auf der Karte</td></tr>
+          <tr><td><span class="mkz"><span class="mk mk-es">ES</span> Entsiegelung (ESM)</span></td><td>nie auf der Karte</td></tr>
+        </table>
+        <div class="boxen">
+          <div class="box"><b>Tauschbox</b><span>Der Vorrat. Alles, was gerade nicht im Spiel ist.</span></div>
+          <div class="box verlust"><b>Verlust-Box</b><span>Deine „Hand“. Alles, was verdrängt wurde, und der Aufwand.</span></div>
+        </div>
+        <div class="fuss"><span>Spielmaterial</span><span>4</span></div>
+      </div></section>
+    </div>
+
+    <!-- Blatt 3 -->
+    <div class="leaf">
+      <section class="face front" data-p="5"><div class="pg gross c-gruen">
+        <header class="ph"><span class="num">4</span><h2>Aufbau</h2></header>
+        <ol>
+          <li>Lege die Karte in die Mitte.</li>
+          <li>Setze die Bausteine auf die Zonen, wie auf dem Foto vorn.</li>
+          <li>Lege auf jeden Baustein seine Marker:</li>
+        </ol>
+        <table>
+          <tr><th>Baustein</th><th>Marker zum Start</th></tr>
+          <tr><td><b>Koppel</b></td><td><span class="mk mk-ti">Ti</span> <span class="mk mk-pf">Pf</span> <span class="mk mk-ns">NS</span></td></tr>
+          <tr><td><b>Grünanlage</b></td><td><span class="mk mk-pf">Pf</span> <span class="mk mk-bs">Bs</span></td></tr>
+          <tr><td><b>Wohnen</b></td><td><span class="mk mk-an">An</span></td></tr>
+          <tr><td><b>Gewerbe</b></td><td><span class="mk mk-be">Be</span></td></tr>
+          <tr><td><b>Erholung/Freizeit</b></td><td><span class="mk mk-bs">Bs</span></td></tr>
+        </table>
+        <ol start="4">
+          <li>Lege die drei Sterne <span class="mk mk-dm">D</span> zu den Gewerbesteinen, bei denen sie auf dem Foto liegen.</li>
+          <li>Alle <span class="mk mk-vs">VS</span> und <span class="mk mk-es">ES</span> und alles Übrige kommen in die Tauschbox.</li>
+          <li>Die Verlust-Box bleibt leer.</li>
+          <li>Lege die Tauschmatrix gut sichtbar daneben.</li>
+        </ol>
+        <p class="klein">Das Foto zeigt einen früheren Stand: Die meisten Marker liegen noch nicht auf den Bausteinen, und statt der Bank steht heute ein Fahrrad.</p>
+        <div class="fuss"><span>Vorbereitung</span><span>5</span></div>
+      </div></section>
+      <section class="face back" data-p="6"><div class="pg gross luft c-blau">
+        <header class="ph"><span class="num">5</span><h2>So läuft ein Zug</h2></header>
+        <p>Du spielst allein und gestaltest das Feld so, wie du es dir vorstellst. Ein Zug ist ein Tausch.</p>
+        <ol class="schritte">
+          <li><div><b>Zone wählen</b><span>Suche einen Baustein auf der Karte aus. Das ist die Nutzung, die <b style="display:inline">da ist</b>.</span></div></li>
+          <li><div><b>Neue Nutzung wählen</b><span>Entscheide, wozu die Fläche <b style="display:inline">wird</b>.</span></div></li>
+          <li><div><b>Baustein tauschen</b><span>Alter Baustein in die Verlust-Box, neuer Baustein auf die Zone. Nie stapeln.</span></div></li>
+          <li><div><b>Matrix lesen</b><span>Oben die Spalte „ist da“, links die Zeile „wird zu“. <a href="#seite-8" onclick="TEGEL_GEHE(8);return false">Zur Matrix auf Seite 8</a></span></div></li>
+          <li><div><b>Marker bewegen</b><span>Führe jedes Plus und Minus der Zelle einmal aus.</span></div></li>
+          <li><div><b>Hinschauen</b><span>Schau auf die Karte und in die Verlust-Box. Erst dann kommt der nächste Zug.</span></div></li>
+        </ol>
+        <div class="fuss"><span>Spielablauf</span><span>6</span></div>
+      </div></section>
+    </div>
+
+    <!-- Blatt 4 -->
+    <div class="leaf">
+      <section class="face front" data-p="7"><div class="pg c-rot">
+        <header class="ph"><span class="num">6</span><h2>Plus und Minus</h2></header>
+        <div class="kasten"><div class="pm"><span class="zeichen plus">+</span><div><h3>Plus: Das geht verloren</h3>
+          <p>Der Marker wird verdrängt. Nimm ihn vom alten Baustein.</p>
+          <div class="weg"><span class="ort k">Karte</span>→<span class="ort v">Verlust-Box</span></div></div></div></div>
+        <div class="kasten c-gruen"><div class="pm"><span class="zeichen minus">−</span><div><h3>Minus: Das kommt neu dazu</h3>
+          <p>Der Marker kommt auf den neuen Baustein. Liegt er schon in der Verlust-Box, nimm ihn von dort. Sonst aus der Tauschbox.</p>
+          <div class="weg"><span class="ort v">Verlust-Box</span>oder<span class="ort t">Tauschbox</span>→<span class="ort k">Karte</span></div></div></div></div>
+        <div class="kasten c-ton"><div class="pm"><span class="zeichen null">0</span><div><h3>Null: Nichts bewegt sich</h3>
+          <p>Die Nutzung bleibt gleich.</p></div></div></div>
+        <div class="kasten c-gelb"><h3>Versiegeln und Entsiegeln kosten immer</h3>
+          <p>Grüner Boden wird weiß: ein <span class="mk mk-vs">VS</span> kommt in die Verlust-Box. Weißer Boden wird grün: ein <span class="mk mk-es">ES</span> kommt in die Verlust-Box.</p>
+          <div class="weg"><span class="ort t">Tauschbox</span>→<span class="ort v">Verlust-Box</span>und bleibt dort</div>
+          <p><b>Diesen Aufwand wirst du nie wieder los.</b> Wer noch einmal versiegelt oder entsiegelt, bekommt einen weiteren Marker dazu.</p></div>
+        <div class="fuss"><span>Regeln</span><span>7</span></div>
+      </div></section>
+      <section class="face back" data-p="8"><div class="pg c-blau">
+        <header class="ph"><span class="num">7</span><h2>Die Tauschmatrix</h2></header>
+        <p><b>Spalte</b> = Nutzung, die da ist. <b>Zeile</b> = Nutzung, zu der die Fläche wird.</p>
+        <table class="matrix" id="matrix"></table>
+        <div class="legende" id="legende"></div>
+        <p class="klein">Rotes Plus: in die Verlust-Box. Grünes Minus: auf den neuen Baustein.</p>
+        <div class="fuss"><span>Regeln</span><span>8</span></div>
+      </div></section>
+    </div>
+
+    <!-- Blatt 5 -->
+    <div class="leaf">
+      <section class="face front" data-p="9"><div class="pg gross c-rot">
+        <header class="ph"><span class="num">8</span><h2>Probier es aus</h2></header>
+        <div class="wahl c-blau"><span>Was ist da?</span><div class="knoepfe" id="wahl-von"></div></div>
+        <div class="wahl c-gruen"><span>Wozu wird es?</span><div class="knoepfe" id="wahl-zu"></div></div>
+        <div class="ergebnis" id="ergebnis" aria-live="polite"></div>
+        <div class="taten"><button class="tat" id="ausfuehren" type="button">Tausch ausführen</button><button class="tat leise" id="leeren" type="button">Neu anfangen</button></div>
+        <div class="kasten vbox" style="--ch:#F7D5D1"><h3 style="--c:#7E1A1D">In deiner Verlust-Box liegt</h3><div class="inhalt" id="vbox"></div></div>
+        <div class="fuss"><span>Zum Ausprobieren</span><span>9</span></div>
+      </div></section>
+      <section class="face back" data-p="10"><div class="pg c-gruen">
+        <header class="ph"><span class="num">9</span><h2>Zwei Beispielzüge</h2></header>
+        <div class="kasten c-rot"><h3>Erster Zug: Aus einer Koppel wird Wohnen</h3>
+          <ol>
+            <li>Der Koppelstein kommt in die Verlust-Box. Ein Wohnstein aus der Tauschbox kommt auf die Zone.</li>
+            <li><span class="mk mk-ti">Ti</span> <span class="mk mk-ns">NS</span> <span class="mk mk-pf">Pf</span> kommen in die Verlust-Box.</li>
+            <li>Ein <span class="mk mk-vs">VS</span> aus der Tauschbox kommt dazu, weil versiegelt wird.</li>
+            <li>Ein <span class="mk mk-an">An</span> aus der Tauschbox kommt auf den Wohnstein.</li>
+          </ol>
+          <p><b>Was du siehst:</b> Neuer Wohnraum. Dafür liegen ein Lebensraum, seine Tiere und Pflanzen, der Naturschutz und der Aufwand in der Verlust-Box.</p></div>
+        <div class="kasten c-gruen"><h3>Zweiter Zug: Aus Wohnen wird eine Grünanlage</h3>
+          <ol>
+            <li>Ein Wohnstein kommt in die Verlust-Box. Ein Grünanlagenstein kommt auf die Zone.</li>
+            <li>Der <span class="mk mk-an">An</span> kommt in die Verlust-Box. Ein <span class="mk mk-es">ES</span> aus der Tauschbox kommt dazu.</li>
+            <li>Der <span class="mk mk-pf">Pf</span> liegt seit dem ersten Zug in der Verlust-Box. Er kommt von dort auf die Grünanlage.</li>
+            <li>Ein <span class="mk mk-bs">Bs</span> aus der Tauschbox kommt auf die Grünanlage.</li>
+          </ol>
+          <p><b>Was du siehst:</b> Die Pflanzen sind zurück, aber ohne Tiere und Naturschutz. Anwohner haben ihren Platz verloren. <span class="mk mk-vs">VS</span> und <span class="mk mk-es">ES</span> bleiben beide in der Verlust-Box.</p></div>
+        <div class="fuss"><span>Beispiele</span><span>10</span></div>
+      </div></section>
+    </div>
+
+    <!-- Blatt 6 -->
+    <div class="leaf">
+      <section class="face front" data-p="11"><div class="pg c-gelb">
+        <header class="ph"><span class="num">10</span><h2>Sonderfälle und Ende</h2></header>
+        <ul>
+          <li><b>Ein Plus-Marker liegt nicht auf dem Baustein:</b> Der Schritt entfällt. Das betrifft vor allem den Stern <span class="mk mk-dm">D</span>.</li>
+          <li><b>Ein Minus-Marker ist in keiner Box mehr:</b> Der Schritt entfällt. Überlege, warum er fehlt.</li>
+          <li><b>Denkmalschutz:</b> Einen Stern kann man nur abbauen. Er kommt in deine Verlust-Box und bleibt dort für immer.</li>
+          <li><b>Alle Tausche sind erlaubt.</b> Das Spiel sagt nicht, ob eine Nutzung in echt zulässig wäre.</li>
+        </ul>
+        <div class="kasten c-gruen"><h3>Wann ist Schluss?</h3>
+          <p>Das Spiel hat kein festes Ende. Du hörst auf, wenn du merkst: Egal wie ich tausche, irgendetwas landet immer in der Verlust-Box.</p></div>
+        <h3 style="--c:var(--himmel)">Fragen zum Nachdenken</h3>
+        <ul class="fragen c-blau">
+          <li>Wer hat durch den Tausch etwas gewonnen?</li>
+          <li>Was liegt in der Verlust-Box, und wer vermisst es?</li>
+          <li>Was konnte ich zurückholen? Was musste ich dafür abgeben?</li>
+          <li>Was lässt sich gar nicht zurückholen?</li>
+          <li>Wie würdest du entscheiden, wenn es deine Stadt wäre?</li>
+        </ul>
+        <div class="fuss"><span>Regeln</span><span>11</span></div>
+      </div></section>
+      <section class="face back" data-p="12"><div class="pg rueck c-gruen">
+        <header class="ph"><span class="num">✓</span><h2>Kurz und knapp</h2></header>
+        <ol class="kurz">
+          <li>Zone wählen.</li>
+          <li>Neue Nutzung wählen.</li>
+          <li>Alten Baustein in die Verlust-Box, neuen auf die Zone.</li>
+          <li>Matrix lesen: Spalte „ist da“, Zeile „wird zu“.</li>
+          <li>Plus in die Verlust-Box, Minus auf den neuen Baustein.</li>
+          <li>Hinschauen und nachdenken.</li>
+        </ol>
+        <div class="kasten" style="--ch:#fff"><h3>Gut zu wissen</h3>
+          <p class="klein">Das Spiel vereinfacht stark. Bausteine und Marker stehen für Arten von Nutzungen und Betroffenen, nicht für Flächengrößen, Personenzahlen oder Messwerte. Es ersetzt keine Planung und keine rechtliche Prüfung.</p>
+          <p class="klein"><b>Ab 6 Jahren.</b> Das Spiel enthält Kleinteile, die verschluckt werden können.</p></div>
+        <p class="klein" style="margin-top:auto"><b>Tegel im Tausch</b> ist ein Projekt im Modul Big Data Analytics.<br>Thao Trang Le (Anny), Linda Izadi Sharifbad, Fatih Koc und Marcel Do.<br>Fotos: eigene Aufnahmen des Modells.</p>
+        <div class="fuss"><span>Tegel im Tausch</span><span>12</span></div>
+      </div></section>
+    </div>
+  </div>
+
+  <div class="bar">
+    <button type="button" id="zurueck" aria-label="Zurückblättern">‹ Zurück</button>
+    <input type="range" id="regler" min="0" max="6" value="0" step="1" aria-label="Seite wählen">
+    <button type="button" id="weiter" aria-label="Weiterblättern">Weiter ›</button>
+  </div>
+  <div class="ort-anzeige" id="anzeige">Titel</div>
+</div>
+
+<script>
+(function(){
+  var IMG={K:"{{IMG:koppel}}",GA:"{{IMG:gruen}}",W:"{{IMG:wohnen}}",Ge:"{{IMG:gewerbe}}",Er:"{{IMG:erholung}}"};
+  var NUTZ=[["K","Koppel"],["GA","Grünanlage"],["W","Wohnen"],["Ge","Gewerbe"],["Er","Erholung/ Freizeit"]];
+  var NAME={K:"Koppel",GA:"Grünanlage",W:"Wohnen",Ge:"Gewerbe",Er:"Erholung/Freizeit"};
+  var MK={ti:["Ti","Tiere"],pf:["Pf","Pflanzen"],ns:["NS","Naturschutz"],bs:["Bs","Besucher"],an:["An","Anwohner"],be:["Be","Beschäftigte"],dm:["D","Denkmalschutz"],vs:["VS","Versiegelung"],es:["ES","Entsiegelung"]};
+  // M[ist da][wird zu] = [Plus, Minus]
+  var M={
+    K:{GA:[["ti","ns"],["bs"]],W:[["vs","ti","ns","pf"],["an"]],Ge:[["vs","ns","ti","pf"],["be"]],Er:[["vs","ns","ti","pf"],["bs"]]},
+    GA:{K:[["bs"],["ti","ns"]],W:[["vs","pf","bs"],["an"]],Ge:[["vs","pf","bs"],["be"]],Er:[["vs","pf"],[]]},
+    W:{K:[["es","an"],["ns","pf","ti"]],GA:[["es","an"],["pf","bs"]],Ge:[["an"],["be"]],Er:[["an"],["bs"]]},
+    Ge:{K:[["es","be","dm"],["ns","ti","pf"]],GA:[["es","be","dm"],["ti","pf","bs"]],W:[["be","dm"],["an"]],Er:[["be","dm"],["bs"]]},
+    Er:{K:[["es","bs"],["ns","ti","pf"]],GA:[["es"],["pf"]],W:[["bs"],["an"]],Ge:[["bs"],["be"]]}
+  };
+  window.TEGEL_MATRIX=M;
+  function chip(k){return '<span class="mk mk-'+k+'" title="'+MK[k][1]+'">'+MK[k][0]+'</span>';}
+
+  // Matrix zeichnen
+  var h='<thead><tr><th class="ecke">wird zu ↓<br>ist da →</th>';
+  NUTZ.forEach(function(n){h+='<th>'+n[1]+'</th>';});
+  h+='</tr></thead><tbody>';
+  NUTZ.forEach(function(zu){
+    h+='<tr><th>'+zu[1]+'</th>';
+    NUTZ.forEach(function(von){
+      if(von[0]===zu[0]){h+='<td><div class="nix">0</div></td>';return;}
+      var c=M[von[0]][zu[0]];
+      h+='<td><div class="zl p"><i>+</i>'+c[0].map(chip).join('')+'</div>'+(c[1].length?'<div class="zl m"><i>−</i>'+c[1].map(chip).join('')+'</div>':'')+'</td>';
+    });
+    h+='</tr>';
+  });
+  document.getElementById('matrix').innerHTML=h+'</tbody>';
+  document.getElementById('legende').innerHTML=Object.keys(MK).map(function(k){return '<span class="mkz">'+chip(k)+' '+MK[k][1]+'</span>';}).join('');
+
+  // Probierer
+  var von='K',zu='W',box={},steine={};
+  function knoepfe(id,get,set){
+    var el=document.getElementById(id);
+    el.innerHTML=NUTZ.map(function(n){return '<button type="button" id="'+id+'-'+n[0]+'" data-k="'+n[0]+'"><img src="'+IMG[n[0]]+'" alt="">'+n[1]+'</button>';}).join('');
+    el.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;set(b.dataset.k);zeige();});
+    return function(){Array.prototype.forEach.call(el.children,function(b){b.setAttribute('aria-pressed',b.dataset.k===get()?'true':'false');});};
+  }
+  var mVon=knoepfe('wahl-von',function(){return von;},function(k){von=k;});
+  var mZu=knoepfe('wahl-zu',function(){return zu;},function(k){zu=k;});
+  function zeige(){
+    mVon();mZu();
+    var e=document.getElementById('ergebnis'),btn=document.getElementById('ausfuehren');
+    if(von===zu){e.innerHTML='<div class="zeile"><b>Kein Tausch</b></div><div>Die Nutzung bleibt gleich. In der Matrix steht eine 0, nichts bewegt sich.</div>';btn.disabled=true;}
+    else{
+      var c=M[von][zu],vomStein=c[0].filter(function(k){return k!=='vs'&&k!=='es';}),aufwand=c[0].filter(function(k){return k==='vs'||k==='es';});
+      var t='<div class="zeile"><b>'+NAME[von]+' → '+NAME[zu]+'</b></div>';
+      t+='<div class="zeile"><b>In die Verlust-Box</b>'+vomStein.map(chip).join(' ')+'<span class="klein">und der alte Baustein</span></div>';
+      if(aufwand.length)t+='<div class="zeile"><b>Aufwand</b>'+aufwand.map(chip).join(' ')+'<span class="klein">'+(aufwand[0]==='vs'?'grüner Boden wird versiegelt':'betonierter Boden wird entsiegelt')+'</span></div>';
+      t+='<div class="zeile"><b>Auf den neuen Stein</b>'+(c[1].length?c[1].map(function(k){return chip(k)+(box[k]>0?'<span class="klein">aus der Verlust-Box</span>':'');}).join(' '):'<span class="klein">keine neuen Marker</span>')+'</div>';
+      if(c[0].indexOf('dm')>-1)t+='<div class="klein">Den Stern gibt es nur ab, wenn einer bei diesem Gewerbestein liegt.</div>';
+      e.innerHTML=t;btn.disabled=false;
+    }
+    var v=document.getElementById('vbox'),teile=[];
+    Object.keys(NAME).forEach(function(k){if(steine[k]>0)teile.push('<span class="mkz"><span class="zahl">'+steine[k]+'×</span> '+NAME[k]+'</span>');});
+    Object.keys(MK).forEach(function(k){if(box[k]>0)teile.push('<span class="mkz"><span class="zahl">'+box[k]+'×</span> '+chip(k)+'</span>');});
+    v.innerHTML=teile.length?teile.join(''):'<span class="klein">Noch nichts. Führe einen Tausch aus und sieh, was passiert.</span>';
+  }
+  document.getElementById('ausfuehren').addEventListener('click',function(){
+    if(von===zu)return;var c=M[von][zu];
+    if(steine[zu]>0)steine[zu]--;
+    steine[von]=(steine[von]||0)+1;
+    c[1].forEach(function(k){if(box[k]>0)box[k]--;});
+    c[0].forEach(function(k){box[k]=(box[k]||0)+1;});
+    zeige();
+  });
+  document.getElementById('leeren').addEventListener('click',function(){box={};steine={};zeige();});
+  zeige();
+
+  // Blättern
+  var book=document.getElementById('book'),leaves=Array.prototype.slice.call(book.querySelectorAll('.leaf')),faces=Array.prototype.slice.call(book.querySelectorAll('.face'));
+  var N=faces.length,page=1,mq=window.matchMedia('(max-width:819px)');
+  var regler=document.getElementById('regler'),anzeige=document.getElementById('anzeige'),bz=document.getElementById('zurueck'),bw=document.getElementById('weiter');
+  function einzeln(){return mq.matches;}
+  function render(){
+    var v=Math.floor(page/2); // Anzahl umgeblätterter Blätter
+    leaves.forEach(function(l,i){var f=i<v;l.classList.toggle('flipped',f);l.style.zIndex=f?i+1:leaves.length-i;});
+    book.classList.toggle('vorn',v===0);book.classList.toggle('hinten',v===leaves.length);
+    faces.forEach(function(f){var p=+f.dataset.p,sicht=einzeln()?p===page:(p===2*v||p===2*v+1);f.classList.toggle('current',einzeln()&&p===page);f.inert=!sicht;});
+    if(einzeln()){regler.max=N-1;regler.value=page-1;anzeige.textContent=page===1?'Titel':'Seite '+page+' von '+N;bz.disabled=page===1;bw.disabled=page===N;}
+    else{regler.max=leaves.length;regler.value=v;anzeige.textContent=v===0?'Titel':(v===leaves.length?'Seite '+N+' von '+N:'Seiten '+(2*v)+' und '+(2*v+1)+' von '+N);bz.disabled=v===0;bw.disabled=v===leaves.length;}
+  }
+  function gehe(d){
+    if(einzeln())page=Math.max(1,Math.min(N,page+d));
+    else{var v=Math.max(0,Math.min(leaves.length,Math.floor(page/2)+d));page=v===0?1:2*v;}
+    render();
+  }
+  bz.addEventListener('click',function(){gehe(-1);});bw.addEventListener('click',function(){gehe(1);});
+  regler.addEventListener('input',function(){var x=+regler.value;page=einzeln()?x+1:(x===0?1:2*x);render();});
+  document.addEventListener('keydown',function(e){if(e.target===regler)return;if(e.key==='ArrowRight'||e.key==='PageDown'){gehe(1);}else if(e.key==='ArrowLeft'||e.key==='PageUp'){gehe(-1);}});
+  var x0=null;
+  book.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
+  book.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;x0=null;if(Math.abs(dx)>60)gehe(dx<0?1:-1);},{passive:true});
+  faces[0].addEventListener('click',function(){if(page===1)gehe(1);});
+  if(mq.addEventListener)mq.addEventListener('change',render);
+  var m=/^#seite-(\d+)$/.exec(location.hash);if(m){page=Math.max(1,Math.min(N,+m[1]));}
+  window.TEGEL_GEHE=function(p){page=p;render();};
+  render();
+})();
+</script>
