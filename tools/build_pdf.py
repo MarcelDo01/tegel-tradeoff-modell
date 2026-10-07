@@ -107,13 +107,13 @@ def build():
         i += 1
 
     def page(canvas, doc):
-        canvas.setTitle('Tegel-Modell - Technische Dokumentation')
+        canvas.setTitle('Tegel im Tausch - Technische Dokumentation')
         canvas.setAuthor('Tegel im Tausch')
         canvas.setStrokeColor(colors.HexColor('#bdc5b4'))
         canvas.line(50, A4[1]-35, A4[0]-50, A4[1]-35)
         canvas.setFont(normal,7.5)
         canvas.setFillColor(colors.HexColor('#666666'))
-        canvas.drawString(50,23,'Tegel-Modell | Technische Dokumentation')
+        canvas.drawString(50,23,'Tegel im Tausch | Technische Dokumentation')
         canvas.drawRightString(A4[0]-50,23,str(doc.page))
 
     SimpleDocTemplate(str(OUTPUT), pagesize=A4, rightMargin=50, leftMargin=50,
