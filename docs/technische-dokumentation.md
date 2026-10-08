@@ -18,7 +18,7 @@ Das Modell richtet sich vor allem an Kinder, jüngere Menschen und Interessierte
 
 ## 2. Untersuchungsgebiet und Zonierung
 
-Betrachtet wird das gesamte Gelände des ehemaligen Flughafens Berlin-Tegel, nicht ausschließlich die Tegeler Stadtheide. Für das Modell wurde das Gebiet in 22 Zonen gegliedert.
+Betrachtet wird das gesamte Gelände des ehemaligen Flughafens Berlin-Tegel, nicht ausschließlich die Tegeler Stadtheide. Für das Modell wurde das Gebiet in Felder gegliedert; auf 21 davon liegt zum Spielstart ein Baustein.
 
 ![Zonendarstellung aus der Präsentation, Folie 2](assets/zonierung.png)
 
@@ -49,8 +49,9 @@ Das Entwicklungs- und Pflegekonzept (EPK, 2022) für die Tegeler Stadtheide dien
 |---|---|---|
 | Abschlusspräsentation | Projektidee, Arbeitsprozess, Modellaufbau, Fotos und Legenden | `presentation/abschlussprasentation.pdf` |
 | Whiteboard-Foto | Grundlage der Tauschmatrix | `docs/assets/tauschmatrix_original.jpg` |
-| Excel-Arbeitsdatei | Zonenbezeichnungen und Zonenattribute | `data/zones.xlsx` |
-| CSV-Export | maschinenlesbare Fassung der Zonendaten | `data/zones.csv` |
+| Startaufbau | Startbaustein, Marker und Planungsmerkmale je Feld | `data/startaufbau.csv`, `data/startaufbau.xlsx` |
+| Tauschmatrix als Tabelle | maschinenlesbare Fassung der Nutzungswechsel | `data/tauschmatrix.csv` |
+| Belege und Eckdaten | Quellenstellen zu den Spielregeln und Kennzahlen zum Gebiet | `data/belege.csv`, `data/eckdaten.csv` |
 
 Die Quellen wurden als Arbeitsgrundlagen für ein didaktisches Modell verwendet. Aus ihnen werden keine ungeprüften rechtlichen Aussagen abgeleitet.
 
@@ -64,35 +65,44 @@ Die eigentliche Zonierung erfolgte manuell. Wir haben die Informationen der Kart
 
 ![Kartenvergleich und Arbeit an der Grundkarte, Präsentation, Folie 6](assets/arbeitsprozess.png)
 
-## 5. Zonendatenmodell
+## 5. Daten zum Spiel
 
-Die Excel-Datei enthält im Tabellenblatt `Tabelle1` 22 Datenzeilen und zehn vollständig befüllte Spalten. Die `zone_id`-Werte reichen ohne Lücken von 1 bis 22. Der CSV-Export bildet denselben Tabellenstand ab; das [Data Dictionary](../data/data_dictionary.md) erläutert die einzelnen Felder.
+Im Ordner `data/` liegen vier Tabellen, mit denen sich das Spiel aufbauen und begründen lässt. Das [Data Dictionary](../data/data_dictionary.md) erläutert alle Spalten.
 
-| Feldgruppe | Spalten | Funktion |
+| Datei | Inhalt |
+|---|---|
+| `startaufbau.csv` und `.xlsx` | ein Eintrag je Feld: Startbaustein, Boden, Marker, Denkmalschutz und Merkmale aus den Planungsunterlagen |
+| `tauschmatrix.csv` | die 20 Nutzungswechsel mit ihren Markerbewegungen |
+| `belege.csv` | für jeden Marker und die Aufwandsregeln eine Belegstelle aus Planungsunterlagen und öffentlichen Quellen |
+| `eckdaten.csv` | Kennzahlen zum Gebiet mit Quelle und Fundstelle |
+
+### 5.1 Startaufbau und Planungsmerkmale
+
+Für jedes der 21 Felder haben wir festgehalten, in welchem Teilgebiet es liegt, zu welchem Bebauungsplan es gehört, ob dort geschützte Biotope kartiert sind, ob es im Entwurf des Naturschutzgebiets liegt und wie stark es heute versiegelt ist. Grundlage sind die Karten im Entwicklungs- und Pflegekonzept (EPK). Die Felder haben keine Koordinaten; wir haben die Folie mit dem Auge über die Karten gelegt. Die Werte gelten deshalb für das Teilgebiet und nicht für die genaue Fläche.
+
+Der Abgleich zeigt, dass der Startaufbau der Planung folgt:
+
+| Gebiet | Felder | Startbausteine |
 |---|---|---|
-| Identifikation | `zone_id` | eindeutige Kennung der Zone |
-| räumliche Einordnung | `Hauptkategorie`, `Unterkategorie`, `Aktuelle Nutzung`, `Flächentyp` | Beschreibung des Ausgangskontexts |
-| Zugang und Beteiligte | `Zugang`, `Akteure`, `Beweidung` | Hinweise auf Nutzung, Beteiligte und Tierhaltung |
-| Schutz und Herkunft | `Schutzstatus`, `Datenquelle` | fachlicher Kontext und projektinterner Quellenhinweis |
+| Tegeler Stadtheide, geplantes Naturschutzgebiet | 1, 2, 3, 4, 6, 7, 11 | alle sieben Koppeln |
+| Landebahn und Nordfuge, laut EPK für Sport und Freizeit vorgesehen | 5, 8, 12, 15 | alle vier Grünanlagen |
+| Landschaftspark | 14, 18 | Erholung/Freizeit |
+| Urban Tech Republic | 9, 13, 16, 17, 19 | vier Gewerbebausteine, ein Wohnbaustein |
+| Schumacher Quartier | 20, 21, 22 | zwei Wohnbausteine, eine Erholungsfläche |
 
-Die 22 Zonen verteilen sich auf folgende Hauptkategorien:
+Abweichungen gibt es bei Feld 19 und Feld 20. Aus der Tabelle ergibt sich auch die Stückliste der Marker für den Startaufbau, zum Beispiel elf Pflanzenmarker und je sieben Tier-, Naturschutz- und Besuchermarker.
 
-| Hauptkategorie | Anzahl |
-|---|---:|
-| Naturschutzgebiet und natürlicher Lebensraum | 13 |
-| Flughafenbestand / Denkmalschutz | 3 |
-| Freizeit / Erholung | 4 |
-| Wohnen / Quartier | 2 |
+### 5.2 Belege für die Regeln
 
-16 Zonen sind als eingeschränkt und sechs als öffentlich zugänglich erfasst. Für 13 Zonen ist Beweidung mit `Ja`, für neun mit `Nein` angegeben.
+Die Marker und die Aufwandsregeln haben wir mit Quellenstellen hinterlegt. Die wichtigste ist die Ausgleichsbilanz im EPK: Durch die Nachnutzung des Flughafens gehen 44,68 Hektar geschützte Trockenrasen und Trockene Sandheide verloren, das Aufwertungspotenzial beträgt 44,43 Hektar, es bleibt ein Defizit von 0,25 Hektar (EPK, S. 111 und 114). Diese Bilanz stützt die Regel, dass Versiegelung als Aufwand in der Verlust-Box bleibt. Weitere Belege betreffen die Schafbeweidung, die erfassten Brutvögel, das geplante Naturschutzgebiet, das Wohnquartier, die Urban Tech Republic und den Denkmalschutz.
 
-Die Tabellenbegriffe sind nicht automatisch mit den fünf vereinfachten Nutzungen der Tauschmatrix gleichzusetzen. Die Datei enthält keine Geometrien, Flächengrößen, Personenzahlen oder quantitativen Umweltwirkungen.
+Die Belege stützen die Regeln qualitativ. Ein Marker steht weiterhin für eine Art von Betroffenheit und nicht für eine bestimmte Menge.
 
 ## 6. Bestandteile des physischen Modells
 
 Das Modell besteht aus:
 
-- einer Karte mit 22 Zonen,
+- einer Karte mit 21 Feldern,
 - Nutzungsbausteinen,
 - Akteursmarkern,
 - Naturschutz- und Denkmalschutzmarkern (NSM, DMS),
@@ -231,7 +241,7 @@ Der dokumentierte Arbeitsablauf lautet:
 1. Kartenebenen und Konzeptgrundlagen auswählen und ihre Datenstände dokumentieren.
 2. Luftbild, Versiegelung, Projektgrenze, Schutz- und Nutzungsinformationen vergleichen.
 3. Die Grundkarte im benötigten Format vorbereiten und drucken.
-4. Die 22 Zonen auf transparenter Folie einzeichnen und mit den Bausteinabmessungen abstimmen.
+4. Die Felder auf transparenter Folie einzeichnen und mit den Bausteinabmessungen abstimmen.
 5. Nutzungsbausteine und Marker gemäß den Legenden herstellen.
 6. Karte, Marker und beide Boxen nach dem Ausgangsaufbau in Abschnitt 6.3 aufbauen.
 7. Die Tauschmatrix bereitlegen und einen Beispielzug durchführen.
@@ -245,7 +255,7 @@ Entstanden sind vier Dinge:
 
 - ein physisches Modell des Tegel-Geländes mit Grundkarte, Nutzungsbausteinen, Markern und zwei Boxen,
 - eine Tauschmatrix mit 25 gerichteten Nutzungswechseln,
-- eine Zonentabelle mit zehn Merkmalen je Zone,
+- Tabellen zum Startaufbau, zur Tauschmatrix, zu den Belegen und zu Eckdaten des Gebiets,
 - eine Spielanleitung als Text und als blätterbares Heft mit einer Seite zum Ausprobieren.
 
 Beim Spielen zeigt das Modell vier Zusammenhänge:
@@ -296,11 +306,11 @@ Das Modell erreicht sein Ziel: Es macht sichtbar, dass es für das Tegel-Geländ
 
 Das Modell ersetzt keine Planung. Es vereinfacht stark und beruht auf unseren eigenen Einschätzungen. Seine Stärke liegt darin, einen Zielkonflikt begreifbar zu machen, auch für Menschen ohne Planungswissen.
 
-Als nächste Schritte sehen wir eine Erprobung mit Kindern, einen vollständigen Markersatz und eine eindeutige Zuordnung der Zonen aus den Daten zu den Bausteinen im Startaufbau.
+Als nächste Schritte sehen wir eine Erprobung mit Kindern, einen vollständigen Markersatz und eine Verortung der Felder mit Koordinaten, damit sich Kartenwerte genau statt nur je Teilgebiet zuordnen lassen.
 
 ## 17. Quellen und weitere Unterlagen
 
 - **Quellen:** Die verwendeten Kartenebenen, Konzeptgrundlagen und Abbildungsnachweise stehen in [Quellen und Herkunft](../references/quellen.md).
 - **KI-Einsatz:** Welche KI-Werkzeuge wir wofür eingesetzt haben, steht im [KI-Verzeichnis](ki-verzeichnis.md).
 - **Spielregeln:** Maßgeblich ist die [Spielanleitung](../SPIELANLEITUNG.md). Die [Tauschmatrix](../model/tauschmatrix.md) ist zusätzlich einzeln dokumentiert.
-- **Zonendaten:** Die Zonentabelle liegt als [Excel-Datei](../data/zones.xlsx) und als [CSV-Datei](../data/zones.csv) vor; das [Data Dictionary](../data/data_dictionary.md) erläutert die Felder.
+- **Daten:** Startaufbau, Tauschmatrix, Belege und Eckdaten liegen im Ordner [data](../data/README.md); das [Data Dictionary](../data/data_dictionary.md) erläutert die Spalten.

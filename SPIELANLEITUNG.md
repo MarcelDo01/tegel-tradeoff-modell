@@ -24,7 +24,7 @@ Du wirst merken: Einen Aufbau, mit dem alle zufrieden sind, gibt es nicht. Genau
 
 ### Karte
 
-Ein Luftbild des Geländes im Format A1. Das Gelände ist in 22 Zonen eingeteilt. Jeder Baustein auf der Karte steht für eine Zone.
+Ein Luftbild des Geländes im Format A1. Das Spielfeld hat 21 Felder. Jeder Baustein auf der Karte steht für ein Feld.
 
 ### Nutzungsbausteine
 

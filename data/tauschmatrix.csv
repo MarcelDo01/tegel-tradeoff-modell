@@ -1,0 +1,21 @@
+ist_da,wird_zu,in_die_verlust_box,auf_den_neuen_baustein
+Koppel,Grünanlage,Tiere; NSM,Besucher
+Koppel,Wohnen,VSM; Tiere; NSM; Pflanzen,Anwohner
+Koppel,Gewerbe,VSM; NSM; Tiere; Pflanzen,Beschäftigte
+Koppel,Erholung/Freizeit,VSM; NSM; Tiere; Pflanzen,Besucher
+Grünanlage,Koppel,Besucher,Tiere; NSM
+Grünanlage,Wohnen,VSM; Pflanzen; Besucher,Anwohner
+Grünanlage,Gewerbe,VSM; Pflanzen; Besucher,Beschäftigte
+Grünanlage,Erholung/Freizeit,VSM; Pflanzen,
+Wohnen,Koppel,ESM; Anwohner,NSM; Pflanzen; Tiere
+Wohnen,Grünanlage,ESM; Anwohner,Pflanzen; Besucher
+Wohnen,Gewerbe,Anwohner,Beschäftigte
+Wohnen,Erholung/Freizeit,Anwohner,Besucher
+Gewerbe,Koppel,ESM; Beschäftigte; DMS,NSM; Tiere; Pflanzen
+Gewerbe,Grünanlage,ESM; Beschäftigte; DMS,Tiere; Pflanzen; Besucher
+Gewerbe,Wohnen,Beschäftigte; DMS,Anwohner
+Gewerbe,Erholung/Freizeit,Beschäftigte; DMS,Besucher
+Erholung/Freizeit,Koppel,ESM; Besucher,NSM; Tiere; Pflanzen
+Erholung/Freizeit,Grünanlage,ESM,Pflanzen
+Erholung/Freizeit,Wohnen,Besucher,Anwohner
+Erholung/Freizeit,Gewerbe,Besucher,Beschäftigte

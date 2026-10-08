@@ -6,8 +6,8 @@
 |---|---|---|
 | Abschlusspräsentation, 17 Folien | Projektidee, Arbeitsprozess, Modellaufbau, Fotos und Legenden | `presentation/abschlussprasentation.pdf` |
 | Whiteboard-Foto der Tauschmatrix | Grundlage für die Übertragung der Tauschregeln | `docs/assets/tauschmatrix_original.jpg` |
-| Finale Excel-Arbeitsdatei | Zonenbezeichnungen und Zonenattribute für insgesamt 22 Zonen | `data/zones.xlsx` |
-| CSV-Export der Zonendaten | Maschinenlesbare Fassung der Excel-Arbeitsdatei | `data/zones.csv` |
+| Startaufbau | Startbaustein, Marker und Planungsmerkmale für 21 Felder | `data/startaufbau.csv`, `data/startaufbau.xlsx` |
+| Belege und Eckdaten | Quellenstellen zu den Spielregeln und Kennzahlen | `data/belege.csv`, `data/eckdaten.csv` |
 
 Für die technische Dokumentation haben wir Modellregeln und Tauschmatrix vereinheitlicht und verständlich formuliert. Maßgeblich ist die aktuelle `SPIELANLEITUNG.md`; das Verzeichnis `model/` enthält die Kurzfassung der Regeln und die separat dokumentierte Tauschmatrix.
 
@@ -31,6 +31,15 @@ Die Kartenebenen dienten uns als visuelle und räumliche Arbeitsgrundlage für d
 ### Fachliche Grundlage
 
 Das [Entwicklungs- und Pflegekonzept (EPK, 2022) für die Tegeler Stadtheide](https://www.berlin.de/sen/uvk/natur-und-gruen/landschaftsplanung/tegeler-stadtheide/) haben wir als fachliche Hintergrundgrundlage verwendet.
+
+### Weitere Unterlagen
+
+- Grün Berlin GmbH (2026): Landschaftsraum der Tegeler Stadtheide. Vorstellung des Betriebs und zukünftige Entwicklung. Präsentation, R. Hain.
+- Grün Berlin GmbH (2026): Digital Greencare. Landschaftspark der Tegeler Stadtheide. Präsentation, R. Hain, 22.04.2026.
+- [entwicklungsstadt.de (2026): Nach Jahren der Planung: Auf dem Flughafen Tegel beginnt der Wohnungsbau](https://www.entwicklungsstadt.de/nach-jahren-der-planung-auf-dem-flughafen-tegel-beginnt-der-wohnungsbau/), 07.08.2026.
+- [Landesdenkmalamt Berlin (2019): Newsletter Mai 2019](https://www.berlin.de/landesdenkmalamt/aktuelles/newsletter/newsletter.807995.php).
+
+Welche Aussage aus welcher Unterlage stammt, steht mit Seiten- oder Folienangabe in `data/belege.csv` und `data/eckdaten.csv`.
 
 Die aus Kartenebenen und Konzept abgeleiteten Zoneneinteilungen und Modellregeln sind projektbezogene Modellannahmen. Sie bilden keine vollständige planerische, ökologische oder rechtliche Bewertung ab.
 
