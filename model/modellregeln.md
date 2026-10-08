@@ -6,7 +6,7 @@ Die vollständigen Regeln stehen in der [Spielanleitung](../SPIELANLEITUNG.md). 
 
 - „Tegel im Tausch“ ist ein Einzelspiel. Eine Person gestaltet das Feld nach ihren Vorstellungen.
 - Es gibt keine Punkte, keinen Gewinner und kein festes Ende.
-- Auf jeder der 22 Zonen liegt immer genau ein Nutzungsbaustein. Bausteine werden ausgetauscht und nie gestapelt.
+- Auf jedem der 21 Felder liegt immer genau ein Nutzungsbaustein. Bausteine werden ausgetauscht und nie gestapelt.
 - Alle Nutzungswechsel sind erlaubt. Das ist keine Aussage über die reale planerische oder rechtliche Zulässigkeit.
 
 ## Marker

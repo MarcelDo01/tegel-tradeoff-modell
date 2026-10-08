@@ -2,7 +2,7 @@
 
 **Setzen. Tauschen. Folgen sichtbar machen.**
 
-Dieses Repository dokumentiert unser physisches und datenbasiertes Modell für das ehemalige Flughafengelände Berlin-Tegel. Das Modell umfasst 22 Zonen. Auf jeder Zone liegt genau ein Nutzungsbaustein, der im Verlauf des Modells gegen eine andere Nutzung ausgetauscht werden kann.
+Dieses Repository dokumentiert unser physisches und datenbasiertes Modell für das ehemalige Flughafengelände Berlin-Tegel. Das Spielfeld umfasst 21 Felder. Auf jeder Zone liegt genau ein Nutzungsbaustein, der im Verlauf des Modells gegen eine andere Nutzung ausgetauscht werden kann.
 
 ![Physisches Modell auf der Grundkarte; Präsentation, Folie 10](docs/assets/modell_gesamt.png)
 
@@ -20,7 +20,7 @@ Die Spielanleitung ist für alle Regeln maßgeblich.
 - [Technische Dokumentation](docs/technische-dokumentation.md) und [PDF-Fassung](docs/technische-dokumentation.pdf)
 - [Modellregeln in Kurzform](model/modellregeln.md)
 - [Tauschmatrix](model/tauschmatrix.md)
-- [Zonendaten](data/README.md), [Excel-Datei](data/zones.xlsx), [CSV-Export](data/zones.csv) und [Data Dictionary](data/data_dictionary.md)
+- [Daten zum Spiel](data/README.md): Startaufbau, Tauschmatrix, Belege, Eckdaten und [Data Dictionary](data/data_dictionary.md)
 - [Quellen und Herkunft der Abbildungen](references/quellen.md)
 - [KI-Verzeichnis](docs/ki-verzeichnis.md)
 - [Abschlusspräsentation](presentation/abschlussprasentation.pdf)
@@ -59,9 +59,9 @@ Die Tauschmatrix unterscheidet fünf vereinfachte Nutzungen:
 
 Alle 25 gerichteten Kombinationen sind im Modell erlaubt. Gleiche Ausgangs- und Zielnutzung ergibt `0`. Diese Modellregel ist keine Aussage über die reale planerische oder rechtliche Zulässigkeit einer Nutzung.
 
-## Zonendaten
+## Daten
 
-Die aktuelle Zonenzuweisung enthält 22 eindeutig nummerierte Zonen und zehn vollständig befüllte Merkmale pro Zone. Die Excel-Datei ist die Arbeitsgrundlage; die CSV-Fassung erleichtert Versionsvergleich und Weiterverarbeitung. Geometrien, Flächengrößen und quantitative Wirkungen sind nicht enthalten.
+Der Ordner `data/` enthält den Startaufbau aller 21 Felder mit Merkmalen aus den Planungsunterlagen, die Tauschmatrix als Tabelle, Belege für die Spielregeln und Eckdaten zum Gebiet. Der Abgleich mit den Karten des Entwicklungs- und Pflegekonzepts zeigt: Alle sieben Koppeln liegen in der Tegeler Stadtheide, alle vier Grünanlagen auf der Landebahn und der Nordfuge.
 
 ## Repository-Struktur
 
@@ -70,7 +70,7 @@ Die aktuelle Zonenzuweisung enthält 22 eindeutig nummerierte Zonen und zehn vol
 | `SPIELANLEITUNG.md` | Spielanleitung als Text |
 | `spielanleitung-heft.html` | Spielanleitung als blätterbares Heft |
 | `docs/` | technische Dokumentation, PDF-Fassung, Abbildungen, KI-Verzeichnis und archivierter Prototyp |
-| `data/` | Excel-Datei, CSV-Export und Beschreibung der 22 Zonen |
+| `data/` | Startaufbau, Tauschmatrix, Belege und Eckdaten als Tabellen |
 | `model/` | Modellregeln in Kurzform und 25 gerichtete Nutzungstausche |
 | `presentation/` | Abschlusspräsentation |
 | `references/` | Quellen und Herkunftsnachweise |

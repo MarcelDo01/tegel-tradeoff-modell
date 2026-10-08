@@ -1,24 +1,62 @@
-# Data Dictionary der Zonenzuweisung
+# Data Dictionary
 
-Grundlage ist `Tabelle1` aus `data/zones.xlsx`. Die beobachteten Werte beschreiben den aktuellen Datenstand. Sie sind keine allgemeingültigen zulässigen Werte und keine rechtliche Validierung.
+## startaufbau.csv und startaufbau.xlsx
 
-| Spalte | Datentyp | Bedeutung | Beobachtete Werte oder Form | Bezug zum Modell |
-|---|---|---|---|---|
-| `zone_id` | Ganzzahl | eindeutige Kennung des Zoneneintrags | 1 bis 22, ohne Lücken | Verknüpfung zur Zonendarstellung |
-| `Hauptkategorie` | Text/Kategorie | übergeordnete räumliche oder nutzungsbezogene Einordnung | Naturschutzgebiet und natürlicher Lebensraum; Flughafenbestand / Denkmalschutz; Freizeit / Erholung; Wohnen / Quartier | beschreibt den Ausgangskontext einer Zone |
-| `Unterkategorie` | Text/Kategorie | nähere Einordnung innerhalb der Hauptkategorie | unter anderem Heide, Trockenrasen, Gehölzgruppen; Rundbogenantenne / Denkmalschutz; Grün- und Parkfläche; Schumacher Quartier | differenziert ähnliche Zonen; nicht identisch mit den fünf Tauschmatrix-Nutzungen |
-| `Aktuelle Nutzung` | Text/Kategorie | in der Datei zugewiesene bestehende oder berücksichtigte Nutzung | unter anderem Biotoperhalt & Artenschutz; Biotopentwicklung; historischer Bestand & Landmarke; Naherholung & Freizeit; Baufeld / städtische Entwicklung | Ausgangsinformation für die physische Belegung; die Zuordnung zur vereinfachten Modellnutzung erfolgt separat |
-| `Flächentyp` | Text/Kategorie | beschreibender Flächen- oder Habitattyp | unter anderem Sandmagerrasen, Heide, Parkwiese, technisches Bauwerk, urbanes Baufeld | fachlicher Kontext der Zone; keine Flächengröße |
-| `Zugang` | Text/Kategorie | dokumentierter Zugangsstatus | Eingeschränkt; Öffentlich | unterstützt die Darstellung von Besucherzugang; keine rechtliche Zugangsprüfung |
-| `Akteure` | Textliste | beteiligte, betroffene oder dargestellte Akteure und Artengruppen | kommagetrennte Bezeichnungen, unter anderem Besucher:innen, Anwohner:innen, Grün Berlin, Brutvögel und Insekten | Informationsgrundlage für Akteursmarker; Begriffe sind nicht vollständig auf die vereinfachte Markerlegende normiert |
-| `Schutzstatus` | Text/Kategorie | in der Arbeitsdatei angegebener Schutz-, Planungs- oder Landschaftsbezug | unter anderem § 30 BNatSchG, Denkmalschutz-Prüfung, Landschaftspark, Bebauungsplan (B-Plan) | Kontextinformation; das physische Modell ersetzt keine Schutz- oder Zulässigkeitsprüfung |
-| `Beweidung` | Text/Kategorie | Angabe, ob Beweidung vorgesehen oder vorhanden ist | Ja; Nein | relevant für Koppel-, Schäfer- und Tierdarstellungen |
-| `Datenquelle` | Text | projektinterner Hinweis auf die herangezogene Grundlage | Kartenfolie / EPK; Kartenfolie / Denkmalkarte; Kartenfolie / Freiraumplanung; Kartenfolie / Kompensationskonzept; Kartenfolie / Masterplan Schumacher Quartier | Herkunftshinweis; weiterführende Quellen stehen in `references/quellen.md` |
+Eine Zeile je Feld mit Startbaustein, 21 Zeilen. Primärschlüssel ist `feld`.
 
-## Vollständigkeit und fehlende Werte
+| Spalte | Typ | Bedeutung | Werte |
+|---|---|---|---|
+| `feld` | Ganzzahl | Nummer des Felds auf der Karte | 1 bis 22 ohne 10 |
+| `lage` | Text | grobe Lage des Felds auf der Karte | zum Beispiel „Nordreihe“ |
+| `startbaustein` | Kategorie | Nutzung des Bausteins zum Spielstart | Koppel, Grünanlage, Wohnen, Gewerbe, Erholung/Freizeit |
+| `kuerzel` | Kategorie | Kürzel wie in der Tauschmatrix | K, GA, W, Ge, Er |
+| `boden` | Kategorie | Farbe des Bodens | dunkelgrün, hellgrün, weiß |
+| `versiegelt` | ja/nein | weißer, betonierter Boden im Spiel | ja, nein |
+| `marker_start` | Liste | Marker auf dem Baustein zum Start, durch Semikolon getrennt | Tiere, Pflanzen, NSM, Besucher, Anwohner, Beschäftigte |
+| `denkmalschutz` | ja/nein | Denkmalschutzmarker beim Baustein zum Start | ja, nein |
+| `gebiet` | Kategorie | Teilgebiet des früheren Flughafens | Tegeler Stadtheide, Landschaftspark Tegeler Stadtheide, Landebahn und Nordfuge, Urban Tech Republic, Schumacher Quartier |
+| `bebauungsplan` | Text | Bebauungsplan, in dessen Geltungsbereich das Feld liegt | 12-61, 12-51, 12-50, 12-62 |
+| `flaechennutzungsplan` | Text | Darstellung im Flächennutzungsplan, soweit abgelesen | Text oder „–“ |
+| `geschuetzte_biotope` | Kategorie | geschützte Biotope nach § 30 BNatSchG laut EPK-Biotopkarte | ja, außerhalb der EPK-Kartierung |
+| `naturschutzgebiet_entwurf` | ja/nein | innerhalb des Entwurfs der Naturschutzgebietsgrenze | ja, nein |
+| `versiegelung_bestand` | Kategorie | Versiegelung heute | überwiegend unversiegelt, teilweise versiegelt, Landebahn teilweise versiegelt, überwiegend versiegelt |
+| `bemerkung` | Text | Hinweise zum einzelnen Feld | frei |
 
-Alle 220 Datenzellen des Tabellenbereichs sind befüllt. Die Datei enthält keine leeren Werte. `Nein` in `Beweidung` ist ein expliziter Wert und kein Ersatz für fehlende Daten.
+Die Spalten von `gebiet` bis `versiegelung_bestand` sind durch Abgleich der Folie mit den Karten im EPK entstanden und gelten für das Teilgebiet, nicht für die genaue Fläche. VSM und ESM kommen in dieser Tabelle nicht vor, weil sie nie auf der Karte liegen.
 
-## Beziehungen und Grenzen
+## tauschmatrix.csv
 
-`zone_id` ist der Primärschlüssel des aktuellen Tabellenstands. Es gibt keine geometrische Spalte und keinen direkten Schlüssel zu einem GIS-Layer. Die Zonenattribute sind von der Tauschmatrix in `model/` zu unterscheiden: Die Tabelle beschreibt den Ausgangskontext, die Matrix qualitative Veränderungen zwischen fünf vereinfachten Nutzungen.
+Eine Zeile je Nutzungswechsel. Wechsel zur gleichen Nutzung fehlen, weil sich dabei nichts bewegt.
+
+| Spalte | Typ | Bedeutung |
+|---|---|---|
+| `ist_da` | Kategorie | Nutzung, die vor dem Tausch auf dem Feld liegt |
+| `wird_zu` | Kategorie | Nutzung, zu der das Feld wird |
+| `in_die_verlust_box` | Liste | Marker mit Plus: werden verdrängt oder entstehen als Aufwand und kommen in die Verlust-Box |
+| `auf_den_neuen_baustein` | Liste | Marker mit Minus: kommen auf den neuen Baustein |
+
+Die Tabelle enthält dieselben Angaben wie die Tauschmatrix in `model/tauschmatrix.md` und in der Spielanleitung.
+
+## belege.csv
+
+Eine Zeile je belegter Regel.
+
+| Spalte | Typ | Bedeutung |
+|---|---|---|
+| `element` | Kategorie | Marker oder Regel, die belegt wird |
+| `regel_im_spiel` | Text | was die Regel im Spiel bewirkt |
+| `beleg` | Text | sinngemäße Wiedergabe der Quellenaussage |
+| `quelle` | Text | Kurzangabe der Quelle; vollständig in `README.md` |
+| `fundstelle` | Text | Seite oder Folie in der Quelle |
+
+## eckdaten.csv
+
+Eine Zeile je Kennzahl.
+
+| Spalte | Typ | Bedeutung |
+|---|---|---|
+| `kennzahl` | Text | was gemessen oder geplant ist |
+| `wert` | Text | Wert wie in der Quelle angegeben, mit deutschem Dezimalkomma |
+| `einheit` | Text | Einheit des Werts |
+| `quelle` | Text | Kurzangabe der Quelle |
+| `fundstelle` | Text | Seite oder Folie in der Quelle |
