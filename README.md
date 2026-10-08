@@ -74,7 +74,7 @@ Die aktuelle Zonenzuweisung enthält 22 eindeutig nummerierte Zonen und zehn vol
 | `model/` | Modellregeln in Kurzform und 25 gerichtete Nutzungstausche |
 | `presentation/` | Abschlusspräsentation |
 | `references/` | Quellen und Herkunftsnachweise |
-| `tools/` | Skripte zum Erzeugen des PDF und des Hefts |
+| `tools/` | Skript und Quelldateien zum Erzeugen des blätterbaren HTML-Hefts |
 
 ## Team
 

@@ -4,7 +4,7 @@
 
 Technische Dokumentation
 
-Stand: 7. Oktober 2026
+Stand: 8. Oktober 2026
 
 Team: Thao Trang Le (Anny), Linda Izadi Sharifbad, Fatih Koc und Marcel Do
 
