@@ -1,4 +1,6 @@
-# Setzen. Tauschen. Folgen sichtbar machen.
+# Tegel im Tausch
+
+**Setzen. Tauschen. Folgen sichtbar machen.**
 
 Dieses Repository dokumentiert unser physisches und datenbasiertes Modell für das ehemalige Flughafengelände Berlin-Tegel. Das Modell umfasst 22 Zonen. Auf jeder Zone liegt genau ein Nutzungsbaustein, der im Verlauf des Modells gegen eine andere Nutzung ausgetauscht werden kann.
 
@@ -6,17 +8,17 @@ Dieses Repository dokumentiert unser physisches und datenbasiertes Modell für d
 
 Ziel ist es, Nutzungskonflikte und mögliche Folgen räumlicher Entscheidungen verständlich zu machen. Das Modell richtet sich insbesondere an Kinder, jüngere Menschen und Interessierte ohne planerisches Fachwissen. Es berechnet keine optimale Planung, keine Flächenbilanz und keine Punktzahl.
 
-## Spielanleitung auf einen Blick
+## Spielanleitung
 
-![Visualisierte Spielanleitung für Tegel im Tausch](docs/assets/spielanleitung-auf-einen-blick.png)
+- [Spielanleitung als Text](SPIELANLEITUNG.md)
+- Spielanleitung als Heft zum Blättern: `spielanleitung-heft.html` herunterladen und im Browser öffnen. Das Heft enthält eine Seite, auf der sich Tausche ausprobieren lassen.
 
-Die ausführlichen und verbindlichen Regeln stehen in den [Modellregeln](model/modellregeln.md) und in der [Tauschmatrix](model/tauschmatrix.md).
+Die Spielanleitung ist für alle Regeln maßgeblich.
 
 ## Dokumentation und Materialien
 
-- [Visualisierte Spielanleitung](docs/assets/spielanleitung-auf-einen-blick.png)
 - [Technische Dokumentation](docs/technische-dokumentation.md) und [PDF-Fassung](docs/technische-dokumentation.pdf)
-- [Modellregeln](model/modellregeln.md)
+- [Modellregeln in Kurzform](model/modellregeln.md)
 - [Tauschmatrix](model/tauschmatrix.md)
 - [Zonendaten](data/README.md), [Excel-Datei](data/zones.xlsx), [CSV-Export](data/zones.csv) und [Data Dictionary](data/data_dictionary.md)
 - [Quellen und Herkunft der Abbildungen](references/quellen.md)
@@ -24,25 +26,26 @@ Die ausführlichen und verbindlichen Regeln stehen in den [Modellregeln](model/m
 - [Abschlusspräsentation](presentation/abschlussprasentation.pdf)
 - [Archivierter Website-Prototyp](docs/prototyp/tegel-im-tausch-prototyp.html)
 
-Der Website-Prototyp zeigt einen frühen Arbeitsstand. Für die aktuelle Spielmechanik sind ausschließlich die Modellregeln und die Tauschmatrix in diesem Repository maßgeblich.
+Der Website-Prototyp zeigt einen frühen Arbeitsstand mit anderen Regeln. Er ist nicht mehr gültig.
 
-## So funktioniert ein Modellzug
+## So funktioniert ein Zug
 
-1. Mit dem festgelegten Ausgangsaufbau beginnen und eine Zone auswählen.
-2. Eine neue Nutzung bestimmen und den passenden Nutzungsbaustein aus der Tauschbox oder der Verlust-Box nehmen.
-3. Den bisherigen Nutzungsbaustein von der Zone entfernen und in die Verlust-Box legen.
-4. Den neuen Nutzungsbaustein auf die Zone setzen. Bausteine werden ausgetauscht und nicht gestapelt.
-5. Die gerichtete Regel in der Tauschmatrix ablesen.
-6. Die genannten Marker zwischen Tauschbox und Verlust-Box bewegen.
-7. Die sichtbaren Veränderungen und Nutzungskonflikte gemeinsam besprechen.
+„Tegel im Tausch“ ist ein Einzelspiel ohne Punkte, ohne Gewinner und ohne festes Ende.
 
-Auf der Karte liegen ausschließlich Nutzungsbausteine. Akteursmarker sowie VSM, ESM, NSM und DMS befinden sich immer in einer der beiden Boxen.
+1. Eine Zone auswählen. Ihr Baustein zeigt die Nutzung, die da ist.
+2. Die neue Nutzung wählen.
+3. Den alten Baustein in die Verlust-Box legen und den neuen auf die Zone setzen. Bausteine werden nie gestapelt.
+4. Die Tauschmatrix lesen: Spalte „ist da“, Zeile „wird zu“.
+5. Die Marker bewegen.
+6. Auf die Karte und in die Verlust-Box schauen.
 
-- `+ Marker`: aus der Tauschbox in die Verlust-Box
-- `− Marker`: aus der Verlust-Box zurück in die Tauschbox
-- `0`: keine Markerbewegung
+Die Zeichen der Matrix:
 
-Elemente aus der Verlust-Box dürfen bei späteren Tauschen erneut verwendet werden. Ihr Inhalt zeigt deshalb den aktuellen Modellzustand und nicht die gesamte Geschichte aller Tausche.
+- `+`: Der Marker wird verdrängt und kommt vom alten Baustein in die Verlust-Box.
+- `−`: Der Marker kommt auf den neuen Baustein, aus der Verlust-Box oder sonst aus der Tauschbox.
+- `0`: Nichts bewegt sich.
+
+Versiegelung und Entsiegelung sind Aufwand. Wird grüner Boden bebaut, kommt ein Versiegelungsmarker (VSM) in die Verlust-Box. Wird bebauter Boden wieder grün, kommt ein Entsiegelungsmarker (ESM) dazu. Beide bleiben für den Rest des Spiels dort.
 
 ## Nutzungen
 
@@ -62,16 +65,19 @@ Die aktuelle Zonenzuweisung enthält 22 eindeutig nummerierte Zonen und zehn vol
 
 ## Repository-Struktur
 
-| Ordner | Inhalt |
+| Ort | Inhalt |
 |---|---|
-| `docs/` | visualisierte Spielanleitung, technische Dokumentation, PDF-Fassung, Abbildungen, KI-Verzeichnis und archivierter Prototyp |
+| `SPIELANLEITUNG.md` | Spielanleitung als Text |
+| `spielanleitung-heft.html` | Spielanleitung als blätterbares Heft |
+| `docs/` | technische Dokumentation, PDF-Fassung, Abbildungen, KI-Verzeichnis und archivierter Prototyp |
 | `data/` | Excel-Datei, CSV-Export und Beschreibung der 22 Zonen |
-| `model/` | Modellregeln und 25 gerichtete Nutzungstausche |
+| `model/` | Modellregeln in Kurzform und 25 gerichtete Nutzungstausche |
 | `presentation/` | Abschlusspräsentation |
 | `references/` | Quellen und Herkunftsnachweise |
+| `tools/` | Skripte zum Erzeugen des PDF und des Hefts |
 
 ## Team
 
 Thao Trang Le (Anny), Linda Izadi Sharifbad, Fatih Koc und Marcel Do
 
-Eine Veröffentlichungslizenz wurde noch nicht gewählt; siehe [Rechtehinweis](LICENSE).
+Alle Rechte vorbehalten; siehe [Rechtehinweis](LICENSE).

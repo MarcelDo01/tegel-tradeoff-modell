@@ -30,7 +30,7 @@ Die Kartenebenen dienten uns als visuelle und räumliche Arbeitsgrundlage für d
 
 ### Fachliche Grundlage
 
-Das [Pflege- und Entwicklungskonzept für die Tegeler Stadtheide](https://www.berlin.de/sen/uvk/natur-und-gruen/landschaftsplanung/tegeler-stadtheide/) haben wir als fachliche Hintergrundgrundlage verwendet.
+Das [Entwicklungs- und Pflegekonzept (EPK, 2022) für die Tegeler Stadtheide](https://www.berlin.de/sen/uvk/natur-und-gruen/landschaftsplanung/tegeler-stadtheide/) haben wir als fachliche Hintergrundgrundlage verwendet.
 
 Die aus Kartenebenen und Konzept abgeleiteten Zoneneinteilungen und Modellregeln sind projektbezogene Modellannahmen. Sie bilden keine vollständige planerische, ökologische oder rechtliche Bewertung ab.
 
@@ -51,8 +51,8 @@ Die folgenden PNG-Dateien sind vollständig gerenderte Seiten der Abschlusspräs
 
 Das Foto der Tauschmatrix wurde separat in das Repository übernommen und befindet sich unter `docs/assets/tauschmatrix_original.jpg`.
 
-### Visualisierte Spielanleitung
+### Spielanleitung und Heft
 
-Die Datei `docs/assets/spielanleitung-auf-einen-blick.png` ist eine KI-generierte Infografik. Als visuelle Referenzen dienten vom Projektteam bereitgestellte Fotos des realen Modells und einzelner Bausteine. Inhalt, Bewegungsrichtungen und Beschriftungen wurden mit den aktuellen Modellregeln und der Tauschmatrix abgeglichen. Die Infografik ist kein unverändertes Foto und ersetzt nicht die ausführlichen Regeln.
+Die Fotos im Heft `spielanleitung-heft.html` sind Ausschnitte aus den Folien 10 bis 12 der Abschlusspräsentation und zeigen das reale Modell und seine Bausteine. Die zugeschnittenen Bilder liegen unter `tools/heft/img/`.
 
 Die Visualisierung auf Folie 3 ist laut Präsentation KI-gestützt und wird nicht als Aufnahme des realen Modells verwendet. Der auf Folie 1 sichtbare Vorlagen-Webseitentext ist kein Bestandteil des Projekts und wird nicht als Projektquelle behandelt.

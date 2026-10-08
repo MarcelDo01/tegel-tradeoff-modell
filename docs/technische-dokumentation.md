@@ -1,7 +1,10 @@
-# Setzen. Tauschen. Folgen sichtbar machen.
+# Tegel im Tausch
 
-Technische Dokumentation des physischen Tegel-Modells
-Stand: 6. Oktober 2026
+**Setzen. Tauschen. Folgen sichtbar machen.**
+
+Technische Dokumentation
+
+Stand: 7. Oktober 2026
 
 Team: Thao Trang Le (Anny), Linda Izadi Sharifbad, Fatih Koc und Marcel Do
 
@@ -9,7 +12,7 @@ Team: Thao Trang Le (Anny), Linda Izadi Sharifbad, Fatih Koc und Marcel Do
 
 Flächen wirken in Planungsprozessen mitunter frei oder ungenutzt. Tatsächlich erfüllen sie bereits ökologische, räumliche und gesellschaftliche Funktionen. Eine neue Nutzung kann Wohnraum, Arbeitsplätze oder Freizeitangebote schaffen und zugleich andere Funktionen verändern oder verdrängen.
 
-Mit unserem physischen, datenbasierten Modell machen wir solche Nutzungskonflikte anschaulich. Eine Zone wird ausgewählt, ihre Nutzung verändert und die daraus entstehenden Markerbewegungen werden gemeinsam besprochen. Im Mittelpunkt steht das Verständnis von Zielkonflikten, nicht die Ermittlung einer optimalen Planung.
+Mit unserem physischen, datenbasierten Modell machen wir solche Nutzungskonflikte anschaulich. Eine Zone wird ausgewählt und ihre Nutzung verändert. Die daraus entstehenden Markerbewegungen zeigen, was die Entscheidung verdrängt und welchen Aufwand sie verursacht. Im Mittelpunkt steht das Verständnis von Zielkonflikten, nicht die Ermittlung einer optimalen Planung.
 
 Das Modell richtet sich vor allem an Kinder, jüngere Menschen und Interessierte ohne planerisches Fachwissen. Es vereinfacht komplexe Zusammenhänge und schafft einen Gesprächsanlass. Die Regeln liefern keine räumliche Prognose, Umweltbilanz oder rechtliche Bewertung.
 
@@ -38,7 +41,7 @@ Für die räumliche Einordnung und die Entwicklung der Zonierung wurden folgende
 - Projektgrenze
 - Hintergrundkarte farbig
 
-Das Pflege- und Entwicklungskonzept für die Tegeler Stadtheide diente als fachliche Hintergrundgrundlage. Die vollständigen Links und Herkunftsnachweise stehen in [Quellen und Herkunft](../references/quellen.md).
+Das Entwicklungs- und Pflegekonzept (EPK, 2022) für die Tegeler Stadtheide diente als fachliche Hintergrundgrundlage. Die vollständigen Links und Herkunftsnachweise stehen in [Quellen und Herkunft](../references/quellen.md).
 
 ### 3.2 Projektdateien
 
@@ -90,105 +93,124 @@ Das Modell besteht aus:
 - einer Karte mit 22 Zonen,
 - Nutzungsbausteinen,
 - Akteursmarkern,
-- VSM-, ESM-, NSM- und DMS-Markern,
+- Naturschutz- und Denkmalschutzmarkern (NSM, DMS),
+- Aufwandsmarkern für Versiegelung und Entsiegelung (VSM, ESM),
 - einer Tauschbox,
 - einer Verlust-Box,
 - der Tauschmatrix.
 
-Auf der Karte liegen ausschließlich die Nutzungsbausteine. Alle Akteurs- und Zusatzmarker befinden sich immer in einer der beiden Boxen.
+Auf jeder Zone liegt genau ein Nutzungsbaustein. Auf dem Baustein liegen die Marker, die zu seiner Nutzung gehören. VSM und ESM liegen nie auf der Karte.
 
 ### 6.1 Nutzungsbausteine
 
-| Kürzel | Nutzung | Vereinfachte Darstellung |
-|---|---|---|
-| K | Koppel | Koppelbaustein auf dunkelgrünem Boden |
-| GA | Grünanlage | hellgrüner Flächenbaustein |
-| W | Wohnen | Haus oder Quartier |
-| Ge | Gewerbe | Unternehmen oder Bildungseinrichtung |
-| Er/Fr | Erholung/Freizeit | Fahrrad |
+| Kürzel | Nutzung | Boden | Aufsatz |
+|---|---|---|---|
+| K | Koppel | dunkelgrün | – |
+| GA | Grünanlage | hellgrün | – |
+| W | Wohnen | weiß | Haus |
+| Ge | Gewerbe | weiß | Tonblöcke |
+| Er/Fr | Erholung/Freizeit | weiß | Fahrrad |
+
+Der Boden zeigt die Versiegelung. Dunkelgrüner Boden steht für Naturschutz und natürlichen Lebensraum mit Koppeln für Tiere und ohne Zugang für Besucher. Hellgrüner Boden steht für Grünflächen mit Besucherzugang und ohne Weidetiere. Weißer Boden steht für betonierten Boden als Grundlage für Wohnen, Gewerbe und Erholung/Freizeit.
 
 Jeder Baustein steht für eine Nutzungskategorie. Er repräsentiert keine festgelegte Fläche, Gebäudezahl oder Personenzahl.
 
-### 6.2 Akteurs- und Zusatzmarker
+### 6.2 Marker
 
-Akteursmarker sind Tiere, Pflanzen, Besucher, Anwohner und Beschäftigte. Zusätzlich verwendet das Modell folgende Kürzel:
-
-| Kürzel | Bedeutung |
-|---|---|
-| NSM | Naturschutzmarker |
-| VSM | Versiegelungsmarker |
-| ESM | Entsiegelungsmarker |
-| DMS | Denkmalschutzmarker |
+| Marker | Kürzel | Liegt zum Start auf |
+|---|---|---|
+| Tiere | – | Koppel |
+| Pflanzen | – | Koppel, Grünanlage |
+| Naturschutzmarker | NSM | Koppel |
+| Besucher | – | Grünanlage, Erholung/Freizeit |
+| Anwohner | – | Wohnen |
+| Beschäftigte | – | Gewerbe |
+| Denkmalschutzmarker | DMS | drei Gewerbebausteinen |
+| Versiegelungsmarker | VSM | keinem Baustein, Tauschbox |
+| Entsiegelungsmarker | ESM | keinem Baustein, Tauschbox |
 
 NSG bezeichnet ein Naturschutzgebiet und ist nicht mit NSM gleichzusetzen. Kein Marker erzeugt einen rechtlichen Schutzstatus oder bestätigt die planerische Zulässigkeit einer Nutzung.
 
 ![Herstellung von Bausteinen und Markern, Präsentation, Folie 7](assets/bausteine_herstellung.png)
 
+### 6.3 Ausgangsaufbau
+
+Der Ausgangsaufbau der Bausteine folgt dem Foto des Modells. Die Marker werden nach der Tabelle in Abschnitt 6.2 auf die Bausteine gelegt. Alle VSM und ESM und alle übrigen Bausteine und Marker liegen in der Tauschbox. Die Verlust-Box ist leer.
+
+![Ausgangsaufbau des Modells, Präsentation, Folie 10](assets/modell_gesamt.png)
+
+Das Foto zeigt einen früheren Stand des Prototyps. Die meisten Marker liegen dort noch nicht auf den Bausteinen, und ein Baustein für Erholung/Freizeit trägt eine Bank, die inzwischen durch ein Fahrrad ersetzt wurde. Der Prototyp enthält aus Budgetgründen fünf Marker je Sorte.
+
 ## 7. Die beiden Boxen
 
 ### 7.1 Tauschbox
 
-In der Tauschbox liegen die aktuell verfügbaren Nutzungsbausteine und Marker. Ihr Inhalt zählt nicht als Verlust.
+Die Tauschbox ist der Vorrat. In ihr liegen alle Bausteine und Marker, die gerade nicht im Spiel sind.
 
 ### 7.2 Verlust-Box
 
-In der Verlust-Box liegen die Nutzungsbausteine und Marker, die durch die bisherigen Tausche verdrängt wurden. Diese Elemente dürfen bei späteren Tauschen erneut verwendet werden.
+Die Verlust-Box ist die „Hand“ der spielenden Person. Sie ist zum Start leer. In ihr landet alles, was durch einen Tausch von der Karte verdrängt wird, sowie der Aufwand für Versiegelung und Entsiegelung.
 
-Wird ein Baustein oder Marker aus der Verlust-Box entnommen, zählt er nicht mehr als aktueller Verlust. Die Box zeigt daher den aktuellen Modellzustand und nicht die vollständige Geschichte aller Tausche.
+Bausteine und Akteursmarker aus der Verlust-Box können durch einen späteren Tausch wieder auf die Karte kommen. VSM, ESM und DMS bleiben dauerhaft in der Verlust-Box.
 
 ## 8. Tauschmatrix und Zeichenlogik
 
 Die Tauschmatrix enthält fünf Ausgangs- und fünf Zielnutzungen und damit 25 gerichtete Kombinationen.
 
-- Die Zeile bezeichnet die bisherige Nutzung.
-- Die Spalte bezeichnet die neue Nutzung.
+- Die Spalte bezeichnet die Nutzung, die da ist.
+- Die Zeile bezeichnet die Nutzung, zu der die Fläche wird.
 - Gleiche Ausgangs- und Zielnutzung ergibt `0`.
 - Alle Kombinationen sind im Modell erlaubt.
 
-Die Zeichen beschreiben ausschließlich Bewegungen zwischen den beiden Boxen:
+Die Zeichen haben folgende Bedeutung:
 
-- `+ Marker`: den Marker aus der Tauschbox in die Verlust-Box legen
-- `− Marker`: den Marker aus der Verlust-Box zurück in die Tauschbox legen
-- `0`: keinen Marker bewegen
+| Zeichen | Bedeutung | Weg |
+|---|---|---|
+| `+` Akteursmarker, NSM, DMS | wird verdrängt | vom alten Baustein in die Verlust-Box |
+| `+` VSM, ESM | Aufwand entsteht | aus der Tauschbox in die Verlust-Box |
+| `−` | kommt neu dazu | aus der Verlust-Box, sonst aus der Tauschbox, auf den neuen Baustein |
+| `0` | keine Änderung | – |
 
-Diese Logik gilt für alle Akteurs- und Zusatzmarker. Marker werden niemals auf die Karte gelegt. Ist ein benötigter Marker nicht in der vorgesehenen Box vorhanden, wird kein negativer Bestand erzeugt. Die fehlende Verfügbarkeit wird festgehalten und gemeinsam besprochen.
+Versiegelung und Entsiegelung sind als Aufwand modelliert. Jeder Wechsel von grünem zu weißem Boden bringt einen VSM in die Verlust-Box, jeder Wechsel in die Gegenrichtung einen ESM. Beide Marker lassen sich nicht wieder abgeben. Der DMS steht in der Matrix nur mit Plus: Ein verlorenes Denkmal kommt nicht zurück auf die Karte.
 
-Die Regeln sind gerichtet: Ein Wechsel von A nach B ist nicht automatisch die genaue Umkehrung des Wechsels von B nach A. Die vollständige [Tauschmatrix](../model/tauschmatrix.md) ist separat dokumentiert.
+Die Regeln sind gerichtet: Ein Wechsel von A nach B ist nicht die Umkehrung des Wechsels von B nach A. Die vollständige [Tauschmatrix](../model/tauschmatrix.md) ist separat dokumentiert.
+
+Die Matrix wurde im Team an einem Whiteboard entwickelt. Gegenüber dem Whiteboard-Foto gelten zwei Festlegungen: Der VSM steht als Aufwandsmarker mit Plus, und die dort eingeklammerten Pflanzen-Einträge gelten.
 
 ## 9. Ablauf eines Modellzugs
 
-1. Mit dem festgelegten Ausgangsaufbau beginnen.
-2. Eine Zone auswählen und ihre bisherige Nutzung bestimmen.
-3. Eine Zielnutzung wählen und den passenden Nutzungsbaustein aus der Tauschbox oder der Verlust-Box nehmen.
-4. Den bisherigen Nutzungsbaustein von der Zone entfernen und in die Verlust-Box legen.
-5. Den neuen Nutzungsbaustein auf die Zone setzen. Pro Zone liegt immer genau ein Nutzungsbaustein.
-6. Die passende Matrixzelle aus bisheriger Nutzung und Zielnutzung bestimmen.
-7. Alle dort genannten Marker nach der `+`- und `−`-Logik zwischen den Boxen bewegen.
-8. Die Veränderungen, Nutzungskonflikte und zugrunde liegenden Annahmen gemeinsam besprechen.
+Das Modell wird als Einzelspiel gespielt. Eine Person gestaltet das Feld nach ihren Vorstellungen. Es gibt kein festes Ende.
 
-Nutzungsbausteine werden ausgetauscht und nicht übereinandergestapelt. Ein Baustein aus der Verlust-Box kann erneut eingesetzt werden; der ausgetauschte Baustein kommt anschließend in die Verlust-Box.
+1. Eine Zone auswählen. Ihr Baustein zeigt die Nutzung, die da ist.
+2. Die neue Nutzung wählen.
+3. Den alten Baustein in die Verlust-Box legen und den neuen Baustein auf die Zone setzen. Pro Zone liegt immer genau ein Baustein.
+4. Die Matrixzelle aus Spalte „ist da“ und Zeile „wird zu“ bestimmen.
+5. Alle dort genannten Marker einmal bewegen.
+6. Auf die Karte und in die Verlust-Box schauen.
+
+Neue Bausteine und Minus-Marker werden zuerst aus der Verlust-Box genommen, falls sie dort liegen, sonst aus der Tauschbox. Liegt ein Plus-Marker nicht auf dem Baustein oder ist ein Minus-Marker in keiner Box vorhanden, entfällt dieser Schritt.
+
+Die ausführliche Fassung für Spielende steht in der [Spielanleitung](../SPIELANLEITUNG.md). Sie liegt zusätzlich als blätterbares Heft in `spielanleitung-heft.html` vor.
 
 ## 10. Beispiele
 
-### 10.1 Grünanlage zu Wohnen
+### 10.1 Koppel zu Wohnen
 
-Der Grünanlagenbaustein wird von der Zone genommen und in die Verlust-Box gelegt. Ein Wohnbaustein aus der Tauschbox oder der Verlust-Box wird auf die Zone gesetzt.
+Die Matrixzelle in Spalte Koppel und Zeile Wohnen lautet:
 
-Die Matrixzelle lautet:
+`+ VSM; + Tiere; + NSM; + Pflanzen; − Anwohner`
 
-`+ VSM; + Anwohner; − Pflanzen; − Besucher`
-
-Damit werden VSM und Anwohnermarker aus der Tauschbox in die Verlust-Box gelegt. Pflanzen- und Besuchermarker werden aus der Verlust-Box zurück in die Tauschbox gelegt.
+Der Koppelbaustein kommt in die Verlust-Box, ein Wohnbaustein aus der Tauschbox auf die Zone. Tiere, NSM und Pflanzen kommen vom Baustein in die Verlust-Box. Ein VSM kommt aus der Tauschbox in die Verlust-Box. Ein Anwohnermarker aus der Tauschbox kommt auf den Wohnbaustein.
 
 ### 10.2 Wohnen zu Grünanlage
 
-Der Wohnbaustein wird von der Zone genommen und in die Verlust-Box gelegt. Ein Grünanlagenbaustein aus der Tauschbox oder der Verlust-Box wird auf die Zone gesetzt.
+Die Matrixzelle in Spalte Wohnen und Zeile Grünanlage lautet:
 
-Die Matrixzelle lautet:
+`+ ESM; + Anwohner; − Pflanzen; − Besucher`
 
-`+ ESM; + Besucher; − VSM; − Anwohner`
+Ein Wohnbaustein kommt in die Verlust-Box, ein Grünanlagenbaustein auf die Zone. Der Anwohnermarker kommt in die Verlust-Box, ein ESM aus der Tauschbox ebenfalls. Der Pflanzenmarker liegt seit dem ersten Beispiel in der Verlust-Box und kommt von dort auf die Grünanlage. Ein Besuchermarker aus der Tauschbox kommt dazu.
 
-Damit werden ESM und Besuchermarker aus der Tauschbox in die Verlust-Box gelegt. VSM und Anwohnermarker werden aus der Verlust-Box zurück in die Tauschbox gelegt.
+Nach beiden Zügen liegen VSM und ESM in der Verlust-Box. Der Aufwand für das Bebauen und das spätere Begrünen bleibt sichtbar.
 
 ## 11. Modellannahmen und Grenzen
 
@@ -196,7 +218,7 @@ Die Zonierung ist eine projektbezogene Interpretation und wurde an die physische
 
 Die Tauschmatrix beschreibt qualitative Modellannahmen. Ein Marker entspricht weder einer bestimmten Fläche noch einer standardisierten Umweltwirkung. Der Inhalt der Verlust-Box darf deshalb nicht als Punktzahl oder quantitative Schadensbilanz interpretiert werden.
 
-Das Modell ist keine GIS-Simulation, ökologische Bilanz, wissenschaftliche Prognose oder rechtliche Prüfung. Es dient dazu, Zusammenhänge und Zielkonflikte sichtbar zu machen und gemeinsam zu diskutieren.
+Das Modell ist keine GIS-Simulation, ökologische Bilanz, wissenschaftliche Prognose oder rechtliche Prüfung. Es dient dazu, Zusammenhänge und Zielkonflikte sichtbar zu machen und zum Nachdenken und zum Gespräch anzuregen.
 
 ## 12. Nachbau und Reproduzierbarkeit
 
@@ -209,14 +231,74 @@ Der dokumentierte Arbeitsablauf lautet:
 3. Die Grundkarte im benötigten Format vorbereiten und drucken.
 4. Die 22 Zonen auf transparenter Folie einzeichnen und mit den Bausteinabmessungen abstimmen.
 5. Nutzungsbausteine und Marker gemäß den Legenden herstellen.
-6. Karte und beide Boxen nach dem festgelegten Ausgangszustand aufbauen.
+6. Karte, Marker und beide Boxen nach dem Ausgangsaufbau in Abschnitt 6.3 aufbauen.
 7. Die Tauschmatrix bereitlegen und einen Beispielzug durchführen.
-8. Die Veränderungen anhand der beiden Boxen gemeinsam auswerten.
+8. Die Veränderungen anhand der Karte und der Verlust-Box auswerten.
 
 Fotos und Präsentationsabbildungen dokumentieren den Aufbau, ersetzen jedoch keine vollständige Maß- oder Stückliste.
 
-## 13. Dokumentationsstand
+## 13. Ergebnisse
 
-Die Markdown-Dateien enthalten den aktuellen Text- und Regelstand. Die Tauschmatrix ist vollständig in Markdown dokumentiert; die Zonenzuweisung wird als Excel- und CSV-Datei bereitgestellt.
+Entstanden sind vier Dinge:
 
-Die Quellen, externen Links und Abbildungsnachweise sind in [Quellen und Herkunft](../references/quellen.md) zusammengefasst. Der Einsatz von KI bei Konzeptentwicklung, Dokumentation, Bildgenerierung und Website-Prototyp ist im [KI-Verzeichnis](ki-verzeichnis.md) beschrieben.
+- ein physisches Modell des Tegel-Geländes mit Grundkarte, Nutzungsbausteinen, Markern und zwei Boxen,
+- eine Tauschmatrix mit 25 gerichteten Nutzungswechseln,
+- eine Zonentabelle mit zehn Merkmalen je Zone,
+- eine Spielanleitung als Text und als blätterbares Heft mit einer Seite zum Ausprobieren.
+
+Beim Spielen zeigt das Modell vier Zusammenhänge:
+
+- **Jede Nutzung verdrängt eine andere.** Kein Tausch bleibt ohne Eintrag in der Verlust-Box.
+- **Aufwand bleibt.** Versiegelung und Entsiegelung hinterlassen Marker, die sich nicht wieder abgeben lassen. Wer eine Fläche bebaut und später wieder begrünt, hat beide in der Verlust-Box.
+- **Zurücktauschen stellt den alten Zustand nicht her.** Wird aus Wohnen wieder eine Grünanlage, kommen Pflanzen und Besucher zurück, Tiere und Naturschutz aber nicht.
+- **Manches ist endgültig.** Ein abgebauter Denkmalschutzmarker kommt nicht zurück auf die Karte.
+
+## 14. Kritische Auseinandersetzung
+
+### Erprobung
+
+Wir haben das Spiel in drei Situationen durchgespielt: untereinander im Team, mit unserer Betreuerin im CityLAB Berlin und in Beispieldurchgängen vor dem Publikum der Abschlusspräsentation. Unsere Betreuerin zeigte sich begeistert, und ihre Rückmeldungen haben wir aufgenommen. Auch beim Publikum kam das Spiel positiv an.
+
+Mit Kindern haben wir das Spiel noch nicht erprobt. Ob sie die Regeln ohne Begleitung verstehen, ist deshalb offen. Die Altersangabe ab 6 Jahren ist eine Sicherheitsvorgabe: Das Spiel enthält Kleinteile, die verschluckt werden können. Eine inhaltliche Altersgrenze gibt es nicht.
+
+### Erkannte Probleme und unser Umgang damit
+
+- **Übertragung der Tauschmatrix:** Beim Abgleich mit dem Whiteboard-Foto haben wir festgestellt, dass die Matrix in einer früheren Fassung gespiegelt übertragen worden war. Zeilen und Spalten waren vertauscht, sodass jeder Tausch bei seiner Gegenrichtung stand. Wir haben die Matrix korrigiert und Zelle für Zelle gegen das Foto geprüft.
+- **Versiegelung und Entsiegelung:** Am Whiteboard standen die beiden Marker mit unterschiedlichen Vorzeichen. Im Spiel ergab das keinen stimmigen Ablauf. Wir haben beide als Aufwandsmarker festgelegt, die in der Verlust-Box bleiben.
+- **Anzahl der Marker:** Der Prototyp enthält aus Budgetgründen fünf Marker je Sorte. Bei längeren Partien reichen sie nicht aus, und einzelne Schritte entfallen. Ein vollständiges Spiel braucht so viele Marker, dass jeder Baustein seine Marker tragen kann.
+
+### Grenzen, die bleiben
+
+- **Die Tauschmatrix beruht auf unserer Einschätzung.** Welche Marker bei welchem Wechsel betroffen sind, haben wir im Team hergeleitet. Die Einträge sind nicht empirisch belegt, und andere Gruppen kämen zu anderen Ergebnissen.
+- **Jeder Tausch wiegt gleich.** Ein Marker steht für eine Art von Betroffenheit, nicht für eine Menge. Ob eine Zone groß oder klein ist und wie viele Tiere oder Menschen betroffen wären, bildet das Modell nicht ab.
+- **Die Zonen folgen den Bausteinen.** Wir haben die Zonengrenzen an die rechteckigen Grundplatten angepasst. Sie entsprechen deshalb nicht genau den realen Flächen.
+- **Fünf Nutzungen sind eine starke Vereinfachung.** Mischformen, zum Beispiel Wohnen mit Grünanteil, lassen sich nicht darstellen.
+
+## 15. Eigenleistung und Innovationsgrad
+
+Idee, Regeln und Umsetzung des Modells stammen von uns. Alle Teile haben wir gemeinsam erarbeitet.
+
+- **Idee:** Wir wollten zeigen, dass jede neue Nutzung auf dem Tegel-Gelände etwas Bestehendes verdrängt. Daraus entstand das Prinzip mit Tauschbox und Verlust-Box.
+- **Karten und Zonen:** Wir haben die Kartenebenen des Geoportals und das Entwicklungs- und Pflegekonzept ausgewertet und die Informationen zusammengetragen. Daraus haben wir die Zonen hergeleitet. 
+- **Regeln und Marker:** Die Tauschmatrix, die Marker und alle Spielregeln haben wir selbst hergeleitet und auf das Spiel übertragen, zunächst am Whiteboard und danach beim Aufbau des Modells.
+- **Bau:** Karte, Bausteine und Marker haben wir von Hand hergestellt.
+- **Spielanleitung und Dokumentation:** Beide haben wir mit KI-Unterstützung erstellt.
+
+Welche KI-Werkzeuge wir wofür eingesetzt haben, steht im [KI-Verzeichnis](ki-verzeichnis.md).
+
+Neu an unserem Ansatz ist die Form. Planungswerkzeuge für Flächen arbeiten meist digital und berechnen Kennzahlen oder eine beste Lösung. Unser Modell ist zum Anfassen, kommt ohne Punkte und Gewinner aus und macht sichtbar, was eine Entscheidung verdrängt und welchen Aufwand sie hinterlässt. So wird erfahrbar, dass sich ein Eingriff nicht folgenlos zurücknehmen lässt.
+
+## 16. Fazit
+
+Das Modell erreicht sein Ziel: Es macht sichtbar, dass es für das Tegel-Gelände keinen Aufbau gibt, mit dem alle Beteiligten zufrieden sind. Wer spielt, sieht nach wenigen Zügen, dass jede Entscheidung etwas kostet und dass sich ein Eingriff nicht folgenlos zurücknehmen lässt. Dafür braucht es keine Punkte und keinen Gewinner.
+
+Das Modell ersetzt keine Planung. Es vereinfacht stark und beruht auf unseren eigenen Einschätzungen. Seine Stärke liegt darin, einen Zielkonflikt begreifbar zu machen, auch für Menschen ohne Planungswissen.
+
+Als nächste Schritte sehen wir eine Erprobung mit Kindern, einen vollständigen Markersatz und eine eindeutige Zuordnung der Zonen aus den Daten zu den Bausteinen im Startaufbau.
+
+## 17. Quellen und weitere Unterlagen
+
+- **Quellen:** Die verwendeten Kartenebenen, Konzeptgrundlagen und Abbildungsnachweise stehen in [Quellen und Herkunft](../references/quellen.md).
+- **KI-Einsatz:** Welche KI-Werkzeuge wir wofür eingesetzt haben, steht im [KI-Verzeichnis](ki-verzeichnis.md).
+- **Spielregeln:** Maßgeblich ist die [Spielanleitung](../SPIELANLEITUNG.md). Die [Tauschmatrix](../model/tauschmatrix.md) ist zusätzlich einzeln dokumentiert.
+- **Zonendaten:** Die Zonentabelle liegt als [Excel-Datei](../data/zones.xlsx) und als [CSV-Datei](../data/zones.csv) vor; das [Data Dictionary](../data/data_dictionary.md) erläutert die Felder.

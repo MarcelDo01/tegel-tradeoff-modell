@@ -1,146 +1,64 @@
-# Modellregeln und Markerlogik
+# Modellregeln
 
-## Ziel des Modells
+Die vollständigen Regeln stehen in der [Spielanleitung](../SPIELANLEITUNG.md). Sie ist maßgeblich. Diese Datei fasst die Regeln für die technische Dokumentation knapp zusammen.
 
-Das Modell zeigt, welche Folgen eine veränderte Flächennutzung haben kann. Eine bestehende Nutzung wird gegen eine neue Nutzung ausgetauscht. Die dabei verdrängten Bausteine und Marker werden in der Verlust-Box sichtbar.
+## Grundsätze
 
-Es gibt keine Punktzahl und keine optimale Lösung. Nach jedem Tausch werden die Veränderungen gemeinsam besprochen.
+- „Tegel im Tausch“ ist ein Einzelspiel. Eine Person gestaltet das Feld nach ihren Vorstellungen.
+- Es gibt keine Punkte, keinen Gewinner und kein festes Ende.
+- Auf jeder der 22 Zonen liegt immer genau ein Nutzungsbaustein. Bausteine werden ausgetauscht und nie gestapelt.
+- Alle Nutzungswechsel sind erlaubt. Das ist keine Aussage über die reale planerische oder rechtliche Zulässigkeit.
 
-## Bestandteile
+## Marker
 
-Das Modell besteht aus:
+- Akteursmarker (Tiere, Pflanzen, Besucher, Anwohner, Beschäftigte) sowie NSM und DMS liegen auf dem Baustein, zu dem sie gehören.
+- VSM und ESM sind Aufwandsmarker. Sie liegen nie auf der Karte.
 
-- einer Karte mit den Zonen,
-- Nutzungsbausteinen,
-- Akteursmarkern,
-- VSM-, ESM-, NSM- und DMS-Markern,
-- einer Tauschbox,
-- einer Verlust-Box,
-- der Tauschmatrix.
+| Baustein | Marker zum Start |
+|---|---|
+| Koppel | Tiere, Pflanzen, NSM |
+| Grünanlage | Pflanzen, Besucher |
+| Wohnen | Anwohner |
+| Gewerbe | Beschäftigte; bei drei Gewerbebausteinen zusätzlich ein DMS |
+| Erholung/Freizeit | Besucher |
 
-Auf der Karte liegen ausschließlich die Nutzungsbausteine. Akteurs- und Zusatzmarker befinden sich immer in einer der beiden Boxen.
+## Boxen
 
-## Die beiden Boxen
+- **Tauschbox:** der Vorrat. Zum Start liegen dort alle VSM und ESM und alle übrigen Bausteine und Marker.
+- **Verlust-Box:** die „Hand“ der spielenden Person. Sie ist zum Start leer.
 
-### Tauschbox
+## Ablauf eines Zugs
 
-In der Tauschbox befinden sich die Bausteine und Marker, die aktuell verfügbar sind.
+1. Eine Zone wählen. Ihr Baustein zeigt die Nutzung, die da ist.
+2. Die neue Nutzung wählen.
+3. Den alten Baustein in die Verlust-Box legen und den neuen auf die Zone setzen.
+4. Die [Tauschmatrix](tauschmatrix.md) lesen: Spalte „ist da“, Zeile „wird zu“.
+5. Die Marker bewegen.
+6. Auf die Karte und in die Verlust-Box schauen.
 
-Der Inhalt der Tauschbox zählt nicht als Verlust.
+## Markerbewegungen
 
-### Verlust-Box
+- `+` bei Akteursmarkern, NSM und DMS: Der Marker wird verdrängt und kommt vom alten Baustein in die Verlust-Box.
+- `+` bei VSM und ESM: Ein Aufwandsmarker kommt aus der Tauschbox in die Verlust-Box.
+- `−`: Der Marker kommt auf den neuen Baustein. Liegt er in der Verlust-Box, wird er von dort genommen, sonst aus der Tauschbox.
+- `0`: Nichts bewegt sich.
 
-In der Verlust-Box befinden sich die Bausteine und Marker, die durch die bisherigen Tausche verdrängt wurden.
+Für neue Bausteine gilt dieselbe Reihenfolge: zuerst aus der Verlust-Box, sonst aus der Tauschbox.
 
-Die Elemente in der Verlust-Box dürfen später wieder verwendet werden. Sobald ein Baustein oder Marker aus der Verlust-Box entnommen wird, zählt er nicht mehr als aktueller Verlust.
+## Was nicht zurückkommt
 
-Die Verlust-Box zeigt deshalb den aktuellen Zustand und nicht die gesamte Geschichte aller vorherigen Tausche.
+- VSM und ESM bleiben für den Rest des Spiels in der Verlust-Box. Jede weitere Versiegelung oder Entsiegelung fügt einen Marker hinzu.
+- Ein DMS kann nur abgebaut werden. Er kommt nicht zurück auf die Karte.
 
-## Vorbereitung
+## Sonderfälle
 
-1. Die Karte wird mit dem festgelegten Ausgangszustand aufgebaut.
-2. Auf jeder Zone liegt der zugehörige Nutzungsbaustein.
-3. Die übrigen Bausteine und Marker werden gemäß dem festgelegten Ausgangsaufbau auf die Tauschbox und die Verlust-Box verteilt.
-4. Die beiden Boxen werden klar voneinander getrennt aufgestellt.
-5. Die Tauschmatrix wird gut sichtbar bereitgelegt.
-
-## Ablauf eines Tauschs
-
-### 1. Zone auswählen
-
-Eine Zone auf der Karte wird ausgewählt. Der dort liegende Nutzungsbaustein zeigt die aktuelle Nutzung.
-
-### 2. Neue Nutzung auswählen
-
-Ein neuer Nutzungsbaustein wird aus der Tauschbox oder aus der Verlust-Box genommen.
-
-### 3. Alten Baustein entfernen
-
-Der bisherige Nutzungsbaustein wird von der ausgewählten Zone genommen und in die Verlust-Box gelegt.
-
-### 4. Neuen Baustein einsetzen
-
-Der neue Nutzungsbaustein wird auf die Zone gelegt.
-
-In jeder Zone liegt immer nur ein Nutzungsbaustein. Bausteine werden ausgetauscht und nicht übereinandergestapelt.
-
-### 5. Tauschmatrix lesen
-
-In der Tauschmatrix wird die Regel für den Wechsel von der bisherigen zur neuen Nutzung gesucht.
-
-- Die Zeile steht für die bisherige Nutzung.
-- Die Spalte steht für die neue Nutzung.
-- Gleiche Ausgangs- und Zielnutzung ergibt `0`.
-
-### 6. Marker zwischen den Boxen bewegen
-
-Die Tauschmatrix legt fest, welche Akteurs- und Zusatzmarker zwischen den beiden Boxen bewegt werden.
-
-Die Zeichen haben für alle Marker dieselbe Bedeutung:
-
-- `+ Marker`: Den genannten Marker aus der Tauschbox nehmen und in die Verlust-Box legen.
-- `− Marker`: Den genannten Marker aus der Verlust-Box nehmen und zurück in die Tauschbox legen.
-- `0`: Es wird kein Marker bewegt.
-
-Diese Regel gilt für:
-
-- Tiere,
-- Pflanzen,
-- Besucher,
-- Anwohner,
-- Beschäftigte,
-- VSM,
-- ESM,
-- NSM,
-- DMS,
-- alle weiteren Marker der Tauschmatrix.
-
-Marker werden niemals auf die Karte gelegt.
-
-Ist ein benötigter Marker nicht in der vorgesehenen Box vorhanden, wird kein negativer Bestand erzeugt. Die fehlende Verfügbarkeit wird notiert und der Modellzug wird gemeinsam besprochen.
-
-### 7. Ergebnis besprechen
-
-Nach dem Tausch wird gemeinsam betrachtet:
-
-- Welche Nutzung befindet sich jetzt in der Zone?
-- Welcher Nutzungsbaustein wurde verdrängt?
-- Welcher Baustein wurde aus der Verlust-Box zurückgeholt?
-- Welche Marker wurden in die Verlust-Box gelegt?
-- Welche Marker wurden aus der Verlust-Box entfernt?
-- Welche Folgen und Nutzungskonflikte macht der Tausch sichtbar?
-
-## Beispiel: Grünanlage zu Wohnen
-
-1. Eine Zone mit Grünanlage wird ausgewählt.
-2. Der Wohnbaustein wird aus der Tauschbox oder Verlust-Box genommen.
-3. Der Grünanlagenbaustein wird von der Karte genommen und in die Verlust-Box gelegt.
-4. Der Wohnbaustein wird auf die Zone gesetzt.
-5. Die Regel für Grünanlage zu Wohnen wird in der Tauschmatrix gelesen.
-6. Für jeden Marker der Matrixzelle wird die angegebene `+`- oder `−`-Bewegung ausgeführt.
-7. Anschließend werden der neue Zustand und die sichtbaren Folgen besprochen.
-
-## Wichtige Regeln
-
-- Auf jeder Zone liegt genau ein Nutzungsbaustein.
-- Nutzungsbausteine werden ausgetauscht und nicht gestapelt.
-- Neue Bausteine dürfen aus beiden Boxen genommen werden.
-- Der entfernte Baustein kommt in die Verlust-Box.
-- Bausteine und Marker aus der Verlust-Box dürfen später wiederverwendet werden.
-- Der Inhalt der Tauschbox zählt nicht als Verlust.
-- Marker liegen niemals auf der Karte.
-- `+` bedeutet Bewegung in die Verlust-Box.
-- `−` bedeutet Bewegung aus der Verlust-Box zurück in die Tauschbox.
-- Gleiche Ausgangs- und Zielnutzung ergibt `0`.
-- Alle in der Tauschmatrix enthaltenen Kombinationen sind im Modell erlaubt.
-- Die Marker zeigen qualitative Veränderungen. Sie bilden keine wissenschaftliche Umweltbilanz und keine rechtliche Bewertung.
+- Liegt ein Plus-Marker nicht auf dem Baustein, entfällt dieser Schritt. Das betrifft vor allem den DMS.
+- Ist ein Minus-Marker in keiner Box mehr vorhanden, entfällt dieser Schritt.
 
 ## Begriffe
 
-- **VSM:** Versiegelungsmarker
-- **ESM:** Entsiegelungsmarker
 - **NSM:** Naturschutzmarker
 - **DMS:** Denkmalschutzmarker
-- **NSG:** Naturschutzgebiet
-
-NSG und NSM haben unterschiedliche Bedeutungen. Ein Marker erzeugt keinen rechtlichen Schutzstatus und bestätigt keine planerische Zulässigkeit.
+- **VSM:** Versiegelungsmarker
+- **ESM:** Entsiegelungsmarker
+- **NSG:** Naturschutzgebiet. NSG und NSM haben unterschiedliche Bedeutungen. Ein Marker erzeugt keinen rechtlichen Schutzstatus.
