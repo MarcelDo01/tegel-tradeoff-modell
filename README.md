@@ -20,7 +20,7 @@ Die Spielanleitung ist für alle Regeln maßgeblich.
 - [Technische Dokumentation](docs/technische-dokumentation.md) und [PDF-Fassung](docs/technische-dokumentation.pdf)
 - [Modellregeln in Kurzform](model/modellregeln.md)
 - [Tauschmatrix](model/tauschmatrix.md)
-- [Daten zum Spiel](data/README.md): Startaufbau, Tauschmatrix, Belege, Eckdaten und [Data Dictionary](data/data_dictionary.md)
+- [Daten zum Spiel](data/README.md): Startaufbau, Tauschmatrix, Belege und [Data Dictionary](data/data_dictionary.md)
 - [Quellen und Herkunft der Abbildungen](references/quellen.md)
 - [KI-Verzeichnis](docs/ki-verzeichnis.md)
 - [Abschlusspräsentation](presentation/abschlussprasentation.pdf)
@@ -61,7 +61,7 @@ Alle 25 gerichteten Kombinationen sind im Modell erlaubt. Gleiche Ausgangs- und 
 
 ## Daten
 
-Der Ordner `data/` enthält den Startaufbau aller 21 Felder mit Merkmalen aus den Planungsunterlagen, die Tauschmatrix als Tabelle, Belege für die Spielregeln und Eckdaten zum Gebiet. Der Abgleich mit den Karten des Entwicklungs- und Pflegekonzepts zeigt: Alle sieben Koppeln liegen in der Tegeler Stadtheide, alle vier Grünanlagen auf der Landebahn und der Nordfuge.
+Der Ordner `data/` enthält den Startaufbau aller 21 Felder mit Merkmalen aus den Planungsunterlagen, die Tauschmatrix als Tabelle und Belege für die Spielregeln. Der Abgleich mit den Karten des Entwicklungs- und Pflegekonzepts zeigt: Alle sieben Koppeln liegen in der Tegeler Stadtheide, alle vier Grünanlagen auf der Landebahn und der Nordfuge.
 
 ## Repository-Struktur
 
@@ -70,7 +70,7 @@ Der Ordner `data/` enthält den Startaufbau aller 21 Felder mit Merkmalen aus de
 | `SPIELANLEITUNG.md` | Spielanleitung als Text |
 | `spielanleitung-heft.html` | Spielanleitung als blätterbares Heft |
 | `docs/` | technische Dokumentation, PDF-Fassung, Abbildungen, KI-Verzeichnis und archivierter Prototyp |
-| `data/` | Startaufbau, Tauschmatrix, Belege und Eckdaten als Tabellen |
+| `data/` | Startaufbau, Tauschmatrix und Belege als Tabellen |
 | `model/` | Modellregeln in Kurzform und 25 gerichtete Nutzungstausche |
 | `presentation/` | Abschlusspräsentation |
 | `references/` | Quellen und Herkunftsnachweise |

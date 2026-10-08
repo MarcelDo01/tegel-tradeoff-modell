@@ -7,7 +7,7 @@
 | Abschlusspräsentation, 17 Folien | Projektidee, Arbeitsprozess, Modellaufbau, Fotos und Legenden | `presentation/abschlussprasentation.pdf` |
 | Whiteboard-Foto der Tauschmatrix | Grundlage für die Übertragung der Tauschregeln | `docs/assets/tauschmatrix_original.jpg` |
 | Startaufbau | Startbaustein, Marker und Planungsmerkmale für 21 Felder | `data/startaufbau.csv`, `data/startaufbau.xlsx` |
-| Belege und Eckdaten | Quellenstellen zu den Spielregeln und Kennzahlen | `data/belege.csv`, `data/eckdaten.csv` |
+| Belege | Quellenstellen zu den Spielregeln | `data/belege.csv` |
 
 Für die technische Dokumentation haben wir Modellregeln und Tauschmatrix vereinheitlicht und verständlich formuliert. Maßgeblich ist die aktuelle `SPIELANLEITUNG.md`; das Verzeichnis `model/` enthält die Kurzfassung der Regeln und die separat dokumentierte Tauschmatrix.
 
@@ -39,7 +39,7 @@ Das [Entwicklungs- und Pflegekonzept (EPK, 2022) für die Tegeler Stadtheide](ht
 - [entwicklungsstadt.de (2026): Nach Jahren der Planung: Auf dem Flughafen Tegel beginnt der Wohnungsbau](https://www.entwicklungsstadt.de/nach-jahren-der-planung-auf-dem-flughafen-tegel-beginnt-der-wohnungsbau/), 07.08.2026.
 - [Landesdenkmalamt Berlin (2019): Newsletter Mai 2019](https://www.berlin.de/landesdenkmalamt/aktuelles/newsletter/newsletter.807995.php).
 
-Welche Aussage aus welcher Unterlage stammt, steht mit Seiten- oder Folienangabe in `data/belege.csv` und `data/eckdaten.csv`.
+Welche Aussage aus welcher Unterlage stammt, steht mit Seiten- oder Folienangabe in `data/belege.csv`.
 
 Die aus Kartenebenen und Konzept abgeleiteten Zoneneinteilungen und Modellregeln sind projektbezogene Modellannahmen. Sie bilden keine vollständige planerische, ökologische oder rechtliche Bewertung ab.
 

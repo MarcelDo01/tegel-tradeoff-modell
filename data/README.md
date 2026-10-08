@@ -10,22 +10,21 @@ Die Dateien in diesem Ordner beschreiben, wie das Spiel aufgebaut wird, wie ein 
 | `startaufbau.xlsx` | dieselbe Tabelle als Excel-Datei |
 | `tauschmatrix.csv` | die 20 Nutzungswechsel mit ihren Markerbewegungen |
 | `belege.csv` | für jeden Marker und die Aufwandsregeln eine Belegstelle aus Planungsunterlagen und öffentlichen Quellen |
-| `eckdaten.csv` | Kennzahlen zum Gebiet mit Quelle und Fundstelle |
 | `data_dictionary.md` | Bedeutung der Spalten |
 
 ## Startaufbau
 
-Die Felder sind auf der Folie über der Grundkarte nummeriert (Abschlusspräsentation, Folie 6). Auf 21 Feldern liegt zum Start ein Baustein; Feld 10 bleibt leer und ist in der Tabelle nicht enthalten.
+Das Spielfeld hat 21 Felder, auf jedem liegt zum Start ein Baustein. Die Nummerierung folgt der Folie über der Grundkarte (Abschlusspräsentation, Folie 6); ein Feld ohne Baustein aus der Planungsphase haben wir nicht übernommen und die Felder ab dort durchgezählt.
 
 | Startbaustein | Felder | Anzahl |
 |---|---|---:|
-| Koppel | 1, 2, 3, 4, 6, 7, 11 | 7 |
-| Grünanlage | 5, 8, 12, 15 | 4 |
-| Erholung/Freizeit | 14, 18, 20 | 3 |
-| Wohnen | 19, 21, 22 | 3 |
-| Gewerbe | 9, 13, 16, 17 | 4 |
+| Koppel | 1, 2, 3, 4, 6, 7, 10 | 7 |
+| Grünanlage | 5, 8, 11, 14 | 4 |
+| Erholung/Freizeit | 13, 17, 19 | 3 |
+| Wohnen | 18, 20, 21 | 3 |
+| Gewerbe | 9, 12, 15, 16 | 4 |
 
-Ein Denkmalschutzmarker liegt bei den Gewerbefeldern 9, 16 und 17.
+Ein Denkmalschutzmarker liegt bei den Gewerbefeldern 9, 15 und 16.
 
 ## Benötigte Marker für den Startaufbau
 
@@ -57,13 +56,13 @@ Der Abgleich zeigt, dass der Startaufbau der Planung folgt:
 
 | Gebiet | Felder | Startbausteine |
 |---|---|---|
-| Tegeler Stadtheide, geplantes Naturschutzgebiet | 1, 2, 3, 4, 6, 7, 11 | alle sieben Koppeln |
-| Landebahn und Nordfuge, laut EPK für Sport und Freizeit vorgesehen | 5, 8, 12, 15 | alle vier Grünanlagen |
-| Landschaftspark | 14, 18 | Erholung/Freizeit |
-| Urban Tech Republic | 9, 13, 16, 17, 19 | vier Gewerbebausteine, ein Wohnbaustein |
-| Schumacher Quartier | 20, 21, 22 | zwei Wohnbausteine, eine Erholungsfläche |
+| Tegeler Stadtheide, geplantes Naturschutzgebiet | 1, 2, 3, 4, 6, 7, 10 | alle sieben Koppeln |
+| Landebahn und Nordfuge, laut EPK für Sport und Freizeit vorgesehen | 5, 8, 11, 14 | alle vier Grünanlagen |
+| Landschaftspark | 13, 17 | Erholung/Freizeit |
+| Urban Tech Republic | 9, 12, 15, 16, 18 | vier Gewerbebausteine, ein Wohnbaustein |
+| Schumacher Quartier | 19, 20, 21 | zwei Wohnbausteine, eine Erholungsfläche |
 
-Abweichungen von der Planung gibt es bei Feld 19 (Wohnen im Gebiet der Urban Tech Republic) und Feld 20 (Erholung im Schumacher Quartier).
+Abweichungen von der Planung gibt es bei Feld 18 (Wohnen im Gebiet der Urban Tech Republic) und Feld 19 (Erholung im Schumacher Quartier).
 
 ## Herkunft und Grenzen
 

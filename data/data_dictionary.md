@@ -2,11 +2,11 @@
 
 ## startaufbau.csv und startaufbau.xlsx
 
-Eine Zeile je Feld mit Startbaustein, 21 Zeilen. Primärschlüssel ist `feld`.
+Eine Zeile je Feld, 21 Zeilen. Primärschlüssel ist `feld`.
 
 | Spalte | Typ | Bedeutung | Werte |
 |---|---|---|---|
-| `feld` | Ganzzahl | Nummer des Felds auf der Karte | 1 bis 22 ohne 10 |
+| `feld` | Ganzzahl | Nummer des Felds auf der Karte | 1 bis 21 |
 | `lage` | Text | grobe Lage des Felds auf der Karte | zum Beispiel „Nordreihe“ |
 | `startbaustein` | Kategorie | Nutzung des Bausteins zum Spielstart | Koppel, Grünanlage, Wohnen, Gewerbe, Erholung/Freizeit |
 | `kuerzel` | Kategorie | Kürzel wie in der Tauschmatrix | K, GA, W, Ge, Er |
@@ -47,16 +47,4 @@ Eine Zeile je belegter Regel.
 | `regel_im_spiel` | Text | was die Regel im Spiel bewirkt |
 | `beleg` | Text | sinngemäße Wiedergabe der Quellenaussage |
 | `quelle` | Text | Kurzangabe der Quelle; vollständig in `README.md` |
-| `fundstelle` | Text | Seite oder Folie in der Quelle |
-
-## eckdaten.csv
-
-Eine Zeile je Kennzahl.
-
-| Spalte | Typ | Bedeutung |
-|---|---|---|
-| `kennzahl` | Text | was gemessen oder geplant ist |
-| `wert` | Text | Wert wie in der Quelle angegeben, mit deutschem Dezimalkomma |
-| `einheit` | Text | Einheit des Werts |
-| `quelle` | Text | Kurzangabe der Quelle |
 | `fundstelle` | Text | Seite oder Folie in der Quelle |

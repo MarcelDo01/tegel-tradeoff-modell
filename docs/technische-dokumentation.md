@@ -18,7 +18,7 @@ Das Modell richtet sich vor allem an Kinder, jüngere Menschen und Interessierte
 
 ## 2. Untersuchungsgebiet und Zonierung
 
-Betrachtet wird das gesamte Gelände des ehemaligen Flughafens Berlin-Tegel, nicht ausschließlich die Tegeler Stadtheide. Für das Modell wurde das Gebiet in Felder gegliedert; auf 21 davon liegt zum Spielstart ein Baustein.
+Betrachtet wird das gesamte Gelände des ehemaligen Flughafens Berlin-Tegel, nicht ausschließlich die 186 Hektar große Tegeler Stadtheide (EPK, S. 6). Für das Modell wurde das Gebiet in Felder gegliedert; auf 21 davon liegt zum Spielstart ein Baustein.
 
 ![Zonendarstellung aus der Präsentation, Folie 2](assets/zonierung.png)
 
@@ -51,7 +51,7 @@ Das Entwicklungs- und Pflegekonzept (EPK, 2022) für die Tegeler Stadtheide dien
 | Whiteboard-Foto | Grundlage der Tauschmatrix | `docs/assets/tauschmatrix_original.jpg` |
 | Startaufbau | Startbaustein, Marker und Planungsmerkmale je Feld | `data/startaufbau.csv`, `data/startaufbau.xlsx` |
 | Tauschmatrix als Tabelle | maschinenlesbare Fassung der Nutzungswechsel | `data/tauschmatrix.csv` |
-| Belege und Eckdaten | Quellenstellen zu den Spielregeln und Kennzahlen zum Gebiet | `data/belege.csv`, `data/eckdaten.csv` |
+| Belege | Quellenstellen zu den Spielregeln | `data/belege.csv` |
 
 Die Quellen wurden als Arbeitsgrundlagen für ein didaktisches Modell verwendet. Aus ihnen werden keine ungeprüften rechtlichen Aussagen abgeleitet.
 
@@ -67,14 +67,13 @@ Die eigentliche Zonierung erfolgte manuell. Wir haben die Informationen der Kart
 
 ## 5. Daten zum Spiel
 
-Im Ordner `data/` liegen vier Tabellen, mit denen sich das Spiel aufbauen und begründen lässt. Das [Data Dictionary](../data/data_dictionary.md) erläutert alle Spalten.
+Im Ordner `data/` liegen drei Tabellen, mit denen sich das Spiel aufbauen und begründen lässt. Das [Data Dictionary](../data/data_dictionary.md) erläutert alle Spalten.
 
 | Datei | Inhalt |
 |---|---|
 | `startaufbau.csv` und `.xlsx` | ein Eintrag je Feld: Startbaustein, Boden, Marker, Denkmalschutz und Merkmale aus den Planungsunterlagen |
 | `tauschmatrix.csv` | die 20 Nutzungswechsel mit ihren Markerbewegungen |
 | `belege.csv` | für jeden Marker und die Aufwandsregeln eine Belegstelle aus Planungsunterlagen und öffentlichen Quellen |
-| `eckdaten.csv` | Kennzahlen zum Gebiet mit Quelle und Fundstelle |
 
 ### 5.1 Startaufbau und Planungsmerkmale
 
@@ -84,13 +83,13 @@ Der Abgleich zeigt, dass der Startaufbau der Planung folgt:
 
 | Gebiet | Felder | Startbausteine |
 |---|---|---|
-| Tegeler Stadtheide, geplantes Naturschutzgebiet | 1, 2, 3, 4, 6, 7, 11 | alle sieben Koppeln |
-| Landebahn und Nordfuge, laut EPK für Sport und Freizeit vorgesehen | 5, 8, 12, 15 | alle vier Grünanlagen |
-| Landschaftspark | 14, 18 | Erholung/Freizeit |
-| Urban Tech Republic | 9, 13, 16, 17, 19 | vier Gewerbebausteine, ein Wohnbaustein |
-| Schumacher Quartier | 20, 21, 22 | zwei Wohnbausteine, eine Erholungsfläche |
+| Tegeler Stadtheide, geplantes Naturschutzgebiet | 1, 2, 3, 4, 6, 7, 10 | alle sieben Koppeln |
+| Landebahn und Nordfuge, laut EPK für Sport und Freizeit vorgesehen | 5, 8, 11, 14 | alle vier Grünanlagen |
+| Landschaftspark | 13, 17 | Erholung/Freizeit |
+| Urban Tech Republic | 9, 12, 15, 16, 18 | vier Gewerbebausteine, ein Wohnbaustein |
+| Schumacher Quartier | 19, 20, 21 | zwei Wohnbausteine, eine Erholungsfläche |
 
-Abweichungen gibt es bei Feld 19 und Feld 20. Aus der Tabelle ergibt sich auch die Stückliste der Marker für den Startaufbau, zum Beispiel elf Pflanzenmarker und je sieben Tier-, Naturschutz- und Besuchermarker.
+Abweichungen gibt es bei Feld 18 und Feld 19. Aus der Tabelle ergibt sich auch die Stückliste der Marker für den Startaufbau, zum Beispiel elf Pflanzenmarker und je sieben Tier-, Naturschutz- und Besuchermarker.
 
 ### 5.2 Belege für die Regeln
 
@@ -255,7 +254,7 @@ Entstanden sind vier Dinge:
 
 - ein physisches Modell des Tegel-Geländes mit Grundkarte, Nutzungsbausteinen, Markern und zwei Boxen,
 - eine Tauschmatrix mit 25 gerichteten Nutzungswechseln,
-- Tabellen zum Startaufbau, zur Tauschmatrix, zu den Belegen und zu Eckdaten des Gebiets,
+- Tabellen zum Startaufbau, zur Tauschmatrix und zu den Belegen für die Regeln,
 - eine Spielanleitung als Text und als blätterbares Heft mit einer Seite zum Ausprobieren.
 
 Beim Spielen zeigt das Modell vier Zusammenhänge:
@@ -313,4 +312,4 @@ Als nächste Schritte sehen wir eine Erprobung mit Kindern, einen vollständigen
 - **Quellen:** Die verwendeten Kartenebenen, Konzeptgrundlagen und Abbildungsnachweise stehen in [Quellen und Herkunft](../references/quellen.md).
 - **KI-Einsatz:** Welche KI-Werkzeuge wir wofür eingesetzt haben, steht im [KI-Verzeichnis](ki-verzeichnis.md).
 - **Spielregeln:** Maßgeblich ist die [Spielanleitung](../SPIELANLEITUNG.md). Die [Tauschmatrix](../model/tauschmatrix.md) ist zusätzlich einzeln dokumentiert.
-- **Daten:** Startaufbau, Tauschmatrix, Belege und Eckdaten liegen im Ordner [data](../data/README.md); das [Data Dictionary](../data/data_dictionary.md) erläutert die Spalten.
+- **Daten:** Startaufbau, Tauschmatrix und Belege liegen im Ordner [data](../data/README.md); das [Data Dictionary](../data/data_dictionary.md) erläutert die Spalten.
