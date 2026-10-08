@@ -279,14 +279,14 @@ Mit Kindern haben wir das Spiel noch nicht erprobt. Ob sie die Regeln ohne Begle
 Idee, Regeln und Umsetzung des Modells stammen von uns. Alle Teile haben wir gemeinsam erarbeitet.
 
 - **Idee:** Wir wollten zeigen, dass jede neue Nutzung auf dem Tegel-Gelände etwas Bestehendes verdrängt. Daraus entstand das Prinzip mit Tauschbox und Verlust-Box.
-- **Karten und Zonen:** Wir haben die Kartenebenen des Geoportals und das Entwicklungs- und Pflegekonzept ausgewertet und die Informationen zusammengetragen. Daraus haben wir die Zonen hergeleitet. Dabei haben wir KI als Hilfsmittel eingesetzt.
+- **Karten und Zonen:** Wir haben die Kartenebenen des Geoportals und das Entwicklungs- und Pflegekonzept ausgewertet und die Informationen zusammengetragen. Daraus haben wir die Zonen hergeleitet. 
 - **Regeln und Marker:** Die Tauschmatrix, die Marker und alle Spielregeln haben wir selbst hergeleitet und auf das Spiel übertragen, zunächst am Whiteboard und danach beim Aufbau des Modells.
 - **Bau:** Karte, Bausteine und Marker haben wir von Hand hergestellt.
 - **Spielanleitung und Dokumentation:** Beide haben wir mit KI-Unterstützung erstellt.
 
 Welche KI-Werkzeuge wir wofür eingesetzt haben, steht im [KI-Verzeichnis](ki-verzeichnis.md).
 
-Neu an unserem Ansatz ist die Form. Planungswerkzeuge für Flächen arbeiten meist digital und berechnen Kennzahlen oder eine beste Lösung. Unser Modell ist zum Anfassen, kommt ohne Punkte und Gewinner aus und macht sichtbar, was eine Entscheidung verdrängt und welchen Aufwand sie hinterlässt. Versiegelung und Entsiegelung bleiben als Marker dauerhaft in der Verlust-Box. So wird erfahrbar, dass sich ein Eingriff nicht folgenlos zurücknehmen lässt.
+Neu an unserem Ansatz ist die Form. Planungswerkzeuge für Flächen arbeiten meist digital und berechnen Kennzahlen oder eine beste Lösung. Unser Modell ist zum Anfassen, kommt ohne Punkte und Gewinner aus und macht sichtbar, was eine Entscheidung verdrängt und welchen Aufwand sie hinterlässt. So wird erfahrbar, dass sich ein Eingriff nicht folgenlos zurücknehmen lässt.
 
 ## 16. Fazit
 
