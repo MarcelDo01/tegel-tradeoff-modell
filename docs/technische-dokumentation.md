@@ -56,6 +56,8 @@ Die Quellen wurden als Arbeitsgrundlagen für ein didaktisches Modell verwendet.
 
 ## 4. Arbeitsprozess und Werkzeuge
 
+Vor dem Bau des physischen Modells erstellten wir für unsere Zwischenpräsentation einen interaktiven HTML-Prototypen. Er diente dazu, die Projektidee und einen möglichen Spielablauf frühzeitig anschaulich zu vermitteln. Nachdem wir das haptische Modell gebaut und die Regeln daran weiterentwickelt hatten, nutzten wir diesen Prototypen nicht weiter. Der [archivierte HTML-Prototyp](prototyp/tegel-im-tausch-prototyp.html) dokumentiert deshalb nur einen frühen Arbeitsstand und ist nicht als aktuelle Spielanleitung zu verstehen. Das heutige `spielanleitung-heft.html` ist davon zu unterscheiden: Es ist eine später erstellte Spielanleitung und bildet den aktuellen Regelstand ab.
+
 Im FUTR HUB Geoportal wurden die relevanten Kartenebenen betrachtet und miteinander verglichen. QGIS wurde genutzt, um das Luftbild zu importieren, den benötigten Ausschnitt festzulegen und die Grundkarte für den Druck im A1-Format vorzubereiten.
 
 Die eigentliche Zonierung erfolgte manuell. Wir haben die Informationen der Kartenebenen verglichen, die Grundkarte ausgedruckt und die Zonengrenzen auf einer transparenten Folie skizziert. Eine automatisierte Zonierung oder weitergehende GIS-Analyse war nicht Bestandteil des finalen Vorgehens.
