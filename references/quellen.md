@@ -9,7 +9,7 @@
 | Finale Excel-Arbeitsdatei | Zonenbezeichnungen und Zonenattribute für insgesamt 22 Zonen | `data/zones.xlsx` |
 | CSV-Export der Zonendaten | Maschinenlesbare Fassung der Excel-Arbeitsdatei | `data/zones.csv` |
 
-Für die technische Dokumentation haben wir Modellregeln und Tauschmatrix vereinheitlicht und verständlich formuliert. Maßgeblich sind die aktuellen Dateien im Verzeichnis `model/`.
+Für die technische Dokumentation haben wir Modellregeln und Tauschmatrix vereinheitlicht und verständlich formuliert. Maßgeblich ist die aktuelle `SPIELANLEITUNG.md`; das Verzeichnis `model/` enthält die Kurzfassung der Regeln und die separat dokumentierte Tauschmatrix.
 
 ## Externe Kartengrundlagen
 
